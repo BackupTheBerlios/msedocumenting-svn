@@ -5,7 +5,7 @@ uses
  msegui,mseclasses,mseevent,mseforms,msegraphics,msemenus,msestat,db,msedb,
  sysutils,msedataedits,msedbedit,mseedit,msegraphutils,msegrids,
  msesimplewidgets,msestrings,msetypes,msewidgetgrid,msewidgets,msestatfile,
- msedatabase,msebufdataset,msesqldb,msqldb,msesqlite3conn;
+ msedatabase,msebufdataset,msesqldb,msqldb,msesqlite3conn,mseact,mseapplication;
 
 type
  tmainfo = class(tmseform)
