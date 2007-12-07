@@ -133,7 +133,7 @@ object mainfo: tmainfo
     datafield = 'numericf1'
     datasource = ds
     reffontheight = 14
-    val = 123456.789
+    val =  1.2345678900000000E+0005
   end
   object realedit: tdbrealedit
     optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_destroywidgets, ow_fontglyphheight, ow_autoscale]
@@ -155,7 +155,7 @@ object mainfo: tmainfo
     datafield = 'realfloatdoublef1'
     datasource = ds
     reffontheight = 14
-    val = 7.89E37
+    val =  1.0000000000000000E+0038
   end
   object varcharedit: tdbstringedit
     optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_destroywidgets, ow_fontglyphheight, ow_autoscale]
@@ -209,6 +209,8 @@ object mainfo: tmainfo
     frame.leveli = -1
     frame.caption = 'BLOB'
     frame.captionpos = cp_left
+    frame.font.colorshadow = -2147483648
+    frame.font.xscale =  1.0000000000000000E+0000
     frame.font.dummy = 0
     frame.localprops = [frl_levelo, frl_leveli]
     frame.dummy = 0
@@ -474,6 +476,7 @@ object mainfo: tmainfo
       000000FF000000FF000000FF000000FF000000FF000000FF000000FF000000F9
     }
     face.fade_transparency = -2147483648
+    face.localprops = [fal_fatransparency]
     face.dummy = 0
     taborder = 9
     hint = 'Use the right click menu'#10'to load/save/clear'#10'the image'
@@ -483,7 +486,6 @@ object mainfo: tmainfo
     bitmap.transparency = -2147483648
     datafield = 'blobf1'
     datasource = ds
-    format = 'jpg'
   end
   object timeedit: tdbdatetimeedit
     optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_destroywidgets, ow_fontglyphheight, ow_autoscale]
@@ -506,8 +508,8 @@ object mainfo: tmainfo
     datasource = ds
     kind = dtk_time
     reffontheight = 14
-    val = 0.081597222222222
-    ma = 365000.99998999998
+    val =  8.2986111111111108E-0002
+    ma =  3.6500099998999998E+0005
   end
   object datetimeedit: tdbdatetimeedit
     optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_destroywidgets, ow_fontglyphheight, ow_autoscale]
@@ -529,8 +531,8 @@ object mainfo: tmainfo
     datasource = ds
     kind = dtk_datetime
     reffontheight = 14
-    val = 39173.082986111112
-    ma = 365000.99998999998
+    val =  3.9173082986111112E+0004
+    ma =  3.6500099998999998E+0005
   end
   object dateedit: tdbdatetimeedit
     optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_destroywidgets, ow_fontglyphheight, ow_autoscale]
@@ -552,8 +554,8 @@ object mainfo: tmainfo
     datafield = 'datef1'
     datasource = ds
     reffontheight = 14
-    val = 39173
-    ma = 365000.99998999998
+    val =  3.9173000000000000E+0004
+    ma =  3.6500099998999998E+0005
   end
   object wordedit: tdbintegeredit
     optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_destroywidgets, ow_fontglyphheight, ow_autoscale]
@@ -599,7 +601,7 @@ object mainfo: tmainfo
     formatedit = '0.##'
     formatdisp = '0.##'
     reffontheight = 14
-    val = 9876543210.0123463
+    val =  9.8765432100123463E+0009
   end
   object conn: tsqlite3connection
     Connected = True
@@ -615,14 +617,11 @@ object mainfo: tmainfo
     top = 256
   end
   object qry: tmsesqlquery
-    Active = True
-    database = conn
-    Transaction = trans
     params = <>
-    SQL.Strings = (
+    SQL.data = (
       'select * from datatypes_test;'
     )
-    SQLUpdate.Strings = (
+    SQLUpdate.data = (
       'update datatypes_test set'
       'integerf1= :INTEGERF1,'
       'largeintf1= :LARGEINTF1,'
@@ -642,6 +641,9 @@ object mainfo: tmainfo
     )
     IndexDefs = <>
     StatementType = stSelect
+    database = conn
+    Active = True
+    Transaction = trans
     FieldDefs = <    
       item
         Name = 'integerf1'
@@ -828,11 +830,12 @@ object mainfo: tmainfo
     controller.options = [dso_utf8, dso_autoapply, dso_autocommitret]
     left = 224
     top = 240
-    object blobfield: tmseblobfield
+    object blobfield: tmsegraphicfield
       DisplayWidth = 10
       FieldName = 'blobf1'
       Index = 13
       Size = 4
+      imagecachekb = 1000
       left = 200
       top = 96
     end

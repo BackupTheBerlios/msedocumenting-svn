@@ -17,7 +17,7 @@ type
    currencyedit: tdbrealedit;
    blobpopup: tpopupmenu;
    blobdialog: tfiledialog;
-   blobfield: tmseblobfield;
+   blobfield: tmsegraphicfield;
    wordedit: tdbintegeredit;
    timeedit: tdbdatetimeedit;
    datetimeedit: tdbdatetimeedit;
