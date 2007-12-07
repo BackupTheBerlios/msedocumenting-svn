@@ -15,7 +15,6 @@ object mainfo: tmainfo
   mainmenu = mnuMain
   options = [fo_main, fo_terminateonclose, fo_autoreadstat, fo_autowritestat, fo_savepos, fo_savestate]
   caption = 'Testcase project for TReport/TMemDataSet'
-  icon.transparency = -2147483648
   moduleclassname = 'tmseform'
   object tbutton1: tbutton
     bounds_x = 231
@@ -45,8 +44,8 @@ object mainfo: tmainfo
     state = [as_localcaption]
     caption = 'Exit'
     font.color = -1610612730
-    font.colorshadow = -2147483648
     font.name = 'stf_default'
+    font.xscale =  1.0000000000000000E+0000
     font.dummy = 0
     modalresult = mr_canclose
   end
@@ -96,11 +95,11 @@ object mainfo: tmainfo
           item
             caption = #8470
           end>
-        font.colorshadow = -2147483648
         font.height = 15
         font.extraspace = -7
         font.style = [fs_bold]
         font.name = 'stf_default'
+        font.xscale =  1.0000000000000000E+0000
         font.dummy = 0
       end>
     datacols.count = 3
@@ -110,18 +109,17 @@ object mainfo: tmainfo
         frame.framei_left = 3
         frame.localprops = [frl_leveli, frl_fileft]
         frame.dummy = 0
-        face.image.transparency = -2147483648
         face.fade_pos.count = 2
         face.fade_pos.items = (
-          0
-          1
+           0.0000000000000000E+0000
+           1.0000000000000000E+0000
         )
         face.fade_color.count = 2
         face.fade_color.items = (
           16764159
           -1610612712
         )
-        face.fade_transparency = -2147483648
+        face.localprops = [fal_fatransparency]
         face.dummy = 0
         width = 445
         options = [co_fill, co_savevalue, co_savestate, co_rowfont, co_rowcolor, co_zebracolor, co_mousescrollrow]
@@ -132,18 +130,17 @@ object mainfo: tmainfo
         frame.framei_right = 3
         frame.localprops = [frl_leveli, frl_firight]
         frame.dummy = 0
-        face.image.transparency = -2147483648
         face.fade_pos.count = 2
         face.fade_pos.items = (
-          0
-          1
+           0.0000000000000000E+0000
+           1.0000000000000000E+0000
         )
         face.fade_color.count = 2
         face.fade_color.items = (
           -1610612712
           13238271
         )
-        face.fade_transparency = -2147483648
+        face.localprops = [fal_fatransparency]
         face.dummy = 0
         width = 109
         options = [co_proportional, co_savevalue, co_savestate, co_rowfont, co_rowcolor, co_zebracolor, co_mousescrollrow]
@@ -155,18 +152,17 @@ object mainfo: tmainfo
         frame.colorframe = -1610612715
         frame.localprops = [frl_leveli, frl_framewidth, frl_colorframe]
         frame.dummy = 0
-        face.image.transparency = -2147483648
         face.fade_pos.count = 2
         face.fade_pos.items = (
-          0
-          1
+           0.0000000000000000E+0000
+           1.0000000000000000E+0000
         )
         face.fade_color.count = 2
         face.fade_color.items = (
           14606079
           16764879
         )
-        face.fade_transparency = -2147483648
+        face.localprops = [fal_fatransparency]
         face.dummy = 0
         width = 77
         widgetname = 'tdbdataimage1'
@@ -186,8 +182,7 @@ object mainfo: tmainfo
       frame.sbvert.width = 12
       frame.sbvert.buttonlength = 7
       frame.sbvert.buttonminlength = 5
-      frame.sbvert.faceendbutton.image.transparency = -2147483648
-      frame.sbvert.faceendbutton.fade_transparency = -2147483648
+      frame.sbvert.faceendbutton.localprops = [fal_fatransparency]
       frame.sbvert.faceendbutton.dummy = 0
       frame.sbvert.color = 12549758
       frame.colorclient = -2147483645
@@ -196,7 +191,7 @@ object mainfo: tmainfo
       taborder = 1
       visible = False
       optionsedit = [oe_closequery, oe_checkmrcancel, oe_shiftreturn, oe_resetselectonexit, oe_endonenter, oe_autopost, oe_autopopupmenu, oe_keyexecute, oe_savevalue, oe_savestate]
-      font.colorshadow = -2147483648
+      font.xscale =  1.0000000000000000E+0000
       font.dummy = 0
       textflags = [tf_wordbreak, tf_noselect]
       textflagsactive = [tf_wordbreak]
@@ -222,7 +217,7 @@ object mainfo: tmainfo
       formatedit = '0.00'
       formatdisp = '0.00'
       reffontheight = 14
-      val = 99.909999999999997
+      val =  9.9909999999999997E+0001
     end
     object tdbdataimage1: tdbdataimage
       bounds_x = 556
@@ -238,7 +233,6 @@ object mainfo: tmainfo
       popupmenu = pmPhoto
       visible = False
       bitmap.alignment = [al_xcentered, al_ycentered, al_fit]
-      bitmap.transparency = -2147483648
       datafield = 'fldBlob'
       datasource = ds
     end
@@ -263,9 +257,9 @@ object mainfo: tmainfo
       frame.colorclient = -2147483647
       frame.caption = 'Ctrl + Ins:'
       frame.captionpos = cp_left
-      frame.font.colorshadow = -2147483648
       frame.font.style = [fs_bold]
       frame.font.name = 'stf_default'
+      frame.font.xscale =  1.0000000000000000E+0000
       frame.font.dummy = 0
       frame.localprops = [frl_colorclient]
       frame.dummy = 0
@@ -286,9 +280,9 @@ object mainfo: tmainfo
       color = -2147483645
       frame.caption = 'Ctrl + Del:'
       frame.captionpos = cp_left
-      frame.font.colorshadow = -2147483648
       frame.font.style = [fs_bold]
       frame.font.name = 'stf_default'
+      frame.font.xscale =  1.0000000000000000E+0000
       frame.font.dummy = 0
       frame.dummy = 0
       frame.outerframe = (
@@ -329,6 +323,8 @@ object mainfo: tmainfo
   object mnuMain: tmainmenu
     popupitemframetemplate = ftMenu
     popupitemframetemplateactive = ftMenu
+    itemframetemplate = ftMenu
+    itemframetemplateactive = ftMenu
     menu.submenu.count = 2
     menu.submenu.items = <    
       item
@@ -353,8 +349,6 @@ object mainfo: tmainfo
         caption = 'Settings'
         state = [as_localcaption]
       end>
-    itemframetemplate = ftMenu
-    itemframetemplateactive = ftMenu
     left = 232
     top = 136
   end
@@ -378,7 +372,6 @@ object mainfo: tmainfo
   end
   object qry: tmsesqlquery
     logfilename = './data.bin'
-    packetrecords = -1
     params = <>
     IndexDefs = <>
     Active = True
@@ -413,7 +406,7 @@ object mainfo: tmainfo
       FieldName = 'fldBlob'
       Index = 1
       Size = 8
-      imagecachekb = 1000
+      imagecachekb = 10000
       left = 576
       top = 112
     end
@@ -449,16 +442,16 @@ object mainfo: tmainfo
     top = 160
   end
   object actLoad: taction
-    caption = 'Load  from file..'
     imagelist = ilActions
+    caption = 'Load  from file..'
     imagenr = 1
     onexecute = loadexec
     left = 536
     top = 232
   end
   object actSave: taction
-    caption = 'Save to file..'
     imagelist = ilActions
+    caption = 'Save to file..'
     imagenr = 2
     onexecute = saveexec
     left = 584
@@ -468,7 +461,6 @@ object mainfo: tmainfo
     width = 30
     height = 24
     colormask = True
-    transparentcolor = -2147483648
     count = 3
     left = 536
     top = 184
@@ -717,8 +709,8 @@ object mainfo: tmainfo
     }
   end
   object actClear: taction
-    caption = 'Clear'
     imagelist = ilActions
+    caption = 'Clear'
     imagenr = 0
     onexecute = clearexec
     left = 576
