@@ -15,7 +15,6 @@ object mainfo: tmainfo
   optionswindow = [wo_groupleader]
   options = [fo_main, fo_terminateonclose, fo_autoreadstat, fo_autowritestat, fo_savepos, fo_savestate]
   caption = 'SQLite3 data types testcase'
-  icon.transparency = -2147483648
   moduleclassname = 'tmseform'
   object tbutton1: tbutton
     bounds_x = 320
@@ -41,9 +40,9 @@ object mainfo: tmainfo
       2
     )
     taborder = 1
-    optionsedit = [oe_undoonesc, oe_closequery, oe_checkmrcancel, oe_exitoncursor, oe_shiftreturn, oe_eatreturn, oe_resetselectonexit, oe_endonenter, oe_autoselect, oe_autoselectonfirstclick, oe_autopost, oe_autopopupmenu, oe_keyexecute, oe_savevalue, oe_savestate]
     datafield = 'booleanf1'
     datasource = ds
+    optionsdb = [oed_autopost]
   end
   object smallintedit: tdbintegeredit
     optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_destroywidgets, ow_fontglyphheight, ow_autoscale]
@@ -61,9 +60,9 @@ object mainfo: tmainfo
       0
     )
     taborder = 2
-    optionsedit = [oe_undoonesc, oe_closequery, oe_checkmrcancel, oe_exitoncursor, oe_shiftreturn, oe_eatreturn, oe_resetselectonexit, oe_endonenter, oe_autoselect, oe_autoselectonfirstclick, oe_autopost, oe_autopopupmenu, oe_keyexecute, oe_savevalue, oe_savestate]
     datafield = 'smallintf1'
     datasource = ds
+    optionsdb = [oed_autopost]
     min = -32767
     max = 32767
     reffontheight = 14
@@ -84,9 +83,9 @@ object mainfo: tmainfo
       0
     )
     taborder = 3
-    optionsedit = [oe_undoonesc, oe_closequery, oe_checkmrcancel, oe_exitoncursor, oe_shiftreturn, oe_eatreturn, oe_resetselectonexit, oe_endonenter, oe_autoselect, oe_autoselectonfirstclick, oe_autopost, oe_autopopupmenu, oe_keyexecute, oe_savevalue, oe_savestate]
     datafield = 'integerf1'
     datasource = ds
+    optionsdb = [oed_autopost]
     min = -2147483647
     reffontheight = 14
   end
@@ -106,9 +105,9 @@ object mainfo: tmainfo
       0
     )
     taborder = 4
-    optionsedit = [oe_undoonesc, oe_closequery, oe_checkmrcancel, oe_exitoncursor, oe_shiftreturn, oe_eatreturn, oe_resetselectonexit, oe_endonenter, oe_autoselect, oe_autoselectonfirstclick, oe_autopost, oe_autopopupmenu, oe_keyexecute, oe_savevalue, oe_savestate]
     datafield = 'largeintf1'
     datasource = ds
+    optionsdb = [oed_autopost]
     min = -899999999
     max = 899999999
     reffontheight = 14
@@ -129,9 +128,9 @@ object mainfo: tmainfo
       0
     )
     taborder = 5
-    optionsedit = [oe_undoonesc, oe_closequery, oe_checkmrcancel, oe_exitoncursor, oe_shiftreturn, oe_eatreturn, oe_resetselectonexit, oe_endonenter, oe_autoselect, oe_autoselectonfirstclick, oe_autopost, oe_autopopupmenu, oe_keyexecute, oe_savevalue, oe_savestate]
     datafield = 'numericf1'
     datasource = ds
+    optionsdb = [oed_autopost]
     reffontheight = 14
     val =  1.2345678900000000E+0005
   end
@@ -151,9 +150,9 @@ object mainfo: tmainfo
       0
     )
     taborder = 6
-    optionsedit = [oe_undoonesc, oe_closequery, oe_checkmrcancel, oe_exitoncursor, oe_shiftreturn, oe_eatreturn, oe_resetselectonexit, oe_endonenter, oe_autoselect, oe_autoselectonfirstclick, oe_autopost, oe_autopopupmenu, oe_keyexecute, oe_savevalue, oe_savestate]
     datafield = 'realfloatdoublef1'
     datasource = ds
+    optionsdb = [oed_autopost]
     reffontheight = 14
     val =  1.0000000000000000E+0038
   end
@@ -173,9 +172,9 @@ object mainfo: tmainfo
       0
     )
     taborder = 7
-    optionsedit = [oe_undoonesc, oe_closequery, oe_checkmrcancel, oe_exitoncursor, oe_shiftreturn, oe_eatreturn, oe_resetselectonexit, oe_endonenter, oe_autoselect, oe_autoselectonfirstclick, oe_autopost, oe_autopopupmenu, oe_keyexecute, oe_savevalue, oe_savestate]
     datafield = 'vcharf1'
     datasource = ds
+    optionsdb = [oed_autopost]
     reffontheight = 14
   end
   object textedit: tdbmemoedit
@@ -194,11 +193,11 @@ object mainfo: tmainfo
       0
     )
     taborder = 8
-    optionsedit = [oe_closequery, oe_checkmrcancel, oe_linebreak, oe_eatreturn, oe_resetselectonexit, oe_autopost, oe_autopopupmenu, oe_keyexecute, oe_savevalue, oe_savestate]
     textflags = [tf_wordbreak, tf_noselect]
     textflagsactive = [tf_wordbreak]
     datafield = 'textf1'
     datasource = ds
+    optionsdb = [oed_autopost]
   end
   object blobdisplay: tdbdataimage
     bounds_x = 221
@@ -209,7 +208,6 @@ object mainfo: tmainfo
     frame.leveli = -1
     frame.caption = 'BLOB'
     frame.captionpos = cp_left
-    frame.font.colorshadow = -2147483648
     frame.font.xscale =  1.0000000000000000E+0000
     frame.font.dummy = 0
     frame.localprops = [frl_levelo, frl_leveli]
@@ -220,10 +218,9 @@ object mainfo: tmainfo
       0
       0
     )
-    face.image.transparentcolor = -2147483648
+    face.image.transparentcolor = -2147483642
     face.image.options = [bmo_masked, bmo_colormask]
     face.image.alignment = [al_xcentered, al_ycentered]
-    face.image.transparency = -2147483648
     face.image.image = {
       0000000006000000640000006400000074060000000000000000000000000000
       0000000000000000000000000000000000000000000000FF000000FF000000FF
@@ -475,7 +472,6 @@ object mainfo: tmainfo
       92929201C9C9C901E8E8E801F8F8F801F5F5F501D6D6D6019E9E9E0143434301
       000000FF000000FF000000FF000000FF000000FF000000FF000000FF000000F9
     }
-    face.fade_transparency = -2147483648
     face.localprops = [fal_fatransparency]
     face.dummy = 0
     taborder = 9
@@ -483,7 +479,6 @@ object mainfo: tmainfo
     popupmenu = blobpopup
     onpopup = popupdisplay
     bitmap.alignment = [al_xcentered, al_ycentered, al_fit]
-    bitmap.transparency = -2147483648
     datafield = 'blobf1'
     datasource = ds
   end
@@ -503,9 +498,9 @@ object mainfo: tmainfo
       0
     )
     taborder = 10
-    optionsedit = [oe_undoonesc, oe_closequery, oe_checkmrcancel, oe_exitoncursor, oe_shiftreturn, oe_eatreturn, oe_resetselectonexit, oe_endonenter, oe_autoselect, oe_autoselectonfirstclick, oe_autopost, oe_autopopupmenu, oe_keyexecute, oe_savevalue, oe_savestate]
     datafield = 'timef1'
     datasource = ds
+    optionsdb = [oed_autopost]
     kind = dtk_time
     reffontheight = 14
     val =  8.2986111111111108E-0002
@@ -550,9 +545,9 @@ object mainfo: tmainfo
       0
     )
     taborder = 12
-    optionsedit = [oe_undoonesc, oe_closequery, oe_checkmrcancel, oe_exitoncursor, oe_shiftreturn, oe_eatreturn, oe_resetselectonexit, oe_endonenter, oe_autoselect, oe_autoselectonfirstclick, oe_autopost, oe_autopopupmenu, oe_keyexecute, oe_savevalue, oe_savestate]
     datafield = 'datef1'
     datasource = ds
+    optionsdb = [oed_autopost]
     reffontheight = 14
     val =  3.9173000000000000E+0004
     ma =  3.6500099998999998E+0005
@@ -573,9 +568,9 @@ object mainfo: tmainfo
       0
     )
     taborder = 13
-    optionsedit = [oe_undoonesc, oe_closequery, oe_checkmrcancel, oe_exitoncursor, oe_shiftreturn, oe_eatreturn, oe_resetselectonexit, oe_endonenter, oe_autoselect, oe_autoselectonfirstclick, oe_autopost, oe_autopopupmenu, oe_keyexecute, oe_savevalue, oe_savestate]
     datafield = 'wordf1'
     datasource = ds
+    optionsdb = [oed_autopost]
     max = 65535
     reffontheight = 14
   end
@@ -595,9 +590,9 @@ object mainfo: tmainfo
       0
     )
     taborder = 14
-    optionsedit = [oe_undoonesc, oe_closequery, oe_checkmrcancel, oe_exitoncursor, oe_shiftreturn, oe_eatreturn, oe_resetselectonexit, oe_endonenter, oe_autoselect, oe_autoselectonfirstclick, oe_autopost, oe_autopopupmenu, oe_keyexecute, oe_savevalue, oe_savestate]
     datafield = 'currencyf1'
     datasource = ds
+    optionsdb = [oed_autopost]
     formatedit = '0.##'
     formatdisp = '0.##'
     reffontheight = 14

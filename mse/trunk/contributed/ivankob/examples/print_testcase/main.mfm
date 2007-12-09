@@ -190,13 +190,14 @@ object mainfo: tmainfo
       frame.dummy = 0
       taborder = 1
       visible = False
-      optionsedit = [oe_closequery, oe_checkmrcancel, oe_shiftreturn, oe_resetselectonexit, oe_endonenter, oe_autopost, oe_autopopupmenu, oe_keyexecute, oe_savevalue, oe_savestate]
+      optionsedit = [oe_closequery, oe_checkmrcancel, oe_shiftreturn, oe_resetselectonexit, oe_endonenter, oe_autopopupmenu, oe_keyexecute, oe_savevalue, oe_savestate]
       font.xscale =  1.0000000000000000E+0000
       font.dummy = 0
       textflags = [tf_wordbreak, tf_noselect]
       textflagsactive = [tf_wordbreak]
       datafield = 'fldMemo'
       datasource = ds
+      optionsdb = [oed_autopost]
     end
     object tdbrealedit1: tdbrealedit
       optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_destroywidgets, ow_fontglyphheight]
@@ -211,9 +212,9 @@ object mainfo: tmainfo
       frame.dummy = 0
       taborder = 2
       visible = False
-      optionsedit = [oe_undoonesc, oe_closequery, oe_checkmrcancel, oe_exitoncursor, oe_shiftreturn, oe_eatreturn, oe_resetselectonexit, oe_endonenter, oe_autoselect, oe_autoselectonfirstclick, oe_autopost, oe_autopopupmenu, oe_keyexecute, oe_savevalue, oe_savestate]
       datafield = 'fldFloat'
       datasource = ds
+      optionsdb = [oed_autopost]
       formatedit = '0.00'
       formatdisp = '0.00'
       reffontheight = 14
