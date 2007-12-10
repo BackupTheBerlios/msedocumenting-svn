@@ -10,10 +10,13 @@ order7=0
 order8=0
 order9=0
 order10=0
+order11=0
+order12=0
+order13=0
 [projectoptions]
-projectdir=/home/extrahd1/simplestringgrid
-projectfilename=/home/extrahd1/simplestringgrid/simplestrgrid.prj
-options=41
+projectdir=/home/mse/packs/standard/svn/msedocumenting/mse/trunk/help/tutorials/grids/simplestringgrid
+projectfilename=/home/mse/packs/standard/svn/msedocumenting/mse/trunk/help/tutorials/grids/simplestringgrid/simplestrgrid.prj
+options=57
  [projectoptionsfo]
  stackedunder=
  x=151
@@ -22,7 +25,26 @@ options=41
  cy=572
  [projectoptionsfo.tabwidget]
  firsttab=0
- index=2
+ index=0
+ [projectoptionsfo.ttabwidget2]
+ firsttab=0
+ index=1
+ [projectoptionsfo.filefiltergrid]
+ width0=112
+ width1=673
+ [projectoptionsfo.grid]
+ width1=566
+ [projectoptionsfo.ttabwidget1]
+ firsttab=0
+ index=0
+ [projectoptionsfo.exceptionsgrid]
+ width0=47
+ values1=1
+  EconvertError
+ width1=766
+ [projectoptionsfo.makegroupbox]
+ firsttab=0
+ index=0
  [projectoptionsfo.macrogrid]
  width0=13
  width1=13
@@ -42,19 +64,16 @@ options=41
  width1=684
  values2=0
  width2=30
- [projectoptionsfo.grid]
- width0=231
- [projectoptionsfo.makesplitter]
- x=0
- y=161
- [projectoptionsfo.ttabwidget1]
+ [projectoptionsfo.newfile]
  firsttab=0
  index=0
- [projectoptionsfo.exceptionsgrid]
- width0=47
- values1=1
-  EconvertError
- width1=764
+ [projectoptionsfo.twidgetgrid3]
+ width0=13
+ width1=13
+ width2=13
+ width3=141
+ width4=290
+ width5=320
 sigsettings=27
  1,1,T,F
  3,3,T,F
@@ -94,7 +113,7 @@ modulenames=1
 moduletypes=1
  TMAINFO
 modulefiles=1
- /home/extrahd1/simplestringgrid/main.mfm
+ /home/mse/packs/standard/svn/msedocumenting/mse/trunk/help/tutorials/grids/simplestringgrid/main.mfm
 mainfile=${PROJECTNAME}.pas
 targetfile=${PROJECTNAME}${EXEEXT}
 messageoutputfile=
@@ -171,8 +190,48 @@ toolparams=0
 fontalias=0
 fontnames=0
 fontheights=0
-usercolors=0
-usercolorcomment=0
+usercolors=20
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+usercolorcomment=20
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 showgrid=1
 snaptogrid=1
 moveonfirstclick=1
@@ -183,7 +242,7 @@ rightmarginchars=80
 tabstops=4
 spacetabs=0
 editfontname=mseide_source
-editfontheight=0
+editfontheight=14
 editfontwidth=0
 editfontextraspace=0
 editfontantialiased=1
@@ -253,10 +312,10 @@ files=
 windowlayout=312
  [mainfo]
  stackedunder=
- x=1
- y=235
- cx=429
- cy=138
+ x=4
+ y=20
+ cx=299
+ cy=66
  wsize=0
  active=1
  visible=1
@@ -284,7 +343,7 @@ windowlayout=312
  ncy=0
  x=0
  y=0
- cx=724
+ cx=917
  cy=491
  [debuggerfo]
  splitdir=0
@@ -298,8 +357,8 @@ windowlayout=312
  ncy=0
  x=0
  y=0
- cx=429
- cy=98
+ cx=299
+ cy=30
  [componentpalettefo]
  splitdir=0
  useroptions=3099
@@ -313,12 +372,12 @@ windowlayout=312
  x=335
  y=41
  cx=440
- cy=129
+ cy=75
  wsize=0
  active=0
  visible=1
  [componentpalettefo.componentpages]
- activetab=1
+ activetab=2
  [messagefo]
  splitdir=0
  useroptions=6171
@@ -331,12 +390,12 @@ windowlayout=312
  ncy=0
  x=0
  y=411
- cx=724
+ cx=917
  cy=80
  [watchfo]
  splitdir=0
  useroptions=3099
- stackedunder=disassfo
+ stackedunder=breakpointsfo
  parent=
  mdistate=0
  nx=0
@@ -362,14 +421,14 @@ windowlayout=312
  [objectinspectorfo]
  splitdir=0
  useroptions=2075
- stackedunder=targetconsolefo
+ stackedunder=mainfo
  parent=
  mdistate=0
  nx=0
  ny=0
  ncx=0
  ncy=0
- x=882
+ x=703
  y=144
  cx=316
  cy=484
@@ -377,12 +436,12 @@ windowlayout=312
  active=0
  visible=1
  [objectinspectorfo.grid]
- width0=107
- width1=193
+ width0=102
+ width1=198
  [breakpointsfo]
  splitdir=0
  useroptions=2075
- stackedunder=projecttreefo
+ stackedunder=stackfo
  parent=
  mdistate=0
  nx=0
@@ -401,7 +460,7 @@ windowlayout=312
  [watchpointsfo]
  splitdir=0
  useroptions=2075
- stackedunder=stackfo
+ stackedunder=projecttreefo
  parent=
  mdistate=0
  nx=0
@@ -467,7 +526,7 @@ windowlayout=312
  [findinfilefo]
  splitdir=0
  useroptions=2075
- stackedunder=componentpalettefo
+ stackedunder=mainfo.panel1
  parent=
  mdistate=0
  nx=0
@@ -481,7 +540,7 @@ windowlayout=312
  [cpufo]
  splitdir=0
  useroptions=2075
- stackedunder=threadsfo
+ stackedunder=disassfo
  parent=
  mdistate=0
  nx=0
@@ -498,7 +557,7 @@ windowlayout=312
  [disassfo]
  splitdir=0
  useroptions=2075
- stackedunder=breakpointsfo
+ stackedunder=threadsfo
  parent=
  mdistate=0
  nx=0
@@ -515,7 +574,7 @@ windowlayout=312
  [threadsfo]
  splitdir=0
  useroptions=2075
- stackedunder=watchfo
+ stackedunder=watchpointsfo
  parent=
  mdistate=0
  nx=0
@@ -532,7 +591,7 @@ windowlayout=312
  [targetconsolefo]
  splitdir=0
  useroptions=2075
- stackedunder=mainfo.panel1
+ stackedunder=componentpalettefo
  parent=
  mdistate=0
  nx=0
@@ -556,9 +615,9 @@ windowlayout=312
  ny=0
  ncx=0
  ncy=0
- x=1
+ x=4
  y=196
- cx=734
+ cx=927
  cy=491
  wsize=0
  active=0
@@ -574,22 +633,27 @@ tabstops=4
 finddtext=
 findhistory=0
 findoptions=1
-editpos=2
+editpos=3
  0,-1073741823
- 47,74
+ 3,38
+ 66,7990
 bookmarks0=0
 bookmarks1=0
-sourcefiles=2
- /home/extrahd1/simplestringgrid/simplestrgrid.pas
- /home/extrahd1/simplestringgrid/main.pas
-relpaths=2
+bookmarks2=0
+sourcefiles=3
+ /home/mse/packs/standard/svn/msedocumenting/mse/trunk/help/tutorials/grids/simplestringgrid/simplestrgrid.pas
+ /home/mse/packs/standard/svn/msedocumenting/mse/trunk/help/tutorials/grids/simplestringgrid/main.pas
+ /home/mse/test/msegui/lib/common/kernel/msegui.pas
+relpaths=3
  simplestrgrid.pas
  main.pas
-ismoduletexts=2
+ ../../../../../../../../../../test/msegui/lib/common/kernel/msegui.pas
+ismoduletexts=3
+ 0
  0
  0
 modules=1
- /home/extrahd1/simplestringgrid/main.mfm
+ /home/mse/packs/standard/svn/msedocumenting/mse/trunk/help/tutorials/grids/simplestringgrid/main.mfm
 visiblemodules=1
  1
 [sourcefo.tabwidget]
