@@ -18,7 +18,7 @@ object barfo: tbarfo
   moduleclassname = 'tmseform'
   object bar: tprogressbar
     bounds_x = 8
-    bounds_y = -1
+    bounds_y = 2
     bounds_cy = 41
     frame.levelo = -2
     frame.framewidth = 1
@@ -79,7 +79,7 @@ object barfo: tbarfo
   end
   object tbutton1: tbutton
     bounds_x = 80
-    bounds_y = 50
+    bounds_y = 53
     bounds_cx = 50
     bounds_cy = 20
     taborder = 1

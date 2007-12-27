@@ -30,6 +30,10 @@ begin
   application.lock;
   try
    bar.value:= i/cnt;
+   //tprogressbar.value is thread safe.
+   //calling application.lock/unlock is
+   //actually not necessary if you don't access other GUI
+   //elements.
   finally
    application.unlock;
   end; 
