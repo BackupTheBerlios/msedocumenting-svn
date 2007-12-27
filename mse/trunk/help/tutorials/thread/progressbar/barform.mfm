@@ -19,7 +19,7 @@ object barfo: tbarfo
   object bar: tprogressbar
     bounds_x = 8
     bounds_y = -1
-    bounds_cy = 37
+    bounds_cy = 41
     frame.levelo = -2
     frame.framewidth = 1
     frame.colorframe = -1610612734
@@ -61,8 +61,12 @@ object barfo: tbarfo
       -1610612727
     )
     bar_face.fade_direction = gd_up
+    bar_face.fade_transparency = 8421376
     bar_face.localprops = [fal_fadirection, fal_fatransparency]
     bar_face.dummy = 0
+    bar_frame.framei_top = 2
+    bar_frame.framei_bottom = 2
+    bar_frame.localprops = [frl_fileft, frl_fitop, frl_firight, frl_fibottom]
     bar_frame.dummy = 0
     valuescale =  1.0000000000000000E-0002
     font.color = -1610612730
@@ -75,7 +79,7 @@ object barfo: tbarfo
   end
   object tbutton1: tbutton
     bounds_x = 80
-    bounds_y = 48
+    bounds_y = 50
     bounds_cx = 50
     bounds_cy = 20
     taborder = 1
