@@ -1,0 +1,61 @@
+object mainfo: tmainfo
+  optionswidget = [ow_arrowfocus, ow_subfocus, ow_destroywidgets, ow_hinton, ow_autoscale]
+  bounds_x = 226
+  bounds_y = 224
+  bounds_cx = 403
+  bounds_cy = 280
+  taborder = 1
+  container.optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_subfocus, ow_mousetransparent, ow_destroywidgets, ow_autoscale]
+  container.bounds_x = 0
+  container.bounds_y = 0
+  container.bounds_cx = 403
+  container.bounds_cy = 280
+  container.frame.dummy = 0
+  optionswindow = [wo_groupleader]
+  options = [fo_main, fo_terminateonclose, fo_autoreadstat, fo_autowritestat, fo_savepos, fo_savestate]
+  moduleclassname = 'tmseform'
+  object chartrec: tchartrecorder
+    bounds_x = 0
+    bounds_y = 0
+    bounds_cx = 403
+    bounds_cy = 280
+    frame.framei_left = 30
+    frame.framei_top = 10
+    frame.framei_bottom = 10
+    frame.localprops = [frl_fileft, frl_fitop, frl_firight, frl_fibottom]
+    frame.dummy = 0
+    anchors = []
+    samplecount = 300
+    traces.count = 1
+    traces.items = <    
+      item
+        offset = -1.0000000000000000E+0000
+        range =  2.0000000000000000E+0000
+      end>
+    dialhorz.widthmm =  2.9999999999999999E-0001
+    dialhorz.range =  1.0000000000000000E+0000
+    dialhorz.ticks.count = 1
+    dialhorz.ticks.items = <    
+      item
+        color = -1610612733
+        intervalcount =  1.0000000000000000E+0001
+      end>
+    dialvert.widthmm =  2.9999999999999999E-0001
+    dialvert.offset = -1.0000000000000000E+0000
+    dialvert.range =  2.0000000000000000E+0000
+    dialvert.ticks.count = 1
+    dialvert.ticks.items = <    
+      item
+        color = -1610612733
+        caption = '0.0'
+        intervalcount =  1.0000000000000000E+0001
+      end>
+  end
+  object ttimer1: ttimer
+    interval = 50000
+    ontimer = ti
+    enabled = True
+    left = 80
+    top = 96
+  end
+end
