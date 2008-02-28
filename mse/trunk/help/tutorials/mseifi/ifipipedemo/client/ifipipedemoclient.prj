@@ -14,8 +14,8 @@ order11=0
 order12=0
 order13=0
 [projectoptions]
-projectdir=/E:/msedocumenting/mse/trunk/help/tutorials/mseifi/ifipipedemo/client
-projectfilename=/E:/msedocumenting/mse/trunk/help/tutorials/mseifi/ifipipedemo/client/ifipipedemoclient.prj
+projectdir=/home/mse/packs/standard/svn/msedocumenting/mse/trunk/help/tutorials/mseifi/ifipipedemo/client
+projectfilename=/home/mse/packs/standard/svn/msedocumenting/mse/trunk/help/tutorials/mseifi/ifipipedemo/client/ifipipedemoclient.prj
 findinfiledialog=30
  [findinfileadialogfo]
  stackedunder=
@@ -158,9 +158,12 @@ exceptclassnames=1
  EconvertError
 exceptignore=1
  0
-modulenames=0
-moduletypes=0
-modulefiles=0
+modulenames=1
+ MAINFO
+moduletypes=1
+ TMAINFO
+modulefiles=1
+ /home/mse/packs/standard/svn/msedocumenting/mse/trunk/help/tutorials/mseifi/ifipipedemo/client/main.mfm
 mainfile=${projectname}.pas
 targetfile=${projectname}${exeext}
 messageoutputfile=
@@ -376,10 +379,10 @@ files=
  a=0,4132,0,Files
  )
 [componentstore]
-storedir=/C:/proj/mseide-msegui/trunk/apps/ide/compstore/
+storedir=/home/mse/packs/standard/svn/mse/trunk/apps/ide/compstore/
 filename=/c:/proj/mseide-msegui/trunk/apps/ide/compstore/default.stg
 [layout]
-windowlayout=363
+windowlayout=364
  [mainfo]
  stackedunder=
  x=10
@@ -393,8 +396,10 @@ windowlayout=363
  splitdir=2
  useroptions=6048
  [mainfo.openfile]
- filenames=0
+ filenames=1
+  /home/mse/packs/standard/svn/msedocumenting/mse/trunk/help/tutorials/mseifi/ifipipedemo/client/main.pas
  filehistory=10
+  /home/mse/packs/standard/svn/msedocumenting/mse/trunk/help/tutorials/mseifi/ifipipedemo/client/main.pas
   /C:/proj/mseide-msegui/trunk/lib/common/widgets/msegrids.pas
   /C:/proj/mseide-msegui/trunk/lib/common/ifi/msesockets.pas
   /C:/proj/mseide-msegui/trunk/lib/common/kernel/msepipestream.pas
@@ -404,7 +409,6 @@ windowlayout=363
   /C:/proj/mseide-msegui/trunk/lib/common/ifi/mseifigui.pas
   /C:/proj/mseide-msegui/trunk/lib/common/ifi/mseifilink.pas
   /C:/proj/mseide-msegui/trunk/lib/common/editwidgets/msedataedits.pas
-  /C:/proj/mseide-msegui/trunk/lib/common/kernel/i386-win32/mseguiintf.pas
  filefilterindex=0
  filecolwidth=174
  [actionsmo.watchesonact]
@@ -438,11 +442,11 @@ windowlayout=363
  x=0
  y=0
  cx=286
- cy=40
+ cy=36
  [componentpalettefo]
  splitdir=0
  useroptions=3099
- stackedunder=threadsfo
+ stackedunder=mainfo.panel1
  parent=
  mdistate=0
  nx=0
@@ -452,7 +456,7 @@ windowlayout=363
  x=335
  y=24
  cx=440
- cy=129
+ cy=89
  wsize=0
  active=0
  visible=1
@@ -461,7 +465,7 @@ windowlayout=363
  [componentstorefo]
  splitdir=0
  useroptions=3097
- stackedunder=breakpointsfo
+ stackedunder=projecttreefo
  parent=
  mdistate=0
  nx=0
@@ -510,7 +514,7 @@ windowlayout=363
  [watchfo]
  splitdir=0
  useroptions=3099
- stackedunder=mainfo.panel1
+ stackedunder=componentpalettefo
  parent=
  mdistate=0
  nx=0
@@ -542,7 +546,7 @@ windowlayout=363
  [objectinspectorfo]
  splitdir=0
  useroptions=2075
- stackedunder=targetconsolefo
+ stackedunder=formdesignerfo
  parent=
  mdistate=0
  nx=0
@@ -557,12 +561,12 @@ windowlayout=363
  active=0
  visible=1
  [objectinspectorfo.grid]
- width0=79
- width1=221
+ width0=75
+ width1=210
  [breakpointsfo]
  splitdir=0
  useroptions=2075
- stackedunder=projecttreefo
+ stackedunder=targetconsolefo
  parent=
  mdistate=0
  nx=0
@@ -647,7 +651,7 @@ windowlayout=363
  [findinfilefo]
  splitdir=0
  useroptions=2075
- stackedunder=objectinspectorfo
+ stackedunder=breakpointsfo
  parent=
  mdistate=0
  nx=0
@@ -712,7 +716,7 @@ windowlayout=363
  [targetconsolefo]
  splitdir=0
  useroptions=2075
- stackedunder=componentpalettefo
+ stackedunder=threadsfo
  parent=
  mdistate=0
  nx=0
@@ -729,7 +733,7 @@ windowlayout=363
  [mainfo.panel1]
  splitdir=2
  useroptions=4091
- stackedunder=mainfo
+ stackedunder=objectinspectorfo
  parent=
  mdistate=0
  nx=0
@@ -737,7 +741,7 @@ windowlayout=363
  ncx=0
  ncy=0
  x=16
- y=186
+ y=184
  cx=838
  cy=535
  wsize=0
@@ -763,16 +767,28 @@ findhistory=9
  msewithifi
  ifi
 findoptions=1
-editpos=0
-sourcefiles=0
-relpaths=0
-ismoduletexts=0
-modules=0
-visiblemodules=0
+editpos=2
+ 0,0
+ 0,727
+bookmarks0=0
+bookmarks1=0
+sourcefiles=2
+ /home/mse/packs/standard/svn/msedocumenting/mse/trunk/help/tutorials/mseifi/ifipipedemo/client/main.pas
+ /home/mse/packs/standard/svn/mse/trunk/lib/common/kernel/msestream.pas
+relpaths=2
+ main.pas
+ ../../../../../../../../mse/trunk/lib/common/kernel/msestream.pas
+ismoduletexts=2
+ 0
+ 0
+modules=1
+ /home/mse/packs/standard/svn/msedocumenting/mse/trunk/help/tutorials/mseifi/ifipipedemo/client/main.mfm
+visiblemodules=1
+ 1
 [sourcefo.tabwidget]
 tabsize=134
 firsttab=0
-index=-1
+index=1
 [components]
 [selecteditpage]
 colwidth=100

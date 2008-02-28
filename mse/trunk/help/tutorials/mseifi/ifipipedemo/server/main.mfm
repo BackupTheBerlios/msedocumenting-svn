@@ -21,14 +21,14 @@ object mainfo: tmainfo
   object tdbstringgrid1: tdbstringgrid
     optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_focusbackonesc, ow_mousewheel, ow_destroywidgets, ow_fontglyphheight, ow_autoscale]
     bounds_x = 8
-    bounds_y = 47
+    bounds_y = 46
     bounds_cx = 304
-    bounds_cy = 189
+    bounds_cy = 190
     frame.caption = 'Dataset'
     frame.dummy = 0
     frame.outerframe = (
       0
-      17
+      18
       0
       0
     )
@@ -40,15 +40,15 @@ object mainfo: tmainfo
     datacols.count = 3
     datacols.items = <    
       item
-        width = 140
+        width = 160
         datafield = 'queryField1'
       end    
       item
-        width = 70
+        width = 80
         datafield = 'string2'
       end    
       item
-        width = 70
+        width = 80
         datafield = 'integer1'
         textflags = [tf_right, tf_ycentered, tf_noselect]
       end>
@@ -61,7 +61,7 @@ object mainfo: tmainfo
     fixrows.count = 1
     fixrows.items = <    
       item
-        height = 16
+        height = 17
         captions.count = 3
         captions.items = <        
           item
@@ -74,60 +74,60 @@ object mainfo: tmainfo
             caption = 'integer1'
           end>
       end>
-    datarowheight = 16
+    datarowheight = 17
     statfile = tstatfile1
-    reffontheight = 14
+    reffontheight = 15
   end
   object prociddisp: tintegerdisp
     bounds_x = 294
-    bounds_y = 8
+    bounds_y = 7
     bounds_cx = 44
-    bounds_cy = 35
+    bounds_cy = 37
     frame.caption = 'ProcID'
     frame.dummy = 0
     frame.outerframe = (
       0
-      17
+      18
       0
       0
     )
     textflags = [tf_xcentered, tf_right, tf_ycentered]
-    reffontheight = 14
+    reffontheight = 15
   end
   object tstringedit1: tstringedit
     optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_destroywidgets, ow_fontglyphheight, ow_autoscale]
     bounds_x = 8
-    bounds_y = 7
+    bounds_y = 6
     bounds_cx = 100
-    bounds_cy = 37
+    bounds_cy = 39
     frame.caption = 'Editwidget'
     frame.dummy = 0
     frame.outerframe = (
       0
-      17
+      18
       0
       0
     )
     taborder = 1
-    reffontheight = 14
+    reffontheight = 15
   end
   object buttondisp: tstringdisp
     bounds_x = 178
     bounds_y = 25
     bounds_cx = 108
-    bounds_cy = 18
+    bounds_cy = 19
     frame.dummy = 0
     taborder = 2
     font.color = -1610612730
     font.name = 'stf_default'
-    font.xscale =  1.0000000000000000E+0000
+    font.xscale = 1.00000000000000000
     font.dummy = 0
     textflags = [tf_xcentered, tf_ycentered]
-    reffontheight = 14
+    reffontheight = 15
   end
   object tbutton1: tbutton
     bounds_x = 120
-    bounds_y = 24
+    bounds_y = 25
     bounds_cx = 50
     bounds_cy = 19
     taborder = 3
