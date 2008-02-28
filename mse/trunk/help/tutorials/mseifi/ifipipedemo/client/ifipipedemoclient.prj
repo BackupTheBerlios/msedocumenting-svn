@@ -13,10 +13,9 @@ order10=0
 order11=0
 order12=0
 order13=0
-order14=0
 [projectoptions]
-projectdir=/home/mse/packs/standard/svn/msedocumenting/mse/trunk/help/tutorials/mseifi/ifipipedemo/client
-projectfilename=/home/mse/packs/standard/svn/msedocumenting/mse/trunk/help/tutorials/mseifi/ifipipedemo/client/ifipipedemoclient.prj
+projectdir=/E:/msedocumenting/mse/trunk/help/tutorials/mseifi/ifipipedemo/client
+projectfilename=/E:/msedocumenting/mse/trunk/help/tutorials/mseifi/ifipipedemo/client/ifipipedemoclient.prj
 findinfiledialog=30
  [findinfileadialogfo]
  stackedunder=
@@ -66,7 +65,7 @@ options=57
  cy=572
  [projectoptionsfo.tabwidget]
  firsttab=0
- index=1
+ index=2
  [projectoptionsfo.ttabwidget2]
  firsttab=0
  index=1
@@ -377,7 +376,7 @@ files=
  a=0,4132,0,Files
  )
 [componentstore]
-storedir=/home/mse/packs/standard/svn/mse/trunk/apps/ide/compstore/
+storedir=/C:/proj/mseide-msegui/trunk/apps/ide/compstore/
 filename=/c:/proj/mseide-msegui/trunk/apps/ide/compstore/default.stg
 [layout]
 windowlayout=363
@@ -439,7 +438,7 @@ windowlayout=363
  x=0
  y=0
  cx=286
- cy=38
+ cy=40
  [componentpalettefo]
  splitdir=0
  useroptions=3099

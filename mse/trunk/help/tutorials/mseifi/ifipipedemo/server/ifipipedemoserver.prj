@@ -13,10 +13,9 @@ order10=0
 order11=0
 order12=0
 order13=0
-order14=0
 [projectoptions]
-projectdir=/home/mse/packs/standard/svn/msedocumenting/mse/trunk/help/tutorials/mseifi/ifipipedemo/server
-projectfilename=/home/mse/packs/standard/svn/msedocumenting/mse/trunk/help/tutorials/mseifi/ifipipedemo/server/ifipipedemoserver.prj
+projectdir=/E:/msedocumenting/mse/trunk/help/tutorials/mseifi/ifipipedemo/server
+projectfilename=/E:/msedocumenting/mse/trunk/help/tutorials/mseifi/ifipipedemo/server/ifipipedemoserver.prj
 findinfiledialog=32
  [findinfileadialogfo]
  stackedunder=
@@ -68,7 +67,7 @@ options=57
  cy=572
  [projectoptionsfo.tabwidget]
  firsttab=0
- index=3
+ index=2
  [projectoptionsfo.ttabwidget2]
  firsttab=0
  index=1
@@ -386,18 +385,18 @@ files=
  a=0,4132,0,Files
  )
 [componentstore]
-storedir=/home/mse/packs/standard/svn/mse/trunk/apps/ide/compstore/
+storedir=/C:/proj/mseide-msegui/trunk/apps/ide/compstore/
 filename=/C:/test/msegui/apps/ide/compstore/default.stg
 [layout]
 windowlayout=359
  [mainfo]
- stackedunder=mainfo.panel1
+ stackedunder=
  x=738
  y=31
  cx=277
  cy=70
  wsize=0
- active=0
+ active=1
  visible=1
  [mainfo.basedock]
  splitdir=2
@@ -434,7 +433,7 @@ windowlayout=359
  x=0
  y=0
  cx=799
- cy=510
+ cy=609
  [debuggerfo]
  splitdir=0
  useroptions=3099
@@ -448,11 +447,11 @@ windowlayout=359
  x=0
  y=0
  cx=277
- cy=34
+ cy=36
  [componentpalettefo]
  splitdir=0
  useroptions=3099
- stackedunder=
+ stackedunder=watchfo
  parent=
  mdistate=0
  nx=0
@@ -507,7 +506,7 @@ windowlayout=359
  splitdir=0
  useroptions=6171
  parent=mainfo.panel1.container
- visible=1
+ visible=0
  mdistate=0
  nx=0
  ny=0
@@ -520,7 +519,7 @@ windowlayout=359
  [watchfo]
  splitdir=0
  useroptions=3099
- stackedunder=
+ stackedunder=objectinspectorfo
  parent=
  mdistate=0
  nx=0
@@ -542,9 +541,9 @@ windowlayout=359
   avalue.fname
  width1=152
  values2=3
-  No symbol table is loaded.  Use the "file" command.
-  No symbol table is loaded.  Use the "file" command.
-  No symbol table is loaded.  Use the "file" command.
+  
+  
+  
  [watchfo.watchon]
  [watchfo.expression]
  [watchfo.watcheson]
@@ -552,7 +551,7 @@ windowlayout=359
  [objectinspectorfo]
  splitdir=0
  useroptions=2075
- stackedunder=
+ stackedunder=stackfo
  parent=
  mdistate=0
  nx=0
@@ -619,7 +618,7 @@ windowlayout=359
  [stackfo]
  splitdir=0
  useroptions=2075
- stackedunder=
+ stackedunder=threadsfo
  parent=
  mdistate=0
  nx=0
@@ -701,7 +700,7 @@ windowlayout=359
  [threadsfo]
  splitdir=0
  useroptions=2075
- stackedunder=
+ stackedunder=mainfo.panel1
  parent=
  mdistate=0
  nx=0
@@ -735,7 +734,7 @@ windowlayout=359
  [mainfo.panel1]
  splitdir=2
  useroptions=4091
- stackedunder=
+ stackedunder=mainfo
  parent=
  mdistate=0
  nx=0
@@ -747,7 +746,7 @@ windowlayout=359
  cx=809
  cy=609
  wsize=0
- active=1
+ active=0
  visible=1
 [edit]
 hintwidth=0
