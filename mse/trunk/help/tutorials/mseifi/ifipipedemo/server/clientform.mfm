@@ -1,13 +1,13 @@
 object clientfo: tclientfo
-  bounds_x = 23
-  bounds_y = 376
-  bounds_cx = 372
-  bounds_cy = 241
+  bounds_x = 20
+  bounds_y = 378
+  bounds_cx = 380
+  bounds_cy = 242
   taborder = 1
   container.optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_subfocus, ow_mousetransparent, ow_mousewheel, ow_destroywidgets, ow_autoscale]
   container.bounds_x = 0
-  container.bounds_y = 26
-  container.bounds_cx = 372
+  container.bounds_y = 27
+  container.bounds_cx = 380
   container.bounds_cy = 215
   container.frame.dummy = 0
   optionswindow = [wo_windowcentermessage]
@@ -18,22 +18,22 @@ object clientfo: tclientfo
   object tstringedit1: tstringedit
     optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_destroywidgets, ow_fontglyphheight, ow_autoscale]
     bounds_x = 8
-    bounds_y = 0
+    bounds_y = 1
     bounds_cx = 100
-    bounds_cy = 35
+    bounds_cy = 37
     frame.caption = 'Editwidget'
     frame.dummy = 0
     frame.outerframe = (
       0
-      16
+      17
       0
       0
     )
-    reffontheight = 13
+    reffontheight = 14
   end
   object tbutton1: tbutton
     bounds_x = 118
-    bounds_y = 16
+    bounds_y = 18
     bounds_cx = 50
     bounds_cy = 19
     taborder = 1
@@ -43,29 +43,29 @@ object clientfo: tclientfo
   end
   object buttondisp: tstringdisp
     bounds_x = 176
-    bounds_y = 17
-    bounds_cx = 76
-    bounds_cy = 17
+    bounds_y = 19
+    bounds_cx = 92
+    bounds_cy = 18
     frame.dummy = 0
     taborder = 2
     font.color = -1610612730
     font.name = 'stf_default'
-    font.xscale = 1.00000000000000000
+    font.xscale =  1.0000000000000000E+0000
     font.dummy = 0
     textflags = [tf_xcentered, tf_ycentered]
-    reffontheight = 13
+    reffontheight = 14
   end
   object tdbstringgrid1: tdbstringgrid
     optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_focusbackonesc, ow_mousewheel, ow_destroywidgets, ow_fontglyphheight, ow_autoscale]
     bounds_x = 8
-    bounds_y = 40
-    bounds_cx = 331
-    bounds_cy = 147
+    bounds_y = 39
+    bounds_cx = 337
+    bounds_cy = 148
     frame.caption = 'Dataset'
     frame.dummy = 0
     frame.outerframe = (
       0
-      16
+      17
       0
       0
     )
@@ -83,13 +83,13 @@ object clientfo: tclientfo
     fixrows.count = 1
     fixrows.items = <    
       item
-        height = 15
+        height = 16
       end>
-    datarowheight = 15
-    reffontheight = 13
+    datarowheight = 16
+    reffontheight = 14
   end
   object progressbar: tprogressbar
-    bounds_x = 347
+    bounds_x = 353
     bounds_y = 57
     bounds_cx = 20
     bounds_cy = 151
@@ -106,8 +106,8 @@ object clientfo: tclientfo
     direction = gd_up
     bar_face.fade_pos.count = 2
     bar_face.fade_pos.items = (
-      0.00000000000000000
-      1.00000000000000000
+       0.0000000000000000E+0000
+       1.0000000000000000E+0000
     )
     bar_face.fade_color.count = 2
     bar_face.fade_color.items = (
@@ -118,7 +118,7 @@ object clientfo: tclientfo
     bar_face.dummy = 0
     bar_frame.localprops = [frl_levelo, frl_fileft, frl_fitop, frl_firight, frl_fibottom]
     bar_frame.dummy = 0
-    valuescale = 0.01000000000000000
+    valuescale =  1.0000000000000000E-0002
     format = ''
   end
   object tdbnavigator1: tdbnavigator
@@ -130,6 +130,7 @@ object clientfo: tclientfo
     frame.leveli = 1
     frame.localprops = [frl_levelo, frl_leveli]
     frame.dummy = 0
+    anchors = [an_left, an_bottom]
     taborder = 5
     datasource = datasource
     buttonface.template = fadehorzconcave
@@ -270,8 +271,8 @@ object clientfo: tclientfo
   object fadecontainer: tfacecomp
     template.fade_pos.count = 2
     template.fade_pos.items = (
-      0.00000000000000000
-      1.00000000000000000
+       0.0000000000000000E+0000
+       1.0000000000000000E+0000
     )
     template.fade_color.count = 2
     template.fade_color.items = (
@@ -284,8 +285,8 @@ object clientfo: tclientfo
   object fadehorzconcave: tfacecomp
     template.fade_pos.count = 2
     template.fade_pos.items = (
-      0.00000000000000000
-      1.00000000000000000
+       0.0000000000000000E+0000
+       1.0000000000000000E+0000
     )
     template.fade_color.count = 2
     template.fade_color.items = (
@@ -299,8 +300,8 @@ object clientfo: tclientfo
   object fadevertconcave: tfacecomp
     template.fade_pos.count = 2
     template.fade_pos.items = (
-      0.00000000000000000
-      1.00000000000000000
+       0.0000000000000000E+0000
+       1.0000000000000000E+0000
     )
     template.fade_color.count = 2
     template.fade_color.items = (
@@ -333,8 +334,8 @@ object clientfo: tclientfo
   object fadehorzconvex: tfacecomp
     template.fade_pos.count = 2
     template.fade_pos.items = (
-      0.00000000000000000
-      1.00000000000000000
+       0.0000000000000000E+0000
+       1.0000000000000000E+0000
     )
     template.fade_color.count = 2
     template.fade_color.items = (
@@ -347,8 +348,8 @@ object clientfo: tclientfo
   object fadevertkonvex: tfacecomp
     template.fade_pos.count = 2
     template.fade_pos.items = (
-      0.00000000000000000
-      1.00000000000000000
+       0.0000000000000000E+0000
+       1.0000000000000000E+0000
     )
     template.fade_color.count = 2
     template.fade_color.items = (

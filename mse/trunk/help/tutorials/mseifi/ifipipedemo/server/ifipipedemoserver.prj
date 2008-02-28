@@ -13,9 +13,10 @@ order10=0
 order11=0
 order12=0
 order13=0
+order14=0
 [projectoptions]
-projectdir=/C:/proj/testcase/mse/ifipipedemo/server
-projectfilename=/C:/proj/testcase/mse/ifipipedemo/server/ifipipedemoserver.prj
+projectdir=/home/mse/packs/standard/svn/msedocumenting/mse/trunk/help/tutorials/mseifi/ifipipedemo/server
+projectfilename=/home/mse/packs/standard/svn/msedocumenting/mse/trunk/help/tutorials/mseifi/ifipipedemo/server/ifipipedemoserver.prj
 findinfiledialog=32
  [findinfileadialogfo]
  stackedunder=
@@ -67,7 +68,7 @@ options=57
  cy=572
  [projectoptionsfo.tabwidget]
  firsttab=0
- index=2
+ index=3
  [projectoptionsfo.ttabwidget2]
  firsttab=0
  index=1
@@ -167,17 +168,11 @@ exceptclassnames=1
  EconvertError
 exceptignore=1
  0
-modulenames=2
- CLIENTFO
- MAINFO
-moduletypes=2
- TCLIENTFO
- TMAINFO
-modulefiles=2
- /C:/proj/testcase/mse/ifipipedemo/server/clientform.mfm
- /C:/proj/testcase/mse/ifipipedemo/server/main.mfm
+modulenames=0
+moduletypes=0
+modulefiles=0
 mainfile=ifipipedemoserver.pas
-targetfile=ifipipedemoserver.exe
+targetfile=ifipipedemoserver${exeext}
 messageoutputfile=
 copymessages=0
 closemessages=1
@@ -188,7 +183,7 @@ debugoptions=
 debugtarget=
 defaultmake=1
 makeoptions=4
- -l -Mobjfpc -Sh ${fpcflags} -dmse_with_ifi
+ -l -Mobjfpc -Sh -dmse_with_ifi
  -gl
  -B
  -OG2p3 -XX -CX -Xs
@@ -197,21 +192,9 @@ makeoptionson=4
  31
  34
  32
-macroon=4
- 63
- 63
- 63
- 63
-macronames=4
- msedir
- fpcdir
- compiler
- fpcflags
-macrovalues=4
- /c:/proj/mseide-msegui/trunk/
- /e:/fpc/svn/fixes_2_2/
- ${fpcdir}compiler/ppc386.exe
- -dsvnfixes_2_2
+macroon=0
+macronames=0
+macrovalues=0
 macrogroup=0
 groupcomments=6
  
@@ -403,25 +386,24 @@ files=
  a=0,4132,0,Files
  )
 [componentstore]
-storedir=/c:/proj/mseide-msegui/trunk/apps/ide/compstore/
+storedir=/home/mse/packs/standard/svn/mse/trunk/apps/ide/compstore/
 filename=/C:/test/msegui/apps/ide/compstore/default.stg
 [layout]
-windowlayout=360
+windowlayout=359
  [mainfo]
- stackedunder=
+ stackedunder=mainfo.panel1
  x=738
  y=31
  cx=277
  cy=70
  wsize=0
- active=1
+ active=0
  visible=1
  [mainfo.basedock]
  splitdir=2
  useroptions=22432
  [mainfo.openfile]
- filenames=1
-  /C:/proj/testcase/mse/ifipipedemo/server/main.pas
+ filenames=0
  filehistory=10
   /C:/proj/testcase/mse/ifipipedemo/server/main.pas
   /C:/proj/mseide-msegui/trunk/lib/common/ifi/mseifids.pas
@@ -452,7 +434,7 @@ windowlayout=360
  x=0
  y=0
  cx=799
- cy=609
+ cy=510
  [debuggerfo]
  splitdir=0
  useroptions=3099
@@ -466,11 +448,11 @@ windowlayout=360
  x=0
  y=0
  cx=277
- cy=36
+ cy=34
  [componentpalettefo]
  splitdir=0
  useroptions=3099
- stackedunder=mainfo.panel1
+ stackedunder=
  parent=
  mdistate=0
  nx=0
@@ -483,13 +465,13 @@ windowlayout=360
  cy=103
  wsize=0
  active=0
- visible=1
+ visible=0
  [componentpalettefo.componentpages]
  activetab=5
  [componentstorefo]
  splitdir=0
  useroptions=3097
- stackedunder=watchpointsfo
+ stackedunder=findinfilefo
  parent=
  mdistate=0
  nx=0
@@ -525,7 +507,7 @@ windowlayout=360
  splitdir=0
  useroptions=6171
  parent=mainfo.panel1.container
- visible=0
+ visible=1
  mdistate=0
  nx=0
  ny=0
@@ -538,7 +520,7 @@ windowlayout=360
  [watchfo]
  splitdir=0
  useroptions=3099
- stackedunder=componentpalettefo
+ stackedunder=
  parent=
  mdistate=0
  nx=0
@@ -551,7 +533,7 @@ windowlayout=360
  cy=245
  wsize=0
  active=0
- visible=1
+ visible=0
  [watchfo.grid]
  width0=13
  values1=3
@@ -560,9 +542,9 @@ windowlayout=360
   avalue.fname
  width1=152
  values2=3
-  
-  
-  
+  No symbol table is loaded.  Use the "file" command.
+  No symbol table is loaded.  Use the "file" command.
+  No symbol table is loaded.  Use the "file" command.
  [watchfo.watchon]
  [watchfo.expression]
  [watchfo.watcheson]
@@ -570,27 +552,27 @@ windowlayout=360
  [objectinspectorfo]
  splitdir=0
  useroptions=2075
- stackedunder=mainfo
+ stackedunder=
  parent=
  mdistate=0
  nx=0
  ny=0
  ncx=0
  ncy=0
- x=634
+ x=630
  y=144
  cx=389
  cy=580
  wsize=0
  active=0
- visible=1
+ visible=0
  [objectinspectorfo.grid]
- width0=109
- width1=249
+ width0=113
+ width1=260
  [breakpointsfo]
  splitdir=0
  useroptions=2075
- stackedunder=cpufo
+ stackedunder=watchpointsfo
  parent=
  mdistate=0
  nx=0
@@ -637,7 +619,7 @@ windowlayout=360
  [stackfo]
  splitdir=0
  useroptions=2075
- stackedunder=watchfo
+ stackedunder=
  parent=
  mdistate=0
  nx=0
@@ -650,7 +632,7 @@ windowlayout=360
  cy=180
  wsize=0
  active=0
- visible=1
+ visible=0
  [projecttreefo]
  splitdir=0
  useroptions=27
@@ -671,7 +653,7 @@ windowlayout=360
  [findinfilefo]
  splitdir=0
  useroptions=2075
- stackedunder=threadsfo
+ stackedunder=breakpointsfo
  parent=
  mdistate=0
  nx=0
@@ -719,7 +701,7 @@ windowlayout=360
  [threadsfo]
  splitdir=0
  useroptions=2075
- stackedunder=stackfo
+ stackedunder=
  parent=
  mdistate=0
  nx=0
@@ -727,16 +709,16 @@ windowlayout=360
  ncx=0
  ncy=0
  x=22
- y=517
+ y=458
  cx=349
  cy=276
  wsize=0
  active=0
- visible=1
+ visible=0
  [targetconsolefo]
  splitdir=0
  useroptions=2075
- stackedunder=findinfilefo
+ stackedunder=componentpalettefo
  parent=
  mdistate=0
  nx=0
@@ -753,7 +735,7 @@ windowlayout=360
  [mainfo.panel1]
  splitdir=2
  useroptions=4091
- stackedunder=formdesignerfo
+ stackedunder=
  parent=
  mdistate=0
  nx=0
@@ -761,11 +743,11 @@ windowlayout=360
  ncx=0
  ncy=0
  x=210
- y=127
+ y=125
  cx=809
  cy=609
  wsize=0
- active=0
+ active=1
  visible=1
 [edit]
 hintwidth=0
@@ -788,136 +770,16 @@ findhistory=10
  execu
  beep
 findoptions=1
-editpos=23
- 0,0
- 0,-1073741823
- 0,0
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 51,8
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,0
-bookmarks0=0
-bookmarks1=0
-bookmarks2=0
-bookmarks3=0
-bookmarks4=0
-bookmarks5=0
-bookmarks6=0
-bookmarks7=1
- 370,1
-bookmarks8=0
-bookmarks9=0
-bookmarks10=0
-bookmarks11=0
-bookmarks12=0
-bookmarks13=0
-bookmarks14=0
-bookmarks15=0
-bookmarks16=0
-bookmarks17=0
-bookmarks18=0
-bookmarks19=0
-bookmarks20=0
-bookmarks21=0
-bookmarks22=0
-sourcefiles=23
- /C:/proj/mseide-msegui/trunk/lib/common/kernel/mseactions.pas
- /C:/proj/mseide-msegui/trunk/lib/common/kernel/mseapplication.pas
- /C:/proj/testcase/mse/ifipipedemo/server/main.pas
- /C:/proj/mseide-msegui/trunk/lib/common/ifi/msesockets.pas
- /C:/proj/mseide-msegui/trunk/lib/common/ifi/mseifi.pas
- /C:/proj/mseide-msegui/trunk/lib/common/kernel/msebintree.pas
- /C:/proj/testcase/mse/ifipipedemo/server/ifipipedemoserver.pas
- /C:/proj/mseide-msegui/trunk/lib/common/kernel/msepipestream.pas
- /C:/proj/testcase/mse/ifipipedemo/server/clientform.pas
- /C:/proj/mseide-msegui/trunk/lib/common/ifi/mseifilink.pas
- /C:/proj/mseide-msegui/trunk/lib/common/ifi/mseifigui.pas
- /C:/proj/mseide-msegui/trunk/lib/common/widgets/mseforms.pas
- /C:/proj/mseide-msegui/trunk/lib/common/dialogs/msepopupcalendar.pas
- /c:/proj/mseide-msegui/trunk/lib/common/kernel/msewidgets.pas
- /C:/proj/mseide-msegui/trunk/lib/common/kernel/msegui.pas
- /c:/proj/mseide-msegui/trunk/lib/common/kernel/msesysintf.inc
- /C:/proj/mseide-msegui/trunk/lib/common/kernel/i386-win32/msesysintf.pas
- /c:/proj/mseide-msegui/trunk/lib/common/kernel/msestream.pas
- /C:/proj/mseide-msegui/trunk/lib/common/editwidgets/msegraphedits.pas
- /c:/proj/mseide-msegui/trunk/lib/common/kernel/mseclasses.pas
- /e:/fpc/svn/fixes_2_2/rtl/inc/objpas.inc
- /C:/proj/mseide-msegui/trunk/lib/common/ifi/mseifiglob.pas
- /C:/proj/mseide-msegui/trunk/lib/common/ifi/mseifids.pas
-relpaths=23
- ../../../../mseide-msegui/trunk/lib/common/kernel/mseactions.pas
- ../../../../mseide-msegui/trunk/lib/common/kernel/mseapplication.pas
- main.pas
- ../../../../mseide-msegui/trunk/lib/common/ifi/msesockets.pas
- ../../../../mseide-msegui/trunk/lib/common/ifi/mseifi.pas
- ../../../../mseide-msegui/trunk/lib/common/kernel/msebintree.pas
- ifipipedemoserver.pas
- ../../../../mseide-msegui/trunk/lib/common/kernel/msepipestream.pas
- clientform.pas
- ../../../../mseide-msegui/trunk/lib/common/ifi/mseifilink.pas
- ../../../../mseide-msegui/trunk/lib/common/ifi/mseifigui.pas
- ../../../../mseide-msegui/trunk/lib/common/widgets/mseforms.pas
- ../../../../mseide-msegui/trunk/lib/common/dialogs/msepopupcalendar.pas
- ../../../../mseide-msegui/trunk/lib/common/kernel/msewidgets.pas
- ../../../../mseide-msegui/trunk/lib/common/kernel/msegui.pas
- ../../../../mseide-msegui/trunk/lib/common/kernel/msesysintf.inc
- ../../../../mseide-msegui/trunk/lib/common/kernel/i386-win32/msesysintf.pas
- ../../../../mseide-msegui/trunk/lib/common/kernel/msestream.pas
- ../../../../mseide-msegui/trunk/lib/common/editwidgets/msegraphedits.pas
- ../../../../mseide-msegui/trunk/lib/common/kernel/mseclasses.pas
- ../../../../../../e:/fpc/svn/fixes_2_2/rtl/inc/objpas.inc
- ../../../../mseide-msegui/trunk/lib/common/ifi/mseifiglob.pas
- ../../../../mseide-msegui/trunk/lib/common/ifi/mseifids.pas
-ismoduletexts=23
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
-modules=2
- /C:/proj/testcase/mse/ifipipedemo/server/clientform.mfm
- /C:/proj/testcase/mse/ifipipedemo/server/main.mfm
-visiblemodules=2
- 1
- 1
+editpos=0
+sourcefiles=0
+relpaths=0
+ismoduletexts=0
+modules=0
+visiblemodules=0
 [sourcefo.tabwidget]
 tabsize=104
 firsttab=0
-index=2
+index=-1
 [components]
 [selecteditpage]
 colwidth=100

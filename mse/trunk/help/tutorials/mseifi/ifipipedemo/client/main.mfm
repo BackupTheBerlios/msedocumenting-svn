@@ -20,74 +20,73 @@ object mainfo: tmainfo
   object serverapp: tfilenameedit
     optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_destroywidgets, ow_fontglyphheight, ow_autoscale]
     bounds_x = 8
-    bounds_y = 12
+    bounds_y = 11
     bounds_cx = 260
-    bounds_cy = 35
+    bounds_cy = 37
     frame.caption = 'Server'
     frame.button.imagenr = 17
     frame.dummy = 0
     frame.outerframe = (
       0
-      16
+      17
       0
       0
     )
     anchors = [an_left, an_top, an_right]
     statfile = tstatfile1
-    value = './ifipipedemoserver.exe'
-    controller.filename = './ifipipedemoserver.exe'
     controller.lastdir = './'
-    reffontheight = 13
+    reffontheight = 14
   end
   object tbooleanedit1: tbooleanedit
     bounds_x = 9
-    bounds_y = 65
-    bounds_cx = 54
-    bounds_cy = 15
+    bounds_y = 67
+    bounds_cx = 59
+    bounds_cy = 16
     frame.caption = 'connect'
     frame.dummy = 0
     frame.outerframe = (
       0
       1
-      41
-      1
+      46
+      2
     )
     taborder = 1
     onsetvalue = setconnected
   end
   object prociddisp: tintegerdisp
     bounds_x = 216
-    bounds_y = 48
+    bounds_y = 49
     bounds_cx = 44
-    bounds_cy = 33
+    bounds_cy = 35
     frame.caption = 'ProcID'
     frame.dummy = 0
     frame.outerframe = (
       0
-      16
+      17
       0
       0
     )
     taborder = 2
     textflags = [tf_xcentered, tf_right, tf_ycentered]
-    reffontheight = 13
+    reffontheight = 14
   end
   object statedisp: tstringdisp
     bounds_x = 72
-    bounds_y = 64
+    bounds_y = 66
     bounds_cx = 132
-    bounds_cy = 17
+    bounds_cy = 18
     frame.dummy = 0
     taborder = 3
     font.style = [fs_bold]
     font.name = 'stf_default'
-    font.xscale = 1.00000000000000000
+    font.xscale =  1.0000000000000000E+0000
     font.dummy = 0
     textflags = [tf_xcentered, tf_ycentered]
-    reffontheight = 13
+    reffontheight = 14
   end
   object tstatfile1: tstatfile
     filename = 'client.sta'
+    onstatafterread = afterstatread
     left = 192
   end
   object channel: tpipeiochannel

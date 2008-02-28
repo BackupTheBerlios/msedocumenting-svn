@@ -22,6 +22,7 @@ type
    procedure afterconn(const sender: tcustomiochannel);
    procedure afterdisconn(const sender: tcustomiochannel);
    procedure cre(const sender: TObject);
+   procedure afterstatread(const sender: TObject);
  end;
 var
  mainfo: tmainfo;
@@ -62,6 +63,19 @@ end;
 procedure tmainfo.cre(const sender: TObject);
 begin
  prociddisp.value:= getprocessid;
+end;
+
+procedure tmainfo.afterstatread(const sender: TObject);
+begin
+ {$ifdef linux}
+ if serverapp.value = '' then begin
+  serverapp.value:= './ifipipedemoserver';
+ end;
+ {$else}
+ if serverapp.value = '' then begin
+  serverapp.value:= './ifipipedemoserver.exe';
+ end;
+ {$endif}
 end;
 
 initialization

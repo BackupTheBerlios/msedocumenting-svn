@@ -13,9 +13,10 @@ order10=0
 order11=0
 order12=0
 order13=0
+order14=0
 [projectoptions]
-projectdir=/C:/proj/testcase/mse/ifipipedemo/client
-projectfilename=/C:/proj/testcase/mse/ifipipedemo/client/ifipipedemoclient.prj
+projectdir=/home/mse/packs/standard/svn/msedocumenting/mse/trunk/help/tutorials/mseifi/ifipipedemo/client
+projectfilename=/home/mse/packs/standard/svn/msedocumenting/mse/trunk/help/tutorials/mseifi/ifipipedemo/client/ifipipedemoclient.prj
 findinfiledialog=30
  [findinfileadialogfo]
  stackedunder=
@@ -65,7 +66,7 @@ options=57
  cy=572
  [projectoptionsfo.tabwidget]
  firsttab=0
- index=2
+ index=1
  [projectoptionsfo.ttabwidget2]
  firsttab=0
  index=1
@@ -158,12 +159,9 @@ exceptclassnames=1
  EconvertError
 exceptignore=1
  0
-modulenames=1
- MAINFO
-moduletypes=1
- TMAINFO
-modulefiles=1
- /C:/proj/testcase/mse/ifipipedemo/client/main.mfm
+modulenames=0
+moduletypes=0
+modulefiles=0
 mainfile=${projectname}.pas
 targetfile=${projectname}${exeext}
 messageoutputfile=
@@ -176,7 +174,7 @@ debugoptions=
 debugtarget=
 defaultmake=1
 makeoptions=4
- -l -Mobjfpc -Sh ${fpcflags} -dmse_with_ifi
+ -l -Mobjfpc -Sh -dmse_with_ifi
  -gl
  -B
  -OG2p3 -CX -XX -Xs
@@ -185,21 +183,9 @@ makeoptionson=4
  31
  34
  32
-macroon=4
- 63
- 63
- 63
- 63
-macronames=4
- msedir
- fpcdir
- compiler
- fpcflags
-macrovalues=4
- /c:/proj/mseide-msegui/trunk/
- /e:/fpc/svn/fixes_2_2/
- ${fpcdir}compiler/ppc386.exe
- -dsvnfixes_2_2
+macroon=0
+macronames=0
+macrovalues=0
 macrogroup=0
 groupcomments=6
  
@@ -208,18 +194,7 @@ groupcomments=6
  
  
  
-sourcedirs=14
- /C:/FPC/svn/zeos/trunk/src/*/
- /C:/FPC/svn/zeos/trunk/src/
- /C:/proj/mseide-msegui/trunk/lib/mse/*/
- ${fpcdir}packages/fcl-db/src/
- ${fpcdir}rtl/objpas/sysutils/
- ${fpcdir}rtl/objpas/classes/
- ${fpcdir}rtl/objpas/
- ${fpcdir}rtl/win32/
- ${fpcdir}rtl/i386/
- ${fpcdir}rtl/inc/
- ${fpcdir}rtl/
+sourcedirs=3
  ${MSELIBDIR}kernel/$TARGET/
  ${MSELIBDIR}*/
  ./
@@ -402,7 +377,7 @@ files=
  a=0,4132,0,Files
  )
 [componentstore]
-storedir=/c:/proj/mseide-msegui/trunk/apps/ide/compstore/
+storedir=/home/mse/packs/standard/svn/mse/trunk/apps/ide/compstore/
 filename=/c:/proj/mseide-msegui/trunk/apps/ide/compstore/default.stg
 [layout]
 windowlayout=363
@@ -464,7 +439,7 @@ windowlayout=363
  x=0
  y=0
  cx=286
- cy=40
+ cy=38
  [componentpalettefo]
  splitdir=0
  useroptions=3099
@@ -487,7 +462,7 @@ windowlayout=363
  [componentstorefo]
  splitdir=0
  useroptions=3097
- stackedunder=cpufo
+ stackedunder=breakpointsfo
  parent=
  mdistate=0
  nx=0
@@ -536,7 +511,7 @@ windowlayout=363
  [watchfo]
  splitdir=0
  useroptions=3099
- stackedunder=objectinspectorfo
+ stackedunder=mainfo.panel1
  parent=
  mdistate=0
  nx=0
@@ -568,7 +543,7 @@ windowlayout=363
  [objectinspectorfo]
  splitdir=0
  useroptions=2075
- stackedunder=formdesignerfo
+ stackedunder=targetconsolefo
  parent=
  mdistate=0
  nx=0
@@ -673,7 +648,7 @@ windowlayout=363
  [findinfilefo]
  splitdir=0
  useroptions=2075
- stackedunder=targetconsolefo
+ stackedunder=objectinspectorfo
  parent=
  mdistate=0
  nx=0
@@ -704,7 +679,7 @@ windowlayout=363
  [disassfo]
  splitdir=0
  useroptions=2075
- stackedunder=breakpointsfo
+ stackedunder=componentstorefo
  parent=
  mdistate=0
  nx=0
@@ -789,174 +764,16 @@ findhistory=9
  msewithifi
  ifi
 findoptions=1
-editpos=31
- 0,-1073741823
- 22,48
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 0,0
-bookmarks0=0
-bookmarks1=0
-bookmarks2=0
-bookmarks3=0
-bookmarks4=0
-bookmarks5=0
-bookmarks6=0
-bookmarks7=0
-bookmarks8=0
-bookmarks9=0
-bookmarks10=0
-bookmarks11=1
- 428,1
-bookmarks12=0
-bookmarks13=0
-bookmarks14=0
-bookmarks15=0
-bookmarks16=0
-bookmarks17=0
-bookmarks18=0
-bookmarks19=0
-bookmarks20=0
-bookmarks21=0
-bookmarks22=0
-bookmarks23=0
-bookmarks24=0
-bookmarks25=0
-bookmarks26=0
-bookmarks27=0
-bookmarks28=0
-bookmarks29=0
-bookmarks30=0
-sourcefiles=31
- /C:/proj/testcase/mse/ifipipedemo/client/ifipipedemoclient.pas
- /C:/proj/testcase/mse/ifipipedemo/client/main.pas
- /C:/proj/mseide-msegui/trunk/lib/common/editwidgets/msedataedits.pas
- /C:/proj/mseide-msegui/trunk/lib/common/ifi/mseifilink.pas
- /C:/proj/mseide-msegui/trunk/lib/common/ifi/mseifigui.pas
- /C:/proj/mseide-msegui/trunk/lib/common/editwidgets/mseedit.pas
- /C:/proj/mseide-msegui/trunk/lib/common/ifi/mseregificomp.pas
- /e:/fpc/svn/fixes_2_2/rtl/win32/classes.pp
- /e:/fpc/svn/fixes_2_2/rtl/objpas/classes/classesh.inc
- /e:/fpc/svn/fixes_2_2/rtl/inc/except.inc
- /e:/fpc/svn/fixes_2_2/rtl/objpas/classes/reader.inc
- /C:/proj/mseide-msegui/trunk/lib/common/ifi/mseifids.pas
- /e:/fpc/svn/fixes_2_2/rtl/objpas/classes/collect.inc
- /e:/fpc/svn/fixes_2_2/rtl/i386/i386.inc
- /C:/proj/mseide-msegui/trunk/lib/common/kernel/mseclasses.pas
- /C:/proj/mseide-msegui/trunk/lib/common/ifi/mseifi.pas
- /C:/proj/mseide-msegui/trunk/lib/common/kernel/msestream.pas
- /C:/proj/mseide-msegui/trunk/lib/common/kernel/i386-win32/msesysintf.pas
- /c:/proj/mseide-msegui/trunk/lib/common/sysutils/mseprocutils.pas
- /C:/proj/mseide-msegui/trunk/lib/common/editwidgets/msegraphedits.pas
- /C:/proj/mseide-msegui/trunk/lib/common/kernel/msegui.pas
- /C:/proj/mseide-msegui/trunk/lib/common/widgets/mseforms.pas
- /c:/proj/mseide-msegui/trunk/lib/common/kernel/i386-win32/mseguiintf.pas
- /c:/proj/mseide-msegui/trunk/lib/common/kernel/mseevent.pas
- /C:/proj/mseide-msegui/trunk/lib/common/kernel/mseapplication.pas
- /C:/proj/mseide-msegui/trunk/lib/common/ifi/msesockets.pas
- /e:/fpc/svn/fixes_2_2/rtl/objpas/classes/streams.inc
- /e:/fpc/svn/fixes_2_2/rtl/inc/systemh.inc
- /C:/proj/mseide-msegui/trunk/lib/common/widgets/msegrids.pas
- /c:/proj/mseide-msegui/trunk/lib/common/kernel/msepipestream.pas
- /e:/fpc/svn/fixes_2_2/packages/fcl-db/src/db.pas
-relpaths=31
- ifipipedemoclient.pas
- main.pas
- ../../../../mseide-msegui/trunk/lib/common/editwidgets/msedataedits.pas
- ../../../../mseide-msegui/trunk/lib/common/ifi/mseifilink.pas
- ../../../../mseide-msegui/trunk/lib/common/ifi/mseifigui.pas
- ../../../../mseide-msegui/trunk/lib/common/editwidgets/mseedit.pas
- ../../../../mseide-msegui/trunk/lib/common/ifi/mseregificomp.pas
- ../../../../../../e:/fpc/svn/fixes_2_2/rtl/win32/classes.pp
- ../../../../../../e:/fpc/svn/fixes_2_2/rtl/objpas/classes/classesh.inc
- ../../../../../../e:/fpc/svn/fixes_2_2/rtl/inc/except.inc
- ../../../../../../e:/fpc/svn/fixes_2_2/rtl/objpas/classes/reader.inc
- ../../../../mseide-msegui/trunk/lib/common/ifi/mseifids.pas
- ../../../../../../e:/fpc/svn/fixes_2_2/rtl/objpas/classes/collect.inc
- ../../../../../../e:/fpc/svn/fixes_2_2/rtl/i386/i386.inc
- ../../../../mseide-msegui/trunk/lib/common/kernel/mseclasses.pas
- ../../../../mseide-msegui/trunk/lib/common/ifi/mseifi.pas
- ../../../../mseide-msegui/trunk/lib/common/kernel/msestream.pas
- ../../../../mseide-msegui/trunk/lib/common/kernel/i386-win32/msesysintf.pas
- ../../../../mseide-msegui/trunk/lib/common/sysutils/mseprocutils.pas
- ../../../../mseide-msegui/trunk/lib/common/editwidgets/msegraphedits.pas
- ../../../../mseide-msegui/trunk/lib/common/kernel/msegui.pas
- ../../../../mseide-msegui/trunk/lib/common/widgets/mseforms.pas
- ../../../../mseide-msegui/trunk/lib/common/kernel/i386-win32/mseguiintf.pas
- ../../../../mseide-msegui/trunk/lib/common/kernel/mseevent.pas
- ../../../../mseide-msegui/trunk/lib/common/kernel/mseapplication.pas
- ../../../../mseide-msegui/trunk/lib/common/ifi/msesockets.pas
- ../../../../../../e:/fpc/svn/fixes_2_2/rtl/objpas/classes/streams.inc
- ../../../../../../e:/fpc/svn/fixes_2_2/rtl/inc/systemh.inc
- ../../../../mseide-msegui/trunk/lib/common/widgets/msegrids.pas
- ../../../../mseide-msegui/trunk/lib/common/kernel/msepipestream.pas
- ../../../../../../e:/fpc/svn/fixes_2_2/packages/fcl-db/src/db.pas
-ismoduletexts=31
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
-modules=1
- /C:/proj/testcase/mse/ifipipedemo/client/main.mfm
-visiblemodules=1
- 1
+editpos=0
+sourcefiles=0
+relpaths=0
+ismoduletexts=0
+modules=0
+visiblemodules=0
 [sourcefo.tabwidget]
 tabsize=134
 firsttab=0
-index=1
+index=-1
 [components]
 [selecteditpage]
 colwidth=100
