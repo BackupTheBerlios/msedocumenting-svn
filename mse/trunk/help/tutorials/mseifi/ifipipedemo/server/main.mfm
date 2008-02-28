@@ -1,0 +1,304 @@
+object mainfo: tmainfo
+  optionswidget = [ow_arrowfocus, ow_subfocus, ow_destroywidgets, ow_hinton, ow_autoscale]
+  bounds_x = 411
+  bounds_y = 376
+  bounds_cx = 345
+  bounds_cy = 241
+  taborder = 1
+  container.optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_subfocus, ow_mousetransparent, ow_destroywidgets, ow_autoscale]
+  container.bounds_x = 0
+  container.bounds_y = 0
+  container.bounds_cx = 345
+  container.bounds_cy = 241
+  container.frame.dummy = 0
+  optionswindow = [wo_groupleader]
+  options = [fo_main, fo_terminateonclose, fo_autoreadstat, fo_autowritestat, fo_savepos, fo_savestate]
+  statfile = tstatfile1
+  caption = 'MSEifi Pipedemo Server'
+  oneventloopstart = onstart
+  onasyncevent = asyncev
+  moduleclassname = 'tmseform'
+  object tdbstringgrid1: tdbstringgrid
+    optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_focusbackonesc, ow_mousewheel, ow_destroywidgets, ow_fontglyphheight, ow_autoscale]
+    bounds_x = 8
+    bounds_y = 48
+    bounds_cx = 304
+    bounds_cy = 187
+    frame.caption = 'Dataset'
+    frame.dummy = 0
+    frame.outerframe = (
+      0
+      16
+      0
+      0
+    )
+    anchors = [an_left, an_top, an_right, an_bottom]
+    taborder = 4
+    datasource = datasource
+    options = [dsgo_autofields]
+    optionsgrid = [og_rowinserting, og_rowdeleting, og_focuscellonenter, og_autofirstrow, og_autoappend, og_colchangeontabkey, og_autopopup, og_mousescrollcol]
+    datacols.count = 3
+    datacols.items = <    
+      item
+        width = 120
+        datafield = 'queryField1'
+      end    
+      item
+        width = 60
+        datafield = 'string2'
+      end    
+      item
+        width = 60
+        datafield = 'integer1'
+        textflags = [tf_right, tf_ycentered, tf_noselect]
+      end>
+    datalink.options = [gdo_propscrollbar, gdo_thumbtrack, gdo_checkbrowsemodeonexit]
+    fixcols.count = 1
+    fixcols.items = <    
+      item
+        width = 15
+      end>
+    fixrows.count = 1
+    fixrows.items = <    
+      item
+        height = 15
+        captions.count = 3
+        captions.items = <        
+          item
+            caption = 'queryField1'
+          end        
+          item
+            caption = 'string2'
+          end        
+          item
+            caption = 'integer1'
+          end>
+      end>
+    datarowheight = 15
+    statfile = tstatfile1
+    reffontheight = 13
+  end
+  object prociddisp: tintegerdisp
+    bounds_x = 294
+    bounds_y = 9
+    bounds_cx = 44
+    bounds_cy = 33
+    frame.caption = 'ProcID'
+    frame.dummy = 0
+    frame.outerframe = (
+      0
+      16
+      0
+      0
+    )
+    textflags = [tf_xcentered, tf_right, tf_ycentered]
+    reffontheight = 13
+  end
+  object tstringedit1: tstringedit
+    optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_destroywidgets, ow_fontglyphheight, ow_autoscale]
+    bounds_x = 8
+    bounds_y = 8
+    bounds_cx = 100
+    bounds_cy = 35
+    frame.caption = 'Editwidget'
+    frame.dummy = 0
+    frame.outerframe = (
+      0
+      16
+      0
+      0
+    )
+    taborder = 1
+    reffontheight = 13
+  end
+  object buttondisp: tstringdisp
+    bounds_x = 178
+    bounds_y = 25
+    bounds_cx = 108
+    bounds_cy = 17
+    frame.dummy = 0
+    taborder = 2
+    font.color = -1610612730
+    font.name = 'stf_default'
+    font.xscale = 1.00000000000000000
+    font.dummy = 0
+    textflags = [tf_xcentered, tf_ycentered]
+    reffontheight = 13
+  end
+  object tbutton1: tbutton
+    bounds_x = 120
+    bounds_y = 24
+    bounds_cx = 50
+    bounds_cy = 19
+    taborder = 3
+    state = [as_localcaption, as_localonexecute]
+    caption = 'Button'
+    onexecute = buttonex
+  end
+  object slider: tslider
+    optionswidget = [ow_destroywidgets, ow_autoscale]
+    bounds_x = 318
+    bounds_y = 64
+    bounds_cx = 19
+    bounds_cy = 171
+    frame.localprops = [frl_fileft, frl_fitop, frl_firight, frl_fibottom]
+    frame.dummy = 0
+    anchors = [an_top, an_right, an_bottom]
+    taborder = 5
+    scrollbar.face.dummy = 0
+    direction = gd_up
+  end
+  object channel: tpipeiochannel
+    onafterdisconnect = afterdisconn
+    active = True
+    left = 264
+    top = 72
+  end
+  object formlink: tformlink
+    channel = channel
+    valuewidgets.count = 3
+    valuewidgets.items = <    
+      item
+        name = 'edit1'
+        widget = tstringedit1
+      end    
+      item
+        name = 'buttondisp'
+      end    
+      item
+        name = 'progressbar'
+        widget = slider
+      end>
+    actionsrx.count = 6
+    actionsrx.items = <    
+      item
+        name = 'button'
+        onexecute = buttonexe
+      end    
+      item
+        name = 'quit'
+        onexecute = quitexe
+      end    
+      item
+        name = 'menu1a'
+        action = menu1a
+      end    
+      item
+        name = 'menu1b'
+        action = menu1b
+      end    
+      item
+        name = 'menu1c'
+        action = menu1c
+      end    
+      item
+        name = 'menu2a'
+        action = menu2a
+      end>
+    modulestx.count = 1
+    modulestx.items = <    
+      item
+        name = 'main'
+        moduleclassname = 'tclientfo'
+        moduleparentclassname = 'tmseform'
+      end>
+    left = 264
+    top = 96
+  end
+  object tstatfile1: tstatfile
+    filename = 'server.sta'
+    left = 168
+  end
+  object timer: ttimer
+    interval = -1
+    ontimer = ti
+    enabled = True
+    left = 264
+    top = 128
+  end
+  object timer2: ttimer
+    ontimer = ti2
+    left = 264
+    top = 160
+  end
+  object datasource: tmsedatasource
+    DataSet = query
+    left = 176
+    top = 168
+  end
+  object query: ttxsqlquery
+    logfilename = 'data.log'
+    params = <>
+    IndexDefs = <>
+    Active = True
+    FieldDefs = <    
+      item
+        Name = 'queryField1'
+        DataType = ftString
+        Size = 60
+      end    
+      item
+        Name = 'string2'
+        DataType = ftString
+        Size = 10
+      end    
+      item
+        Name = 'integer1'
+        DataType = ftInteger
+      end>
+    controller.fields.count = 3
+    controller.fields.fields = (
+      (
+        ft_string
+        ft_string
+        ft_longint
+      )
+      <      
+        item
+          DisplayWidth = 60
+          FieldName = 'queryField1'
+          Size = 60
+        end      
+        item
+          DisplayWidth = 10
+          FieldName = 'string2'
+          Index = 1
+          Size = 10
+        end      
+        item
+          AlignMent = taRightJustify
+          DisplayWidth = 10
+          FieldName = 'integer1'
+          Index = 2
+        end>
+    )
+    controller.options = [dso_utf8, dso_autoapply, dso_local]
+    ifi.channel = channel
+    ifi.linkname = 'dataset'
+    left = 176
+    top = 144
+  end
+  object menu1a: taction
+    onexecute = menuexe
+    left = 24
+    top = 136
+  end
+  object menu1b: taction
+    Tag = 1
+    onexecute = menuexe
+    left = 24
+    top = 160
+  end
+  object menu1c: taction
+    Tag = 2
+    onexecute = menuexe
+    left = 24
+    top = 184
+  end
+  object menu2a: taction
+    Tag = 3
+    onexecute = menuexe
+    left = 96
+    top = 136
+  end
+end

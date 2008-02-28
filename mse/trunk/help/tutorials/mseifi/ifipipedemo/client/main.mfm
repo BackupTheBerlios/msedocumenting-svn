@@ -1,0 +1,111 @@
+object mainfo: tmainfo
+  optionswidget = [ow_arrowfocus, ow_subfocus, ow_destroywidgets, ow_hinton, ow_autoscale]
+  bounds_x = 24
+  bounds_y = 216
+  bounds_cx = 275
+  bounds_cy = 101
+  taborder = 1
+  container.optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_subfocus, ow_mousetransparent, ow_destroywidgets, ow_autoscale]
+  container.bounds_x = 0
+  container.bounds_y = 0
+  container.bounds_cx = 275
+  container.bounds_cy = 101
+  container.frame.dummy = 0
+  optionswindow = [wo_groupleader]
+  options = [fo_main, fo_terminateonclose, fo_autoreadstat, fo_autowritestat, fo_savepos, fo_savestate]
+  statfile = tstatfile1
+  caption = 'MSEifi Pipedemo Client'
+  oncreate = cre
+  moduleclassname = 'tmseform'
+  object serverapp: tfilenameedit
+    optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_destroywidgets, ow_fontglyphheight, ow_autoscale]
+    bounds_x = 8
+    bounds_y = 12
+    bounds_cx = 260
+    bounds_cy = 35
+    frame.caption = 'Server'
+    frame.button.imagenr = 17
+    frame.dummy = 0
+    frame.outerframe = (
+      0
+      16
+      0
+      0
+    )
+    anchors = [an_left, an_top, an_right]
+    statfile = tstatfile1
+    value = './ifipipedemoserver.exe'
+    controller.filename = './ifipipedemoserver.exe'
+    controller.lastdir = './'
+    reffontheight = 13
+  end
+  object tbooleanedit1: tbooleanedit
+    bounds_x = 9
+    bounds_y = 65
+    bounds_cx = 54
+    bounds_cy = 15
+    frame.caption = 'connect'
+    frame.dummy = 0
+    frame.outerframe = (
+      0
+      1
+      41
+      1
+    )
+    taborder = 1
+    onsetvalue = setconnected
+  end
+  object prociddisp: tintegerdisp
+    bounds_x = 216
+    bounds_y = 48
+    bounds_cx = 44
+    bounds_cy = 33
+    frame.caption = 'ProcID'
+    frame.dummy = 0
+    frame.outerframe = (
+      0
+      16
+      0
+      0
+    )
+    taborder = 2
+    textflags = [tf_xcentered, tf_right, tf_ycentered]
+    reffontheight = 13
+  end
+  object statedisp: tstringdisp
+    bounds_x = 72
+    bounds_y = 64
+    bounds_cx = 132
+    bounds_cy = 17
+    frame.dummy = 0
+    taborder = 3
+    font.style = [fs_bold]
+    font.name = 'stf_default'
+    font.xscale = 1.00000000000000000
+    font.dummy = 0
+    textflags = [tf_xcentered, tf_ycentered]
+    reffontheight = 13
+  end
+  object tstatfile1: tstatfile
+    filename = 'client.sta'
+    left = 192
+  end
+  object channel: tpipeiochannel
+    onafterconnect = afterconn
+    onafterdisconnect = afterdisconn
+    left = 48
+  end
+  object tformlink1: tformlink
+    channel = channel
+    modulesrx.count = 1
+    modulesrx.items = <    
+      item
+        name = 'main'
+      end>
+    left = 112
+  end
+  object tframecomp1: tframecomp
+    left = 144
+    top = 40
+  end
+end
