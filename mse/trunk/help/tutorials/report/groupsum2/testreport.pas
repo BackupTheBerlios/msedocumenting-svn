@@ -22,7 +22,6 @@ type
    group2: trecordband;
    group1: trecordband;
    procedure reportloaded(const sender: TObject);
-   procedure groupsumgetvalue(const sender: TObject; var avalue: richstringty);
    procedure group3getvalue(const sender: TObject; var avalue: richstringty);
    procedure group2getvalue(const sender: TObject; var avalue: richstringty);
    procedure group1getvalue(const sender: TObject; var avalue: richstringty);
@@ -41,12 +40,6 @@ begin
  dse.appendrecord(['a1','b2','c1','d1',300,1,2,1]);
  dse.appendrecord(['a1','b2','c1','d2',250,1,2,1]);
  render(printer{,ttextstream.create('test.ps',fm_create)});
-end;
-
-procedure ttestre.groupsumgetvalue(const sender: TObject;
-               var avalue: richstringty);
-begin
- avalue.text:= 'Sum ' + avalue.text;
 end;
 
 procedure ttestre.group3getvalue(const sender: TObject;

@@ -5,7 +5,7 @@ object testre: ttestre
   font.xscale =  1.0000000000000000E+0000
   font.dummy = 0
   grid_size =  2.0000000000000000E+0000
-  options = [reo_autorelease, reo_nothread]
+  options = [reo_autorelease]
   onloaded = reportloaded
   repdesigninfo = (
     23
@@ -27,12 +27,12 @@ object testre: ttestre
         bounds_x = 0
         bounds_y = 42
         bounds_cx = 570
-        bounds_cy = 132
+        bounds_cy = 108
         optionsscale = [osc_expandy, osc_shrinky]
         datasource = dso
         object trecordband1: trecordband
           bounds_x = 0
-          bounds_y = 36
+          bounds_y = 6
           bounds_cx = 570
           bounds_cy = 18
           tabs.count = 6
@@ -72,7 +72,7 @@ object testre: ttestre
         end
         object group3: trecordband
           bounds_x = 0
-          bounds_y = 66
+          bounds_y = 30
           bounds_cx = 570
           bounds_cy = 18
           taborder = 1
@@ -91,8 +91,8 @@ object testre: ttestre
               pos =  8.0000000000000000E+0001
               datafield = 'group3'
               datasource = dso
+              format = 'Sum '
               litop_widthmm =  2.9999999999999999E-0001
-              ongetvalue = groupsumgetvalue
             end          
             item
               pos =  1.2000000000000000E+0002
@@ -115,7 +115,7 @@ object testre: ttestre
         end
         object group2: trecordband
           bounds_x = 0
-          bounds_y = 90
+          bounds_y = 60
           bounds_cx = 570
           bounds_cy = 18
           taborder = 2
@@ -130,8 +130,8 @@ object testre: ttestre
               pos =  4.0000000000000000E+0001
               datafield = 'group2'
               datasource = dso
+              format = 'Sum '
               litop_widthmm =  2.9999999999999999E-0001
-              ongetvalue = groupsumgetvalue
             end          
             item
               pos =  8.0000000000000000E+0001
@@ -158,7 +158,7 @@ object testre: ttestre
         end
         object group1: trecordband
           bounds_x = 0
-          bounds_y = 114
+          bounds_y = 90
           bounds_cx = 570
           bounds_cy = 18
           taborder = 3
@@ -169,8 +169,8 @@ object testre: ttestre
             item
               datafield = 'group1'
               datasource = dso
+              format = 'Sum '
               litop_widthmm =  2.9999999999999999E-0001
-              ongetvalue = groupsumgetvalue
             end          
             item
               pos =  4.0000000000000000E+0001
@@ -260,7 +260,6 @@ object testre: ttestre
     pa_frametop =  1.0000000000000000E+0001
     pa_frameright =  1.0000000000000000E+0001
     pa_framebottom =  1.0000000000000000E+0001
-    printcommand = 'gswin32c.exe -dNOPAUSE -sDEVICE=mswinpr2 -'
     left = 12
     top = 222
   end
