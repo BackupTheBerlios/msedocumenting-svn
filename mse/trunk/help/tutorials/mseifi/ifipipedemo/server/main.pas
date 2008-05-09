@@ -8,7 +8,7 @@ uses
  mseifilink,msesimplewidgets,msewidgets,db,msebufdataset,msedb,mseifids,
  msesqldb,msqldb,sysutils,msedbedit,msedialog,msegraphedits,mseact,mseactions;
 
-type
+type 
  tmainfo = class(tmseform)
    channel: tpipeiochannel;
    prociddisp: tintegerdisp;
