@@ -1,3 +1,13 @@
+{ Contributed module by Tolstov Igor  (attid@yandex.ru) for MSEgui(c)
+
+    See the file COPYING.MSE the part of the MSEgui distribution,
+    for details about the copyright.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+}
+
 unit main;
 
 {$ifdef FPC}{$mode objfpc}{$h+}{$INTERFACES CORBA}{$endif}
@@ -35,7 +45,6 @@ type
  tmainfo = class(tmseform)
    tbutton5: tbutton;
    myfilenameedit: tfilenameedit;
-   tlabel1: tlabel;
    tstatfile1: tstatfile;
    efon: teventwidget;
    bk: tstringdisp;
@@ -51,36 +60,22 @@ type
    tlabel2: tlabel;
    sx: tintegeredit;
    sy: tintegeredit;
-   tlabel3: tlabel;
-   tlabel4: tlabel;
    tlabel5: tlabel;
-   tlabel6: tlabel;
    nx: tintegeredit;
-   tlabel7: tlabel;
    ny: tintegeredit;
    tlabel8: tlabel;
-   tlabel9: tlabel;
    cx: tintegeredit;
-   tlabel10: tlabel;
    cy: tintegeredit;
    tlabel11: tlabel;
-   tlabel12: tlabel;
    bx: tintegeredit;
-   tlabel13: tlabel;
    by: tintegeredit;
-   tlabel15: tlabel;
    bh: tintegeredit;
-   tlabel16: tlabel;
    bw: tintegeredit;
-   tlabel14: tlabel;
-   tlabel17: tlabel;
    zw: tintegeredit;
    zh: tintegeredit;
    tlabel18: tlabel;
    printcmd: tfilenameedit;
    cbUsePipe: tbooleanedit;
-   tlabel19: tlabel;
-   tlabel20: tlabel;
    procedure create_report_with_out_hate_mouse(const sender: TObject);
    procedure bf1(const sender: tcustomrecordband; var empty: Boolean);
    procedure onmouseevent(const sender: twidget; var info: mouseeventinfoty);
