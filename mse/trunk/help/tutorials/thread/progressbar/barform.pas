@@ -3,7 +3,7 @@ unit barform;
 interface
 uses
  msegui,mseclasses,mseforms,msegraphedits,mseevent,msegraphics,msegraphutils,
- msemenus,msesimplewidgets,msewidgets,mseguithread;
+ msemenus,msesimplewidgets,msewidgets,msethreadcomp;
 
 type
  tbarfo = class(tmseform)
@@ -37,6 +37,7 @@ begin
   finally
    application.unlock;
   end; 
+  //do some useful stuff
   sleep(200);
   if sender.terminated then begin
    break;
@@ -51,7 +52,7 @@ end;
 
 procedure tbarfo.cancelex(const sender: TObject);
 begin
- application.lock;
+ application.lock;            //avoid calling taskfinished
  try
   if not releasing then begin //there could be a race condition 
                               //with terminated thread
