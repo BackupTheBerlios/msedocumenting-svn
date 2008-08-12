@@ -64,6 +64,7 @@ object nodsre: tnodsre
         zebra_color = -1610612712
         zebra_height = 1
         onbeforerender = fillDataLine
+        onafterrender = advanceCounter
       end
     end
     object tlabel1: tlabel

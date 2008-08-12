@@ -19,6 +19,7 @@ type
    procedure doInit(const sender: TObject);
    procedure reportLoaded(const sender: TObject);
    
+   procedure advanceCounter(const sender: tcustomrecordband);
    protected
    dataCount : Integer;
  end;
@@ -33,11 +34,10 @@ procedure tnodsre.fillDataLine(const sender: tcustomrecordband;
 var
 	snum : string;               
 begin
-	if dataCount > 10 then 
+	if dataCount > 27 then 
 	begin
 		exit;
 	end;
-	inc(dataCount);
 	snum := IntToStr(dataCount);
 	dataRec.tabs[0].value := snum;
 	dataRec.tabs[1].value := 'A data name ' + snum;
@@ -53,6 +53,11 @@ end;
 procedure tnodsre.reportLoaded(const sender: TObject);
 begin
 	render(psprn{,ttextstream.create('test.ps',fm_create)});
+end;
+
+procedure tnodsre.advanceCounter(const sender: tcustomrecordband);
+begin
+	inc(dataCount);
 end;
 
 end.
