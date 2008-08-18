@@ -68,7 +68,7 @@ const
  errormsg = '*** ERROR ***';
 implementation
 uses
- main_mfm, sysutils, math, msekeyboard;
+ main_mfm, sysutils, math, msekeyboard, msesys;
 procedure tmainfo.donumber(const sender: TObject);
 var
  tmp : string;
@@ -112,7 +112,6 @@ procedure tmainfo.updatedisplay(number : currency);
 var
  s : string;
 begin
- //s := formatfloat(format, number);
  s := FloatToStrf(number,ffNumber,maxdigits,decimals);
  ldisplay.caption := s;
 end;
@@ -121,6 +120,7 @@ procedure tmainfo.setdefaults(const sender: TObject);
 begin
  doreset(nil);
  tbutton19.caption := #8730; // sqrt simbol
+ bperiod.caption:= defaultformatsettingsmse.decimalseparator;
 end;
 
 function tmainfo.cround(number: currency; digits: integer): currency;
@@ -170,18 +170,12 @@ begin
   doreset(nil);
   displayerror;
  end;
-  
- //total += number1;
- //operation := '+';
- //printoperation(number1, '+');
- //finishoperation;
 end;
 
 procedure tmainfo.dochangesign(const sender: TObject);
 begin
  number1 := -number1;
  tmpbuf := floattostr(number1);
- //total := number1;
  updatedisplay(number1);
 end;
 

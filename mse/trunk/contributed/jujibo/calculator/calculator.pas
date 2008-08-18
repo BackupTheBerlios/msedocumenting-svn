@@ -17,11 +17,6 @@ uses
  msegraphutils;
 begin
  //mseconsts.setlangconsts('es'); // set your language
- // TODO: fix hard coded, read system locale, add config file support
- {$IFDEF UNIX}
- decimalseparator := ',';
- thousandseparator := '.';
- {$ENDIF}
  setcolormapvalue(cl_mapped+5{cl_background}, 237,240,221); // background color
  application.createform(tmainfo,mainfo);
  application.run;

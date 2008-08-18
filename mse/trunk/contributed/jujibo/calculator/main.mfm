@@ -267,7 +267,7 @@ object mainfo: tmainfo
       bounds_cy = 37
       taborder = 11
       state = [as_localcaption, as_localonexecute]
-      caption = ','
+      caption = '.'
       font.style = [fs_bold]
       font.name = 'stf_default'
       font.xscale =  1.0000000000000000E+0000

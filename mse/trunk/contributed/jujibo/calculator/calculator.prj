@@ -368,7 +368,7 @@ files=
 storedir=/home/jujibo/Dev/FreePascal/mseide-msegui/apps/ide/compstore/
 filename=/home/jujibo/Dev/FreePascal/mseide-msegui/apps/ide/compstore/default.stg
 [layout]
-windowlayout=334
+windowlayout=349
  [mainfo.openfile]
  filenames=0
  filehistory=1
@@ -379,13 +379,13 @@ windowlayout=334
  splitdir=2
  useroptions=3904
  [mainfo]
- stackedunder=
+ stackedunder=mainfo.panel1
  x=4
  y=50
  cx=692
  cy=93
  wsize=0
- active=1
+ active=0
  visible=1
  [targetconsolefo]
  splitdir=0
@@ -502,19 +502,25 @@ windowlayout=334
  [watchpointsfo.grid]
  propcolwidthref=352
  width0=16
+ sortdescent0=0
  values1=1
   0
  width1=33
+ sortdescent1=0
  values2=1
   pinteger(0x126c6b4)^
  width2=239
+ sortdescent2=0
  width4=34
+ sortdescent4=0
  values5=1
   0
  width5=38
+ sortdescent5=0
  values6=1
   
  width6=103
+ sortdescent6=0
  [breakpointsfo]
  splitdir=0
  useroptions=4151
@@ -537,7 +543,7 @@ windowlayout=334
  [objectinspectorfo]
  splitdir=0
  useroptions=4151
- stackedunder=mainfo.panel1
+ stackedunder=mainfo
  parent=
  mdistate=0
  nx=0
@@ -554,7 +560,9 @@ windowlayout=334
  [objectinspectorfo.grid]
  propcolwidthref=306
  width0=154
+ sortdescent0=0
  width1=146
+ sortdescent1=0
  [watchfo]
  splitdir=0
  useroptions=6197
@@ -574,13 +582,17 @@ windowlayout=334
  [watchfo.grid]
  propcolwidthref=105
  width0=13
+ sortdescent0=0
  values1=0
  width1=152
+ sortdescent1=0
  values2=0
  values3=0
  width3=12
+ sortdescent3=0
  values4=0
  width4=13
+ sortdescent4=0
  [watchfo.watchon]
  [watchfo.expression]
  [watchfo.watcheson]
@@ -596,8 +608,8 @@ windowlayout=334
  ncx=0
  ncy=0
  x=0
- y=452
- cx=904
+ y=115
+ cx=313
  cy=80
  [componentstorefo]
  splitdir=0
@@ -619,8 +631,11 @@ windowlayout=334
  [componentstorefo.grid]
  propcolwidthref=435
  width0=111
+ sortdescent0=0
  width1=157
+ sortdescent1=0
  width2=160
+ sortdescent2=0
  [componentstorefo.storefiledialog]
  filenames=1
   /home/jujibo/Dev/FreePascal/mseide-msegui/apps/ide/compstore/
@@ -689,7 +704,7 @@ windowlayout=334
  [mainfo.panel1]
  splitdir=2
  useroptions=8183
- stackedunder=mainfo
+ stackedunder=
  parent=
  mdistate=0
  nx=0
@@ -701,7 +716,7 @@ windowlayout=334
  cx=914
  cy=532
  wsize=0
- active=0
+ active=1
  visible=1
 [edit]
 hintwidth=314
@@ -724,8 +739,8 @@ findhistory=9
  updatedisplay
 findoptions=1
 editpos=2
- 69,19
- 15,198
+ 0,-1073741823
+ 0,124
 bookmarks0=0
 bookmarks1=0
 sourcefiles=2
@@ -747,7 +762,7 @@ order=2
  0
 tabsize=134
 firsttab=0
-index=1
+index=0
 [components]
 [selecteditpage]
 colwidth=100
