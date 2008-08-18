@@ -11,8 +11,8 @@ order8=0
 order9=0
 order10=0
 [projectoptions]
-projectdir=/home/jujibo/Dev/FreePascal/Proyectos/calculator
-projectfilename=/home/jujibo/Dev/FreePascal/Proyectos/calculator/calculator.prj
+projectdir=/home/jujibo/Dev/FreePascal/documenting/msedocumenting/mse/trunk/contributed/jujibo/calculator
+projectfilename=/home/jujibo/Dev/FreePascal/documenting/msedocumenting/mse/trunk/contributed/jujibo/calculator/calculator.prj
 finddialog=8
  [finddialogfo.selectedonly]
  value=0
@@ -151,7 +151,7 @@ modulenames=1
 moduletypes=1
  TMAINFO
 modulefiles=1
- /home/jujibo/Dev/FreePascal/Proyectos/calculator/main.mfm
+ /home/jujibo/Dev/FreePascal/documenting/msedocumenting/mse/trunk/contributed/jujibo/calculator/main.mfm
 mainfile=${PROJECTNAME}.pas
 targetfile=${PROJECTNAME}${EXEEXT}
 messageoutputfile=
@@ -725,12 +725,12 @@ findhistory=9
 findoptions=1
 editpos=2
  37,5
- 40,277
+ 15,198
 bookmarks0=0
 bookmarks1=0
 sourcefiles=2
- /home/jujibo/Dev/FreePascal/Proyectos/calculator/calculator.pas
- /home/jujibo/Dev/FreePascal/Proyectos/calculator/main.pas
+ /home/jujibo/Dev/FreePascal/documenting/msedocumenting/mse/trunk/contributed/jujibo/calculator/calculator.pas
+ /home/jujibo/Dev/FreePascal/documenting/msedocumenting/mse/trunk/contributed/jujibo/calculator/main.pas
 relpaths=2
  calculator.pas
  main.pas
@@ -738,7 +738,7 @@ ismoduletexts=2
  0
  0
 modules=1
- /home/jujibo/Dev/FreePascal/Proyectos/calculator/main.mfm
+ /home/jujibo/Dev/FreePascal/documenting/msedocumenting/mse/trunk/contributed/jujibo/calculator/main.mfm
 visiblemodules=1
  1
 [sourcefo.tabwidget]
@@ -747,7 +747,7 @@ order=2
  0
 tabsize=134
 firsttab=0
-index=1
+index=0
 [components]
 [selecteditpage]
 colwidth=100

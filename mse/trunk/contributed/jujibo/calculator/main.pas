@@ -49,7 +49,6 @@ type
    procedure dosqrt(const sender: TObject);
    procedure dokey(const sender: twidget; var info: keyeventinfoty);
  private
-   format : string;
    tmpbuf : string;
    operation : string;
    decimals : integer;
@@ -74,7 +73,6 @@ procedure tmainfo.donumber(const sender: TObject);
 var
  tmp : string;
 begin
- //tmp := floattostr(number1);
  try
   tmp := tmpbuf + tbutton(sender).caption;
   tmp := leftstr(tmp, maxdigits);
@@ -199,7 +197,6 @@ begin
  number1 := 0.0;
  total := 0;
  decimals := 2;
- format := '#,0.00';
  updatedisplay(number1);
  operation := ' ';
  tmpbuf := '';
@@ -258,7 +255,6 @@ end;
 procedure tmainfo.dokey(const sender: twidget; var info: keyeventinfoty);
 begin
  case info.key of
-  //key_Escape : botoncancelar(nil);
   key_Period : donumber(bperiod);
   key_comma : donumber(bperiod);
   key_0  : donumber(b0);
@@ -280,7 +276,7 @@ begin
   key_slash    : dooperation(bdiv);
   key_Enter    : dototal(bequal);
   key_Return   : dototal(bequal);
-  key_equal   : dototal(bequal);
+  key_equal    : dototal(bequal);
   key_percent  : dopercent(bpercent);
   key_c        : doclear(nil); // CE
   key_Escape   : doreset(nil); // AC
