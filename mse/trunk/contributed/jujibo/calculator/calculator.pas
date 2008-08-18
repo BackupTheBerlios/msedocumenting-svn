@@ -13,11 +13,11 @@ program calculator;
 {$endif}
 uses
  {$ifdef FPC}{$ifdef linux}cthreads,{$endif}{$endif}msegui,mseforms,main,
- mseconsts,mseconsts_es{replace by your language unit},sysutils,msegraphics,
+ mseconsts{,mseconsts_es }{replace by your language unit},sysutils,msegraphics,
  msegraphutils;
 begin
- mseconsts.setlangconsts('es'); // set your language
- // TODO: fix hard coded
+ //mseconsts.setlangconsts('es'); // set your language
+ // TODO: fix hard coded, read system locale, add config file support
  {$IFDEF UNIX}
  decimalseparator := ',';
  thousandseparator := '.';

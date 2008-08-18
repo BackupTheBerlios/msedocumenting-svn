@@ -379,13 +379,13 @@ windowlayout=334
  splitdir=2
  useroptions=3904
  [mainfo]
- stackedunder=mainfo.panel1
+ stackedunder=
  x=4
  y=50
  cx=692
  cy=93
  wsize=0
- active=0
+ active=1
  visible=1
  [targetconsolefo]
  splitdir=0
@@ -537,7 +537,7 @@ windowlayout=334
  [objectinspectorfo]
  splitdir=0
  useroptions=4151
- stackedunder=mainfo
+ stackedunder=mainfo.panel1
  parent=
  mdistate=0
  nx=0
@@ -689,7 +689,7 @@ windowlayout=334
  [mainfo.panel1]
  splitdir=2
  useroptions=8183
- stackedunder=
+ stackedunder=mainfo
  parent=
  mdistate=0
  nx=0
@@ -701,7 +701,7 @@ windowlayout=334
  cx=914
  cy=532
  wsize=0
- active=1
+ active=0
  visible=1
 [edit]
 hintwidth=314
@@ -724,7 +724,7 @@ findhistory=9
  updatedisplay
 findoptions=1
 editpos=2
- 37,5
+ 69,19
  15,198
 bookmarks0=0
 bookmarks1=0
@@ -747,7 +747,7 @@ order=2
  0
 tabsize=134
 firsttab=0
-index=0
+index=1
 [components]
 [selecteditpage]
 colwidth=100
