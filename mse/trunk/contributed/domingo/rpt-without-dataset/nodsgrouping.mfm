@@ -1,0 +1,51 @@
+inherited nodsgroupingfo: tnodsgroupingfo
+  repdesigninfo = (
+    169
+    219
+    602
+    369
+  )
+  moduleclassname = 'tnodsre'
+  inherited treportpage1: treportpage
+    inherited tbandarea1: tbandarea
+      inherited header: trecordband
+        tabs.items = <        
+          item
+          end        
+          item
+          end        
+          item
+          end>
+      end
+      inherited dataRec: trecordband
+        tabs.items = <        
+          item
+          end        
+          item
+          end        
+          item
+          end>
+        onbeforenextrecord = checkNextRecord
+      end
+      object bandGroup: trecordband[2]
+        bounds_x = 0
+        bounds_y = 30
+        bounds_cx = 560
+        bounds_cy = 18
+        taborder = 2
+        tabs.count = 1
+        tabs.items = <        
+          item
+          end>
+        nextband = dataRec
+        onbeforerender = checkGroup
+      end
+    end
+    inherited tlabel1: tlabel
+    end
+    inherited treppagenumdisp1: treppagenumdisp
+    end
+  end
+  inherited psprn: tpostscriptprinter
+  end
+end

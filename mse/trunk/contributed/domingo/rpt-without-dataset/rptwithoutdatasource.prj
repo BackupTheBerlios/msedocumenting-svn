@@ -10,19 +10,72 @@ order7=0
 order8=0
 order9=0
 order10=0
-order11=0
 [projectoptions]
 projectdir=/home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset
 projectfilename=/home/mingo/lazarus/msegui/apps/rpt-without-dataset/rptwithoutdatasource.prj
+findinfiledialog=38
+ [findinfileadialogfo.subdirs]
+ value=1
+ [findinfileadialogfo.inopenfiles]
+ value=0
+ [findinfileadialogfo.wholeword]
+ value=0
+ [findinfileadialogfo.casesensitive]
+ value=0
+ [findinfileadialogfo.indirectories]
+ value=1
+ [findinfileadialogfo.mask]
+ value="*.pas" "*.pp" "*.inc"
+ history=0
+ [findinfileadialogfo.dir]
+ filenames=1
+  /home/mingo/lazarus/msegui/lib/
+ filehistory=1
+  /home/mingo/lazarus/msegui/lib/
+ filefilterindex=-1
+ filecolwidth=174
+ [findinfileadialogfo.findtext]
+ value=writeimage
+ history=9
+  writeimage
+  compress
+  zlib
+  smtp
+  writegraphic
+  fpwrite
+  fpwritejpg
+  inherited
+  registergraphicformat
+ [findinfileadialogfo]
+ stackedunder=
+ x=268
+ y=415
+ cx=496
+ cy=249
 finddialog=8
+ [finddialogfo.selectedonly]
+ value=0
  [finddialogfo]
  stackedunder=
  x=319
  y=205
- cx=331
+ cx=416
  cy=116
- [finddialogfo.selectedonly]
+replacedialog=14
+ [replacedialogfo.promptonreplace]
+ value=1
+ [replacedialogfo.selectedonly]
  value=0
+ [replacedialogfo.replacetext]
+ value=imageviewer
+ history=1
+  imageviewer
+ [replacedialogfo]
+ stackedunder=
+ x=142
+ y=302
+ cx=520
+ cy=163
 options=41
  [projectoptionsfo]
  stackedunder=
@@ -65,6 +118,22 @@ options=41
  values1=1
   EconvertError
  width1=764
+settaborder=5
+ [settaborderfo]
+ x=471
+ y=402
+ cx=292
+ cy=205
+settings=9
+ [settingsfo]
+ stackedunder=
+ x=100
+ y=106
+ cx=358
+ cy=574
+ wsize=0
+ active=1
+ visible=1
 sigsettings=27
  1,1,T,F
  3,3,T,F
@@ -99,20 +168,29 @@ exceptclassnames=1
  EconvertError
 exceptignore=1
  0
-modulenames=4
- MAINFO
+modulenames=7
+ DATAGRIDFO
  MAINFO
  NODSRE
+ NODSGROUPINGFO
+ PRODUCTPRICESRE
+ RPTPREVIEWFO
  TESTRE
-moduletypes=4
- TMAINFO
+moduletypes=7
+ TDATAGRIDFO
  TMAINFO
  TNODSRE
+ TNODSGROUPINGFO
+ TPRODUCTPRICESRE
+ TRPTPREVIEWFO
  TTESTRE
-modulefiles=4
+modulefiles=7
+ /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/datagrid.mfm
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/main.mfm
- /home/mingo/lazarus/msedocumenting/mse/trunk/help/tutorials/report/groupsum2/main.mfm
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/nods.mfm
+ /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/nodsgrouping.mfm
+ /home/mingo/lazarus/msegui/apps/rpt-without-dataset/productprices.mfm
+ /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/rptpreview.mfm
  /home/mingo/lazarus/msedocumenting/mse/trunk/help/tutorials/report/groupsum2/testreport.mfm
 mainfile=${PROJECTNAME}.pas
 targetfile=${PROJECTNAME}${EXEEXT}
@@ -266,16 +344,13 @@ activateonbreak=1
 showconsole=0
 externalconsole=0
 [breakpoints]
-on=1
- 0
-path=1
- /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/nods.pas
-line=1
- 36
-ignore=1
- 0
-condition=1
- 
+on=0
+path=0
+line=0
+address=0
+addbkpt=0
+ignore=0
+condition=0
 panels=1
  panel1
 units=
@@ -293,7 +368,25 @@ files=
 storedir=/home/mingo/lazarus/msegui/apps/ide/compstore/
 filename=/home/mingo/lazarus/msegui/apps/ide/compstore/default.stg
 [layout]
-windowlayout=343
+windowlayout=358
+ [mainfo.openfile]
+ filenames=0
+ filehistory=10
+  /home/mingo/lazarus/msedocumenting/mse/trunk/help/tutorials/report/groupsum2/testreport.pas
+  /home/mingo/lazarus/msedocumenting/mse/trunk/contributed/juan/printintf/i386-linux/mseprintintf.pas
+  /home/mingo/lazarus/msedocumenting/mse/trunk/contributed/juan/printintf/i386-win32/mseprintintf.pas
+  /home/mingo/lazarus/msedocumenting/mse/trunk/contributed/juan/printintf/mseprintintf.inc
+  /home/mingo/lazarus/dadbiz-mse5-2/invoicesedit.pas
+  /home/mingo/lazarus/dadbiz-mse5-2/invoiceslist.pas
+  /home/mingo/lazarus/msegui/apps/rpt-without-dataset/productprices.pas
+  /home/mingo/lazarus/msegui/apps/rpt-without-dataset/datagrid.pas
+  /home/mingo/lazarus/dadbiz-mse-garbage/reportdemo/datagrid.pas
+  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/imageviewer.pas
+ filefilterindex=0
+ filecolwidth=174
+ [mainfo.basedock]
+ splitdir=2
+ useroptions=3904
  [mainfo]
  stackedunder=
  x=9
@@ -303,59 +396,58 @@ windowlayout=343
  wsize=0
  active=1
  visible=1
- [mainfo.basedock]
- splitdir=2
- useroptions=3904
- [mainfo.openfile]
- filenames=0
- filehistory=10
-  /home/mingo/lazarus/msedocumenting/mse/trunk/help/tutorials/report/groupsum2/main.pas
-  /home/mingo/lazarus/msedocumenting/mse/trunk/help/tutorials/report/groupsum2/testreport.pas
-  /home/mingo/lazarus/tmp/msedocumenting/mse/trunk/help/tutorials/report/groupsum2/main.pas
-  /C:/proj/mseide-msegui/trunk/lib/common/widgets/mseforms.pas
-  /D:/Documents and Settings/ivankob/MSEGUI_PROJECTS/roznitsa_1nodes/reports/svodtablereqs.pas
-  /D:/Documents and Settings/ivankob/MSEGUI_PROJECTS/roznitsa_1nodes/reports/svodkatable_narrow.pas
-  /D:/Documents and Settings/ivankob/MSEGUI_PROJECTS/roznitsa_1nodes/refs.pas
-  /D:/Documents and Settings/ivankob/MSEGUI_PROJECTS/roznitsa_1nodes/refofficedactiv.pas
-  /D:/Documents and Settings/ivankob/MSEGUI_PROJECTS/roznitsa_1nodes/reqsrequest.pas
-  /D:/Documents and Settings/ivankob/MSEGUI_PROJECTS/roznitsa_1nodes/dactivrequest.pas
- filefilterindex=0
- filecolwidth=174
- [actionsmo.watchesonact]
- checked=1
- [actionsmo.bluedotsonact]
- checked=1
- [sourcefo]
+ [targetconsolefo]
  splitdir=0
  useroptions=4149
- parent=mainfo.panel1.container
- visible=1
+ parent=
  mdistate=0
  nx=0
  ny=0
  ncx=0
  ncy=0
- x=0
- y=0
- cx=724
- cy=491
- [debuggerfo]
- splitdir=0
- useroptions=6199
- parent=mainfo.basedock
+ x=116
+ y=297
+ cx=904
+ cy=347
+ wsize=0
+ active=0
  visible=1
+ [threadsfo]
+ splitdir=0
+ useroptions=4149
+ parent=
  mdistate=0
  nx=0
  ny=0
  ncx=0
  ncy=0
- x=0
- y=0
- cx=356
- cy=30
- [componentpalettefo]
+ x=37
+ y=270
+ cx=349
+ cy=276
+ wsize=0
+ active=0
+ visible=0
+ [disassfo]
  splitdir=0
- useroptions=6199
+ useroptions=4151
+ stackedunder=threadsfo
+ parent=
+ mdistate=0
+ nx=0
+ ny=0
+ ncx=0
+ ncy=0
+ x=162
+ y=502
+ cx=564
+ cy=210
+ wsize=0
+ active=0
+ visible=0
+ [findinfilefo]
+ splitdir=0
+ useroptions=4151
  stackedunder=targetconsolefo
  parent=
  mdistate=0
@@ -363,18 +455,13 @@ windowlayout=343
  ny=0
  ncx=0
  ncy=0
- x=375
- y=49
- cx=541
- cy=100
- wsize=0
- active=0
- visible=1
- [componentpalettefo.componentpages]
- activetab=0
- [componentstorefo]
+ x=548
+ y=115
+ cx=598
+ cy=198
+ [projecttreefo]
  splitdir=0
- useroptions=6195
+ useroptions=4151
  stackedunder=watchpointsfo
  parent=
  mdistate=0
@@ -382,116 +469,29 @@ windowlayout=343
  ny=0
  ncx=0
  ncy=0
- x=100
- y=92
- cx=445
- cy=354
+ x=321
+ y=101
+ cx=698
+ cy=413
  wsize=0
  active=0
  visible=0
- [componentstorefo.grid]
- propcolwidthref=435
- width0=111
- width1=160
- width2=157
- [componentstorefo.storefiledialog]
- filenames=1
-  /home/mingo/lazarus/msegui/apps/ide/compstore/
- lastdir=/home/mingo/lazarus/msegui/apps/ide/compstore/
- filehistory=0
- filefilterindex=0
- filecolwidth=0
- [componentstorefo.groupfiledialog]
- filenames=1
-  /home/mingo/lazarus/msegui/apps/ide/compstore/
- lastdir=/home/mingo/lazarus/msegui/apps/ide/compstore/
- filehistory=0
- filefilterindex=0
- filecolwidth=0
- [messagefo]
+ [stackfo]
  splitdir=0
- useroptions=4151
- parent=mainfo.panel1.container
- visible=0
- mdistate=0
- nx=0
- ny=0
- ncx=0
- ncy=0
- x=0
- y=452
- cx=724
- cy=39
- [watchfo]
- splitdir=0
- useroptions=6197
+ useroptions=4149
  parent=
  mdistate=0
  nx=0
  ny=0
  ncx=0
  ncy=0
- x=510
- y=325
- cx=310
- cy=245
+ x=407
+ y=349
+ cx=254
+ cy=180
  wsize=0
  active=0
  visible=0
- [watchfo.grid]
- propcolwidthref=104
- width0=13
- values1=0
- width1=152
- values2=0
- values3=0
- width3=13
- values4=0
- width4=15
- [watchfo.watchon]
- [watchfo.expression]
- [watchfo.watcheson]
- value=1
- [objectinspectorfo]
- splitdir=0
- useroptions=4151
- stackedunder=reportdesignerfo
- parent=
- mdistate=0
- nx=0
- ny=0
- ncx=0
- ncy=0
- x=926
- y=77
- cx=316
- cy=484
- wsize=0
- active=0
- visible=1
- [objectinspectorfo.grid]
- propcolwidthref=291
- width0=161
- width1=124
- [breakpointsfo]
- splitdir=0
- useroptions=4151
- stackedunder=stackfo
- parent=
- mdistate=0
- nx=0
- ny=0
- ncx=0
- ncy=0
- x=107
- y=404
- cx=477
- cy=128
- wsize=0
- active=0
- visible=0
- [breakpointsfo.bkptson]
- value=1
  [watchpointsfo]
  splitdir=0
  useroptions=4149
@@ -511,119 +511,209 @@ windowlayout=343
  [watchpointsfo.grid]
  propcolwidthref=342
  width0=16
+ sortdescent0=0
  values1=1
   0
  width1=33
+ sortdescent1=0
  values2=1
   pinteger(0x126c6b4)^
  width2=239
+ sortdescent2=0
  width4=34
+ sortdescent4=0
  values5=1
   0
  width5=38
+ sortdescent5=0
  values6=1
   
  width6=93
- [stackfo]
- splitdir=0
- useroptions=4149
- parent=
- mdistate=0
- nx=0
- ny=0
- ncx=0
- ncy=0
- x=407
- y=349
- cx=254
- cy=180
- wsize=0
- active=0
- visible=0
- [projecttreefo]
+ sortdescent6=0
+ [breakpointsfo]
  splitdir=0
  useroptions=4151
- stackedunder=findinfilefo
+ stackedunder=stackfo
  parent=
  mdistate=0
  nx=0
  ny=0
  ncx=0
  ncy=0
- x=321
- y=101
- cx=698
- cy=413
+ x=107
+ y=404
+ cx=477
+ cy=128
  wsize=0
  active=0
  visible=0
- [findinfilefo]
+ [breakpointsfo.bkptson]
+ value=1
+ [objectinspectorfo]
  splitdir=0
  useroptions=4151
- stackedunder=componentpalettefo
+ stackedunder=mainfo.panel1
  parent=
  mdistate=0
  nx=0
  ny=0
  ncx=0
  ncy=0
- x=548
- y=115
- cx=369
- cy=198
- [disassfo]
- splitdir=0
- useroptions=4151
- stackedunder=threadsfo
- parent=
- mdistate=0
- nx=0
- ny=0
- ncx=0
- ncy=0
- x=162
- y=502
- cx=564
- cy=210
- wsize=0
- active=0
- visible=0
- [threadsfo]
- splitdir=0
- useroptions=4149
- parent=
- mdistate=0
- nx=0
- ny=0
- ncx=0
- ncy=0
- x=37
- y=270
- cx=349
- cy=276
- wsize=0
- active=0
- visible=0
- [targetconsolefo]
- splitdir=0
- useroptions=4149
- parent=
- mdistate=0
- nx=0
- ny=0
- ncx=0
- ncy=0
- x=116
- y=297
- cx=904
- cy=347
+ x=926
+ y=77
+ cx=316
+ cy=577
  wsize=0
  active=0
  visible=1
+ [objectinspectorfo.grid]
+ propcolwidthref=306
+ width0=169
+ sortdescent0=0
+ width1=131
+ sortdescent1=0
+ [watchfo]
+ splitdir=0
+ useroptions=6197
+ parent=
+ mdistate=0
+ nx=0
+ ny=0
+ ncx=0
+ ncy=0
+ x=510
+ y=325
+ cx=310
+ cy=245
+ wsize=0
+ active=0
+ visible=0
+ [watchfo.grid]
+ propcolwidthref=105
+ width0=13
+ sortdescent0=0
+ values1=0
+ width1=152
+ sortdescent1=0
+ values2=0
+ values3=0
+ width3=12
+ sortdescent3=0
+ values4=0
+ width4=13
+ sortdescent4=0
+ [watchfo.watchon]
+ [watchfo.expression]
+ [watchfo.watcheson]
+ value=1
+ [messagefo]
+ splitdir=0
+ useroptions=4151
+ parent=mainfo.panel1.container
+ visible=0
+ mdistate=0
+ nx=0
+ ny=0
+ ncx=0
+ ncy=0
+ x=0
+ y=113
+ cx=313
+ cy=82
+ [componentstorefo]
+ splitdir=0
+ useroptions=6195
+ stackedunder=formdesignerfo
+ parent=
+ mdistate=0
+ nx=0
+ ny=0
+ ncx=0
+ ncy=0
+ x=100
+ y=92
+ cx=445
+ cy=354
+ wsize=0
+ active=0
+ visible=0
+ [componentstorefo.grid]
+ propcolwidthref=435
+ width0=111
+ sortdescent0=0
+ width1=160
+ sortdescent1=0
+ width2=157
+ sortdescent2=0
+ [componentstorefo.storefiledialog]
+ filenames=1
+  /home/mingo/lazarus/msegui/apps/ide/compstore/
+ lastdir=/home/mingo/lazarus/msegui/apps/ide/compstore/
+ filehistory=0
+ filefilterindex=0
+ filecolwidth=0
+ [componentstorefo.groupfiledialog]
+ filenames=1
+  /home/mingo/lazarus/msegui/apps/ide/compstore/
+ lastdir=/home/mingo/lazarus/msegui/apps/ide/compstore/
+ filehistory=0
+ filefilterindex=0
+ filecolwidth=0
+ [componentpalettefo]
+ splitdir=0
+ useroptions=6199
+ stackedunder=reportdesignerfo
+ parent=
+ mdistate=0
+ nx=0
+ ny=0
+ ncx=0
+ ncy=0
+ x=424
+ y=49
+ cx=503
+ cy=76
+ wsize=0
+ active=0
+ visible=1
+ [componentpalettefo.componentpages]
+ activetab=8
+ [debuggerfo]
+ splitdir=0
+ useroptions=6199
+ parent=mainfo.basedock
+ visible=1
+ mdistate=0
+ nx=0
+ ny=0
+ ncx=0
+ ncy=0
+ x=0
+ y=0
+ cx=356
+ cy=38
+ [sourcefo]
+ splitdir=0
+ useroptions=4149
+ parent=mainfo.panel1.container
+ visible=1
+ mdistate=0
+ nx=0
+ ny=0
+ ncx=0
+ ncy=0
+ x=0
+ y=0
+ cx=1039
+ cy=491
+ [actionsmo.watchesonact]
+ checked=1
+ [actionsmo.bluedotsonact]
+ checked=1
  [mainfo.panel1]
  splitdir=2
  useroptions=8183
- stackedunder=objectinspectorfo
+ stackedunder=mainfo
  parent=
  mdistate=0
  nx=0
@@ -632,32 +722,46 @@ windowlayout=343
  ncy=0
  x=5
  y=201
- cx=734
+ cx=1049
  cy=491
  wsize=0
  active=0
  visible=1
 [edit]
-hintwidth=0
-hintheight=0
+hintwidth=314
+hintheight=214
 autoindent=1
 blockindent=1
 rightmarginon=1
 rightmarginchars=80
 tabstops=4
-finddtext=treptabulatoritem
-findhistory=1
- treptabulatoritem
+finddtext=bo_onbeforerenderallways
+findhistory=10
+ bo_onbeforerenderallways
+ bo_
+ finished
+ rpps_showed
+ updatevisibility
+ rbs_visibilitychecked
+ fstate
+ recordbandstatesty
+ dobeforerender
+ next
 findoptions=1
-editpos=8
+editpos=13
+ 28,34
+ 13,59
+ 64,24
+ 5,26
  0,-1073741823
- 8,19
- 4,27
- 59,47
  0,-1073741823
  0,-1073741823
- 21,20
- 23,240
+ 13,16
+ 0,-1073741823
+ 12,43
+ 0,-1073741823
+ 19,62
+ 1,338
 bookmarks0=0
 bookmarks1=0
 bookmarks2=0
@@ -666,56 +770,87 @@ bookmarks4=0
 bookmarks5=0
 bookmarks6=0
 bookmarks7=0
-sourcefiles=8
- /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/rptwithoutdatasource.pas
- /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/main.pas
+bookmarks8=0
+bookmarks9=0
+bookmarks10=0
+bookmarks11=0
+bookmarks12=0
+sourcefiles=13
+ /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/rptpreview.pas
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/nods.pas
- /home/mingo/lazarus/msedocumenting/mse/trunk/help/tutorials/report/groupsum2/testreport.pas
- /home/mingo/lazarus/dadbiz-mse5/partnersrpt.pas
- /home/mingo/lazarus/dadbiz-mse5/partnersrpt.mfm
- /home/mingo/lazarus/msedocumenting/mse/trunk/help/tutorials/report/groupsum2/main.pas
+ /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/main.pas
+ /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/nodsgrouping.pas
+ /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/imageviewer.pas
  /home/mingo/lazarus/msegui/lib/common/report/msereport.pas
-relpaths=8
- rptwithoutdatasource.pas
- main.pas
+ /home/mingo/lazarus/dadbiz-mse5-2/invoicesedit.pas
+ /home/mingo/lazarus/msegui/apps/rpt-without-dataset/productprices.pas
+ /home/mingo/lazarus/msegui/lib/common/kernel/msestrings.pas
+ /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/datagrid.pas
+ /home/mingo/lazarus/dadbiz-mse5-2/invoiceslist.pas
+ /home/mingo/lazarus/msedocumenting/mse/trunk/help/tutorials/report/groupsum2/testreport.pas
+ /home/mingo/lazarus/msegui/lib/common/widgets/msesimplewidgets.pas
+relpaths=13
+ rptpreview.pas
  nods.pas
- ../../../msedocumenting/mse/trunk/help/tutorials/report/groupsum2/testreport.pas
- ../../../dadbiz-mse5/partnersrpt.pas
- ../../../dadbiz-mse5/partnersrpt.mfm
- ../../../msedocumenting/mse/trunk/help/tutorials/report/groupsum2/main.pas
+ main.pas
+ nodsgrouping.pas
+ imageviewer.pas
  ../../../msegui/lib/common/report/msereport.pas
-ismoduletexts=8
+ ../../../dadbiz-mse5-2/invoicesedit.pas
+ ../../../msegui/apps/rpt-without-dataset/productprices.pas
+ ../../../msegui/lib/common/kernel/msestrings.pas
+ datagrid.pas
+ ../../../dadbiz-mse5-2/invoiceslist.pas
+ ../../../msedocumenting/mse/trunk/help/tutorials/report/groupsum2/testreport.pas
+ ../../../msegui/lib/common/widgets/msesimplewidgets.pas
+ismoduletexts=13
  0
  0
  0
  0
  0
- 1
  0
  0
-modules=4
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+modules=7
+ /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/rptpreview.mfm
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/main.mfm
- /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/nods.mfm
+ /home/mingo/lazarus/msegui/apps/rpt-without-dataset/productprices.mfm
+ /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/datagrid.mfm
  /home/mingo/lazarus/msedocumenting/mse/trunk/help/tutorials/report/groupsum2/testreport.mfm
- /home/mingo/lazarus/msedocumenting/mse/trunk/help/tutorials/report/groupsum2/main.mfm
-visiblemodules=4
- 1
- 1
- 1
+ /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/nods.mfm
+ /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/nodsgrouping.mfm
+visiblemodules=7
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
  1
 [sourcefo.tabwidget]
-order=8
+order=13
  0
  1
- 6
  2
- 7
+ 3
  4
  5
- 3
+ 12
+ 6
+ 7
+ 8
+ 9
+ 10
+ 11
 tabsize=134
 firsttab=0
-index=3
+index=1
 [components]
 [selecteditpage]
 colwidth=100

@@ -1,0 +1,154 @@
+object datagridfo: tdatagridfo
+  optionswidget = [ow_arrowfocus, ow_subfocus, ow_destroywidgets, ow_hinton, ow_autoscale]
+  bounds_x = 305
+  bounds_y = 108
+  bounds_cx = 604
+  bounds_cy = 280
+  taborder = 1
+  container.optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_subfocus, ow_mousetransparent, ow_destroywidgets, ow_autoscale]
+  container.bounds_x = 0
+  container.bounds_y = 0
+  container.bounds_cx = 604
+  container.bounds_cy = 280
+  container.frame.dummy = 0
+  optionswindow = [wo_groupleader]
+  options = [fo_closeonesc, fo_autoreadstat, fo_autowritestat, fo_savepos, fo_savestate]
+  oncreate = doInit
+  ondestroy = doFinish
+  moduleclassname = 'tmseform'
+  object tbutton1: tbutton
+    bounds_x = 208
+    bounds_y = 240
+    bounds_cx = 162
+    bounds_cy = 25
+    anchors = [an_left, an_bottom]
+    state = [as_localcaption, as_localonexecute]
+    caption = 'Print Report'
+    onexecute = doReport
+  end
+  object grid: tdrawgrid
+    optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_arrowfocusout, ow_mousewheel, ow_destroywidgets, ow_fontglyphheight, ow_autoscale]
+    bounds_x = 8
+    bounds_y = 8
+    bounds_cx = 586
+    bounds_cy = 226
+    frame.dummy = 0
+    taborder = 1
+    optionsgrid = [og_colsizing, og_focuscellonenter, og_colchangeontabkey, og_autopopup, og_mousescrollcol]
+    datacols.count = 10
+    datacols.colorselect = -1610612727
+    datacols.coloractive = -1610612727
+    datacols.options = [co_readonly, co_rowselect, co_savevalue, co_savestate, co_rowfont, co_rowcolor, co_zebracolor, co_rowcoloractive, co_mousescrollrow]
+    datacols.items = <    
+      item
+        colorselect = -1610612727
+        coloractive = -1610612727
+        width = 90
+        options = [co_readonly, co_rowselect, co_savevalue, co_savestate, co_rowfont, co_rowcolor, co_zebracolor, co_rowcoloractive, co_mousescrollrow]
+        ondrawcell = grawGridCell
+      end    
+      item
+        colorselect = -1610612727
+        coloractive = -1610612727
+        width = 69
+        options = [co_readonly, co_rowselect, co_savevalue, co_savestate, co_rowfont, co_rowcolor, co_zebracolor, co_rowcoloractive, co_mousescrollrow]
+        ondrawcell = grawGridCell
+      end    
+      item
+        colorselect = -1610612727
+        coloractive = -1610612727
+        width = 291
+        options = [co_readonly, co_rowselect, co_savevalue, co_savestate, co_rowfont, co_rowcolor, co_zebracolor, co_rowcoloractive, co_mousescrollrow]
+        ondrawcell = grawGridCell
+      end    
+      item
+        colorselect = -1610612727
+        coloractive = -1610612727
+        width = 104
+        options = [co_readonly, co_rowselect, co_savevalue, co_savestate, co_rowfont, co_rowcolor, co_zebracolor, co_rowcoloractive, co_mousescrollrow]
+        ondrawcell = grawGridCell
+      end    
+      item
+        colorselect = -1610612727
+        coloractive = -1610612727
+        width = 69
+        options = [co_readonly, co_rowselect, co_savevalue, co_savestate, co_rowfont, co_rowcolor, co_zebracolor, co_rowcoloractive, co_mousescrollrow]
+        ondrawcell = grawGridCell
+      end    
+      item
+        colorselect = -1610612727
+        coloractive = -1610612727
+        width = 100
+        options = [co_readonly, co_rowselect, co_savevalue, co_savestate, co_rowfont, co_rowcolor, co_zebracolor, co_rowcoloractive, co_mousescrollrow]
+        ondrawcell = grawGridCell
+      end    
+      item
+        colorselect = -1610612727
+        coloractive = -1610612727
+        width = 90
+        options = [co_readonly, co_rowselect, co_savevalue, co_savestate, co_rowfont, co_rowcolor, co_zebracolor, co_rowcoloractive, co_mousescrollrow]
+        ondrawcell = grawGridCell
+      end    
+      item
+        colorselect = -1610612727
+        coloractive = -1610612727
+        width = 69
+        options = [co_readonly, co_rowselect, co_savevalue, co_savestate, co_rowfont, co_rowcolor, co_zebracolor, co_rowcoloractive, co_mousescrollrow]
+        ondrawcell = grawGridCell
+      end    
+      item
+        colorselect = -1610612727
+        coloractive = -1610612727
+        width = 84
+        options = [co_readonly, co_rowselect, co_savevalue, co_savestate, co_rowfont, co_rowcolor, co_zebracolor, co_rowcoloractive, co_mousescrollrow]
+        ondrawcell = grawGridCell
+      end    
+      item
+        colorselect = -1610612727
+        coloractive = -1610612727
+        width = 75
+        options = [co_readonly, co_rowselect, co_savevalue, co_savestate, co_rowfont, co_rowcolor, co_zebracolor, co_rowcoloractive, co_mousescrollrow]
+        ondrawcell = grawGridCell
+      end>
+    fixrows.count = 1
+    fixrows.items = <    
+      item
+        height = 21
+        captions.count = 10
+        captions.items = <        
+          item
+            caption = 'Group'
+          end        
+          item
+            caption = 'Ref.'
+          end        
+          item
+            caption = 'Description'
+          end        
+          item
+            caption = 'Price'
+          end        
+          item
+            caption = 'Qty.'
+          end        
+          item
+            caption = 'Price/Qty.'
+          end        
+          item
+            caption = 'Measure'
+          end        
+          item
+            caption = 'Weight'
+          end        
+          item
+            caption = 'V.A.T. %'
+          end        
+          item
+            caption = 'ID'
+          end>
+      end>
+    zebra_color = -1610612716
+    zebra_height = 1
+    reffontheight = 19
+  end
+end

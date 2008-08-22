@@ -1,0 +1,45 @@
+object imageviewerfo: timageviewerfo
+  bounds_x = 190
+  bounds_y = 263
+  bounds_cx = 444
+  bounds_cy = 363
+  taborder = 1
+  container.optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_subfocus, ow_mousetransparent, ow_mousewheel, ow_destroywidgets, ow_autoscale]
+  container.bounds_x = 0
+  container.bounds_y = 0
+  container.bounds_cx = 444
+  container.bounds_cy = 363
+  container.frame.dummy = 0
+  moduleclassname = 'tmseform'
+  object imgPreview: timage
+    bounds_x = 8
+    bounds_y = 48
+    bounds_cx = 426
+    bounds_cy = 306
+    frame.dummy = 0
+    anchors = [an_left, an_top, an_right, an_bottom]
+    bitmap.alignment = [al_fit]
+  end
+  object imagFileName: tfilenameedit
+    bounds_x = 8
+    bounds_y = 8
+    bounds_cx = 364
+    bounds_cy = 25
+    frame.button.imagenr = 17
+    frame.dummy = 0
+    anchors = [an_left, an_top, an_right]
+    taborder = 1
+    reffontheight = 19
+  end
+  object btnLoadImage: tbutton
+    bounds_x = 384
+    bounds_y = 8
+    bounds_cx = 50
+    bounds_cy = 25
+    anchors = [an_top, an_right]
+    taborder = 2
+    state = [as_localcaption, as_localonexecute]
+    caption = 'Load'
+    onexecute = doLoadImage
+  end
+end

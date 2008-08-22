@@ -5,7 +5,7 @@ uses
  mseglob,mseguiglob,mseapplication,msestat,msemenus,msegui,msegraphics,
  msegraphutils,mseevent,mseclasses,mseforms,msereport,msesplitter,msestrings,
  msesimplewidgets,msewidgets,msedataedits,mseedit,msepostscriptprinter,
- mseprinter,msetypes;
+ mseprinter,msetypes,db,mserichstring;
 
 type
  tnodsre = class(treport)
@@ -15,11 +15,17 @@ type
    header: trecordband;
    dataRec: trecordband;
    psprn: tpostscriptprinter;
-   procedure fillDataLine(const sender: tcustomrecordband; var empty: Boolean);
-   procedure doInit(const sender: TObject);
+   treppagenumdisp1: treppagenumdisp;
+   procedure fillDataLine(const sender: tcustomrecordband; 
+   		var empty: Boolean);virtual;
+   procedure doInit(const sender: TObject);virtual;
    procedure reportLoaded(const sender: TObject);
    
    procedure advanceCounter(const sender: tcustomrecordband);
+   procedure resetCounter(const sender: tcustomreport);
+   procedure pageFinished(const sender: tcustomreportpage;
+                   const acanvas: tcanvas);
+   procedure rptFinished(const sender: TObject);
    protected
    dataCount : Integer;
  end;
@@ -34,7 +40,7 @@ procedure tnodsre.fillDataLine(const sender: tcustomrecordband;
 var
 	snum : string;               
 begin
-	if dataCount > 27 then 
+	if dataCount > 100 then 
 	begin
 		exit;
 	end;
@@ -58,6 +64,21 @@ end;
 procedure tnodsre.advanceCounter(const sender: tcustomrecordband);
 begin
 	inc(dataCount);
+end;
+
+procedure tnodsre.resetCounter(const sender: tcustomreport);
+begin
+	dataCount := 0;
+end;
+
+procedure tnodsre.pageFinished(const sender: tcustomreportpage;
+               const acanvas: tcanvas);
+begin
+	writeln('page finished ' + IntToStr(sender.pagenum));
+end;
+
+procedure tnodsre.rptFinished(const sender: TObject);
+begin
 end;
 
 end.

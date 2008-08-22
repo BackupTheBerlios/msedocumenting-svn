@@ -1,0 +1,88 @@
+object rptpreviewfo: trptpreviewfo
+  bounds_x = 204
+  bounds_y = 259
+  bounds_cx = 668
+  bounds_cy = 375
+  taborder = 1
+  container.optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_subfocus, ow_mousetransparent, ow_mousewheel, ow_destroywidgets, ow_autoscale]
+  container.bounds_x = 0
+  container.bounds_y = 0
+  container.bounds_cx = 668
+  container.bounds_cy = 375
+  container.frame.dummy = 0
+  options = [fo_freeonclose, fo_closeonesc, fo_autoreadstat, fo_autowritestat, fo_savepos, fo_savezorder, fo_savestate]
+  oncreate = doInit
+  ondestroy = doFinish
+  moduleclassname = 'tmseform'
+  object imgPreview: timage
+    optionswidget = [ow_mousewheel, ow_destroywidgets, ow_autoscale]
+    bounds_x = 72
+    bounds_y = 8
+    bounds_cx = 586
+    bounds_cy = 358
+    color = -1610612730
+    frame.dummy = 0
+    anchors = [an_left, an_top, an_right, an_bottom]
+    bitmap.alignment = [al_fit]
+  end
+  object gridPages: tstringgrid
+    optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_mousewheel, ow_destroywidgets, ow_fontglyphheight, ow_autoscale]
+    bounds_x = 8
+    bounds_y = 8
+    bounds_cx = 50
+    bounds_cy = 294
+    frame.dummy = 0
+    anchors = [an_left, an_top, an_bottom]
+    taborder = 1
+    datacols.count = 1
+    datacols.colorselect = -1610612727
+    datacols.coloractive = -1610612727
+    datacols.textflagsactive = [tf_right, tf_ycentered]
+    datacols.items = <    
+      item
+        colorselect = -1610612727
+        coloractive = -1610612727
+        width = 45
+        options = [co_readonly, co_fill, co_savevalue, co_savestate, co_rowfont, co_rowcolor, co_zebracolor, co_mousescrollrow]
+        textflags = [tf_right, tf_ycentered, tf_noselect]
+        textflagsactive = [tf_right, tf_ycentered]
+      end>
+    zebra_color = -1610612716
+    zebra_height = 1
+    datarowheight = 21
+    oncellevent = gridCellEvent
+    reffontheight = 19
+  end
+  object tbutton1: tbutton
+    bounds_x = 8
+    bounds_y = 312
+    bounds_cx = 50
+    bounds_cy = 25
+    anchors = [an_left, an_bottom]
+    taborder = 2
+    hint = 'Save Page'
+    state = [as_localcaption, as_localhint, as_localonexecute]
+    caption = 'SP'
+    onexecute = doSavePageImage
+  end
+  object tbutton2: tbutton
+    bounds_x = 8
+    bounds_y = 344
+    bounds_cx = 50
+    bounds_cy = 25
+    anchors = [an_left, an_bottom]
+    taborder = 3
+    hint = 'Send page by email'
+    state = [as_localcaption, as_localhint]
+    caption = 'SE'
+  end
+  object fileSaveDialog: tfiledialog
+    controller.filter = '*.jpg'
+    controller.defaultext = 'jpg'
+    controller.options = [fdo_save, fdo_savelastdir]
+    controller.captionsave = 'Save Page Image'
+    dialogkind = fdk_none
+    left = 88
+    top = 16
+  end
+end

@@ -1,2 +1,2 @@
-rm *.o *.ppu *.bak *.compiled
+rm *.o *.ppu *.bak *.compiled *.bak?
 strip * 

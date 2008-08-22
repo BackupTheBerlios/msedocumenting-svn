@@ -5,8 +5,9 @@ object nodsre: tnodsre
   font.xscale =  1.0000000000000000E+0000
   font.dummy = 0
   grid_size =  2.0000000000000000E+0000
+  options = [reo_autorelease, reo_prepass]
+  onreportstart = resetCounter
   oncreate = doInit
-  onloaded = reportLoaded
   repdesigninfo = (
     169
     219
@@ -46,7 +47,7 @@ object nodsre: tnodsre
       end
       object dataRec: trecordband
         bounds_x = 0
-        bounds_y = 30
+        bounds_y = 54
         bounds_cx = 560
         bounds_cy = 18
         taborder = 1
@@ -75,6 +76,14 @@ object nodsre: tnodsre
       taborder = 1
       caption = 'Report Without DataSet'
       reffontheight = 16
+    end
+    object treppagenumdisp1: treppagenumdisp
+      bounds_x = 228
+      bounds_y = 348
+      bounds_cx = 36
+      bounds_cy = 16
+      taborder = 2
+      format = '0 of 1'
     end
   end
   object psprn: tpostscriptprinter
