@@ -53,7 +53,7 @@ begin
 	rpt.render(bitmapCanvas.canvas);
 end;
 
-procedure trptpreviewfo.pageFinished2(const sender: tcustomreportpage;
+procedure trptpreviewfo.pageFinished(const sender: tcustomreportpage;
                const acanvas: tcanvas);
 var
 	ipage : cardinalarty;               
@@ -69,7 +69,7 @@ begin
 	end;
 end;
 
-procedure trptpreviewfo.pageFinished(const sender: tcustomreportpage;
+procedure trptpreviewfo.pageFinished2(const sender: tcustomreportpage;
                const acanvas: tcanvas);
 var
 	ipage : tmaskedbitmap;               
@@ -93,11 +93,6 @@ begin
 	bitmapCanvas.Destroy;
 	for i := 0 to high(imagePages) do
 		imagePages[i].Destroy;
-	setLength(imagePages, 0);
-
-	for i := 0 to high(imagePagesCompressed) do
-		setLength(imagePagesCompressed[i], 0);
-	setLength(imagePages, 0);
 end;
 
 procedure trptpreviewfo.gridCellEvent(const sender: TObject;
@@ -111,8 +106,8 @@ begin
 		begin
 			//writeln(gridPages[0][gridPages.row]);
 			i := StrToInt(gridPages[0][gridPages.row]);
-			imgPreview.bitmap := imagePages[i-1];
-			//imgPreview.bitmap.decompressdata(rptImgSize, imagePagesCompressed[i-1]);
+			//imgPreview.bitmap := imagePages[i-1];
+			imgPreview.bitmap.decompressdata(rptImgSize, imagePagesCompressed[i-1]);
 		end;
 	end;
 end;

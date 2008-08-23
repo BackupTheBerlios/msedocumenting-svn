@@ -23,7 +23,6 @@ object rptpreviewfo: trptpreviewfo
     color = -1610612730
     frame.dummy = 0
     anchors = [an_left, an_top, an_right, an_bottom]
-    bitmap.alignment = [al_fit]
   end
   object gridPages: tstringgrid
     optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_mousewheel, ow_destroywidgets, ow_fontglyphheight, ow_autoscale]
