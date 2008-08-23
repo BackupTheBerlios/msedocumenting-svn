@@ -923,6 +923,7 @@ type
    property onchildscaled;
 
    property onbeforerender;
+   property onafterrender;
    property onpaint;
    property onafterpaint;
  end;

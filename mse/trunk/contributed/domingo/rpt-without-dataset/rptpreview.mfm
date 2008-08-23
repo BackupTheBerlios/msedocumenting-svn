@@ -20,7 +20,9 @@ object rptpreviewfo: trptpreviewfo
     bounds_y = 8
     bounds_cx = 586
     bounds_cy = 358
-    color = -1610612730
+    color = -2147483646
+    frame.colorclient = -1610612730
+    frame.localprops = [frl_colorclient]
     frame.dummy = 0
     anchors = [an_left, an_top, an_right, an_bottom]
   end

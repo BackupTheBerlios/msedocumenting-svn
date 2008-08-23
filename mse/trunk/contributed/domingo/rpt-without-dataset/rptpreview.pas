@@ -16,8 +16,6 @@ type
    procedure doInit(const sender: TObject);
    procedure pageFinished(const sender: tcustomreportpage;
                    const acanvas: tcanvas);
-   procedure pageFinished2(const sender: tcustomreportpage;
-                   const acanvas: tcanvas);
    procedure rptFinished(const sender: TObject);                   
    procedure doFinish(const sender: TObject);
    procedure gridCellEvent(const sender: TObject; var info: celleventinfoty);
@@ -38,7 +36,7 @@ uses
  rptpreview_mfm, mseformatbmpico, mseformatjpg, mseformatpng, 
  mseformatpnm, mseformattga, mseformatxpm, nods, sysutils, 
  msestream, fpwritejpeg;
- 
+{$define compressed} 
 procedure trptpreviewfo.doInit(const sender: TObject);
 begin
 	bitmapCanvas := tmaskedbitmap.Create(false);
@@ -56,33 +54,24 @@ end;
 procedure trptpreviewfo.pageFinished(const sender: tcustomreportpage;
                const acanvas: tcanvas);
 var
-	ipage : cardinalarty;               
+	ipagear : cardinalarty;               
+	ipagemb : tmaskedbitmap;               
 begin
 	//writeln('Page finished ' + IntToStr(sender.pagenum));
 	if not sender.report.prepass then
 	begin
 		gridPages.appendrow(IntToStr(sender.pagenum+1));
+{$ifdef compressed}
 		setLength(imagePagesCompressed, sender.pagenum+1);
 		rptImgSize := bitmapCanvas.size;
-		ipage := bitmapCanvas.compressdata;
-		imagePagesCompressed[high(imagePagesCompressed)] := ipage;
-	end;
-end;
-
-procedure trptpreviewfo.pageFinished2(const sender: tcustomreportpage;
-               const acanvas: tcanvas);
-var
-	ipage : tmaskedbitmap;               
-begin
-	//writeln('Page finished ' + IntToStr(sender.pagenum));
-	if not sender.report.prepass then
-	begin
-		gridPages.appendrow(IntToStr(sender.pagenum+1));
+		ipagear := bitmapCanvas.compressdata;
+		imagePagesCompressed[high(imagePagesCompressed)] := ipagear;
+{$else}
 		setLength(imagePages, sender.pagenum+1);
-		ipage := tmaskedbitmap.Create(false);
-		ipage.Assign(bitmapCanvas);
-		imagePages[high(imagePages)] := ipage;
-		imgPreview.bitmap.alignment := [al_xcentered];
+		ipagemb := tmaskedbitmap.Create(false);
+		ipagemb.Assign(bitmapCanvas);
+		imagePages[high(imagePages)] := ipagemb;
+{$endif}
 	end;
 end;
 
@@ -106,8 +95,13 @@ begin
 		begin
 			//writeln(gridPages[0][gridPages.row]);
 			i := StrToInt(gridPages[0][gridPages.row]);
-			//imgPreview.bitmap := imagePages[i-1];
+{$ifdef compressed}
 			imgPreview.bitmap.decompressdata(rptImgSize, imagePagesCompressed[i-1]);
+			imgPreview.bitmap.change;
+{$else}
+			imgPreview.bitmap := imagePages[i-1];
+{$endif}
+			imgPreview.bitmap.alignment := [al_xcentered];
 		end;
 	end;
 end;

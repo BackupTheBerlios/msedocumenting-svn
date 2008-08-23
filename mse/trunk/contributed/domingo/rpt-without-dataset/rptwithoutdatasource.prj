@@ -64,14 +64,15 @@ finddialog=8
  y=205
  cx=416
  cy=116
-replacedialog=15
+replacedialog=16
  [replacedialogfo.promptonreplace]
  value=1
  [replacedialogfo.selectedonly]
  value=0
  [replacedialogfo.replacetext]
- value=bandProduct
- history=2
+ value=productprices2
+ history=3
+  productprices2
   bandProduct
   imageviewer
  [replacedialogfo]
@@ -177,21 +178,21 @@ modulenames=6
  MAINFO
  NODSRE
  NODSGROUPINGFO
- PRODUCTPRICESRE
+ PRODUCTPRICES2RE
  RPTPREVIEWFO
 moduletypes=6
  TDATAGRIDFO
  TMAINFO
  TNODSRE
  TNODSGROUPINGFO
- TPRODUCTPRICESRE
+ TPRODUCTPRICES2RE
  TRPTPREVIEWFO
 modulefiles=6
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/datagrid.mfm
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/main.mfm
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/nods.mfm
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/nodsgrouping.mfm
- /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices.mfm
+ /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices2.mfm
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/rptpreview.mfm
 mainfile=${PROJECTNAME}.pas
 targetfile=${PROJECTNAME}${EXEEXT}
@@ -355,7 +356,7 @@ line=2
  94
  85
 address=2
- 136554876
+ 136554860
  135666963
 addbkpt=2
  0
@@ -387,6 +388,7 @@ windowlayout=358
  [mainfo.openfile]
  filenames=0
  filehistory=10
+  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices2.pas
   /home/mingo/lazarus/msegui/lib/common/report/msereport.pas
   /home/mingo/lazarus/msegui/apps/rpt-without-dataset/msereport.pas
   /home/mingo/lazarus/msedocumenting/mse/trunk/help/tutorials/report/groupsum2/testreport.pas
@@ -396,7 +398,6 @@ windowlayout=358
   /home/mingo/lazarus/dadbiz-mse5-2/invoicesedit.pas
   /home/mingo/lazarus/dadbiz-mse5-2/invoiceslist.pas
   /home/mingo/lazarus/msegui/apps/rpt-without-dataset/productprices.pas
-  /home/mingo/lazarus/msegui/apps/rpt-without-dataset/datagrid.pas
  filefilterindex=0
  filecolwidth=174
  [mainfo.basedock]
@@ -567,7 +568,7 @@ windowlayout=358
  [objectinspectorfo]
  splitdir=0
  useroptions=4151
- stackedunder=mainfo
+ stackedunder=formdesignerfo
  parent=
  mdistate=0
  nx=0
@@ -582,10 +583,10 @@ windowlayout=358
  active=0
  visible=1
  [objectinspectorfo.grid]
- propcolwidthref=291
- width0=161
+ propcolwidthref=306
+ width0=169
  sortdescent0=0
- width1=124
+ width1=131
  sortdescent1=0
  [watchfo]
  splitdir=0
@@ -632,13 +633,13 @@ windowlayout=358
  ncx=0
  ncy=0
  x=0
- y=469
+ y=474
  cx=1039
- cy=22
+ cy=17
  [componentstorefo]
  splitdir=0
  useroptions=6195
- stackedunder=formdesignerfo
+ stackedunder=findinfilefo
  parent=
  mdistate=0
  nx=0
@@ -750,8 +751,10 @@ blockindent=1
 rightmarginon=1
 rightmarginchars=80
 tabstops=4
-finddtext=render(
+finddtext=productprices
 findhistory=10
+ productprices
+ bo_dummy
  render(
  canvas
  bandgroup
@@ -760,17 +763,17 @@ findhistory=10
  bo_
  finished
  rpps_showed
- updatevisibility
- rbs_visibilitychecked
 findoptions=1
-editpos=7
- 0,84
- 32,63
+editpos=9
+ 38,74
+ 25,42
  59,24
  0,-1073741823
- 0,66
- 12,35
- 0,87
+ 30,48
+ 4,57
+ 2,81
+ 0,-1073741823
+ 1,31
 bookmarks0=0
 bookmarks1=0
 bookmarks2=0
@@ -778,23 +781,31 @@ bookmarks3=0
 bookmarks4=0
 bookmarks5=0
 bookmarks6=0
-sourcefiles=7
+bookmarks7=0
+bookmarks8=0
+sourcefiles=9
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/rptpreview.pas
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/nods.pas
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/main.pas
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/imageviewer.pas
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/nodsgrouping.pas
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/datagrid.pas
- /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices.pas
-relpaths=7
+ /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices2.pas
+ /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/msereport.pas
+ /home/mingo/lazarus/msegui/lib/common/kernel/msebitmap.pas
+relpaths=9
  rptpreview.pas
  nods.pas
  main.pas
  imageviewer.pas
  nodsgrouping.pas
  datagrid.pas
- productprices.pas
-ismoduletexts=7
+ productprices2.pas
+ msereport.pas
+ ../../../msegui/lib/common/kernel/msebitmap.pas
+ismoduletexts=9
+ 0
+ 0
  0
  0
  0
@@ -807,27 +818,29 @@ modules=6
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/main.mfm
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/datagrid.mfm
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/nods.mfm
- /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices.mfm
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/nodsgrouping.mfm
+ /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices2.mfm
 visiblemodules=6
- 0
+ 1
  0
  0
  1
  1
  1
 [sourcefo.tabwidget]
-order=7
+order=9
  0
+ 8
  1
  2
- 4
  3
+ 4
+ 5
+ 6
  7
- 11
 tabsize=134
 firsttab=0
-index=5
+index=7
 [components]
 [selecteditpage]
 colwidth=100
