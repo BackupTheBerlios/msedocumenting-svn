@@ -126,6 +126,15 @@ object productpricesre: tproductpricesre
           end>
         zebra_color = -1610612716
         zebra_height = 1
+        onbeforerender = checkGroup
+      end
+      object bandDummy: trecordband
+        bounds_x = 0
+        bounds_y = 138
+        bounds_cx = 536
+        bounds_cy = 18
+        taborder = 3
+        options = [bo_dummy]
         onbeforerender = feedData
         onafterrender = updateCounter
       end

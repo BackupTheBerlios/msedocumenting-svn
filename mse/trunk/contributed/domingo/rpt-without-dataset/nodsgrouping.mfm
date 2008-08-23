@@ -25,7 +25,8 @@ inherited nodsgroupingfo: tnodsgroupingfo
           end        
           item
           end>
-        onbeforenextrecord = checkNextRecord
+        onbeforerender = checkGroup
+        onafterrender = nil
       end
       object bandGroup: trecordband[2]
         bounds_x = 0
@@ -39,6 +40,16 @@ inherited nodsgroupingfo: tnodsgroupingfo
           end>
         nextband = dataRec
         onbeforerender = checkGroup
+      end
+      object bandDummy: trecordband[3]
+        bounds_x = 0
+        bounds_y = 90
+        bounds_cx = 560
+        bounds_cy = 18
+        taborder = 3
+        options = [bo_dummy]
+        onbeforerender = fillDataLine
+        onafterrender = goNext
       end
     end
     inherited tlabel1: tlabel

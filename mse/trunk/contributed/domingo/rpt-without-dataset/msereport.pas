@@ -511,7 +511,8 @@ type
                   //treportpage instead the number of the printed pages
                   //and in trepprinttimedisp to show now instead of 
                   //print start time
-                 bo_topofarea //sets areafull if not first of page before render
+                 bo_topofarea, //sets areafull if not first of page before render
+                 bo_dummy //used to command other bands render nothing
                  );
  bandoptionsty = set of bandoptionty;
 
@@ -647,6 +648,7 @@ type
    function getminbandsize: sizety; virtual;
    function calcminscrollsize: sizety; override;
    function actualcolor: colorty; override;
+   procedure render(const acanvas: tcanvas; var empty: boolean); virtual;
    procedure init; virtual;
    procedure initpage; virtual;
    procedure beginrender(const arestart: boolean); virtual;
@@ -693,7 +695,7 @@ type
    function islastofgroup: boolean;
    procedure restart;
    procedure resetzebra; virtual;
-   procedure render(const acanvas: tcanvas; var empty: boolean); virtual;
+   procedure render(var empty: boolean);overload;
    
    property tabs: treptabulators read ftabs write settabs;
    property font: trepwidgetfont read getfont write setfont stored isfontstored;
@@ -1573,7 +1575,6 @@ type
    procedure recordchanged;  
      //calls recordchanged of active page
    
-   property canvas : tcanvas read fcanvas;
    property ppmm: real read fppmm write setppmm; //pixel per mm
    function reppagecount: integer;
    property reppages[index: integer]: tcustomreportpage read getreppages 
@@ -3566,10 +3567,26 @@ begin
  end;
 end;
 
+procedure tcustomrecordband.render(var empty: boolean);
+begin
+	render(reppage.report.fcanvas, empty);
+end;
+
 procedure tcustomrecordband.render(const acanvas: tcanvas; var empty: boolean);
 var
  widget1: twidget;
  int1: integer;
+ procedure callafterrender;
+ begin
+   if canevent(tmethod(fonafterrender)) then begin
+    application.lock;
+    try
+     fonafterrender(self);
+    finally
+     application.unlock;
+    end;
+   end;
+ end;
 begin
  widget1:= rootwidget;
  if (widget1 is tcustomreport) and 
@@ -3581,33 +3598,30 @@ begin
  include(fstate,rbs_visibilitychecked);
  empty:= empty or (rbs_finish in fstate);
  dobeforerender(empty);
- if not empty then begin
-  if not (rbs_visibilitychecked in fstate) then begin
-   fparentintf.updatevisible;
-  end;
-  if visible then begin
-   if fparentintf.beginband(acanvas,self) then begin
-    exit; //area full
-   end;
-   try
-    for int1:= 0 to high(fareas) do begin
-     fareas[int1].initband;
-    end;
-    inheritedpaint(acanvas);
-   finally
-    fparentintf.endband(acanvas,self);
-   end;
-   if canevent(tmethod(fonafterrender)) then begin
-    application.lock;
-    try
-     fonafterrender(self);
-    finally
-     application.unlock;
-    end;
-   end;
-  end;
-  nextrecord;
- end;
+ if bo_dummy in foptions then callafterrender
+ else
+ begin
+     if not empty then begin
+      if not (rbs_visibilitychecked in fstate) then begin
+       fparentintf.updatevisible;
+      end;
+      if visible then begin
+       if fparentintf.beginband(acanvas,self) then begin
+        exit; //area full
+       end;
+       try
+        for int1:= 0 to high(fareas) do begin
+         fareas[int1].initband;
+        end;
+        inheritedpaint(acanvas);
+       finally
+        fparentintf.endband(acanvas,self);
+       end;
+       callafterrender;
+      end;
+      nextrecord;
+     end;
+ end;     
 end;
 
 procedure tcustomrecordband.init;

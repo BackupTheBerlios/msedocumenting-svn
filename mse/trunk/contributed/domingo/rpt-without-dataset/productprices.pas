@@ -25,6 +25,7 @@ type
    gdiprn: tgdiprinter;
    bandProduct: trecordband;
    bandGroupTitle: trecordband;
+   bandDummy: trecordband;
    procedure reportLoaded(const sender: TObject);
    procedure checkGroup(const sender: tcustomrecordband; var empty: Boolean);
    procedure doInit(const sender: TObject);
@@ -80,15 +81,9 @@ var
 	var
 		bo : boolean;
 	begin
-		application.unlock;
-		try
-			showGroup := true;
-			bnd.render(canvas,bo);
-		finally
-			showGroup := false;
-			application.lock;
-		end;
-		
+		showGroup := true;
+		bnd.render(bo);
+		showGroup := false;
 	end;             
 begin
 	if recordsPtr = nil then exit;
@@ -116,9 +111,10 @@ begin
 		bandProduct.tabs[0].value := '';
 		bandProduct.tabs[1].textflags := bandProduct.tabs[1].textflags + [tf_right];  
 		bandProduct.tabs[1].value := 'buys starting from';
-		bandProduct.tabs[3].value := formatfloatmse(rec.qty_price, '0.00');;
+		bandProduct.tabs[3].value := formatfloatmse(rec.qty_price, '0.00');
 	end;
-	bandProduct.tabs[2].value := formatfloatmse(rec.quantity, '0.###');;
+	bandProduct.tabs[2].value := formatfloatmse(rec.quantity, '0.###');
+	showBand(bandProduct);
 	empty := false;
 end;
 
