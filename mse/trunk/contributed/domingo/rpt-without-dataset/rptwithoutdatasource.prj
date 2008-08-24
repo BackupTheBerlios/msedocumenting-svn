@@ -37,8 +37,9 @@ findinfiledialog=39
  filefilterindex=-1
  filecolwidth=174
  [findinfileadialogfo.findtext]
- value=canvas.
+ value=TFPCustomImage
  history=10
+  TFPCustomImage
   canvas.
   tstreamprintercanvas
   tcustomprintercanvas
@@ -48,7 +49,6 @@ findinfiledialog=39
   writeimage
   compress
   zlib
-  smtp
  [findinfileadialogfo]
  stackedunder=
  x=268
@@ -430,9 +430,9 @@ line=4
  128
 address=4
  136554674
- 135666946
- 136556959
- 136557023
+ 135669122
+ 136559484
+ 136559500
 addbkpt=4
  0
  0
@@ -465,10 +465,13 @@ files=
 storedir=/home/mingo/lazarus/msegui/apps/ide/compstore/
 filename=/home/mingo/lazarus/msegui/apps/ide/compstore/default.stg
 [layout]
-windowlayout=358
+windowlayout=359
  [mainfo.openfile]
- filenames=0
+ filenames=1
+  /home/mingo/lazarus/msegui-dev/lib/common/image/mseformatpngwrite.pas
  filehistory=10
+  /home/mingo/lazarus/msegui-dev/lib/common/image/mseformatpngwrite.pas
+  /home/mingo/lazarus/msegui-dev/lib/common/image/mseformatjpgwrite.pas
   /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices2.pas
   /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/rptpreview.pas
   /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/main.pas
@@ -477,21 +480,19 @@ windowlayout=358
   /home/mingo/lazarus/msegui/apps/rpt-without-dataset/productprices2.pas
   /home/mingo/lazarus/dadbiz-mse5-2/rptpreview.pas
   /home/mingo/lazarus/msegui-dev/apps/ide/sourcepage.pas
-  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices.pas
-  /home/mingo/lazarus/msegui/lib/common/report/msereport.pas
  filefilterindex=0
  filecolwidth=174
  [mainfo.basedock]
  splitdir=2
  useroptions=3904
  [mainfo]
- stackedunder=objectinspectorfo
+ stackedunder=
  x=9
  y=49
  cx=356
  cy=76
  wsize=0
- active=0
+ active=1
  visible=1
  [targetconsolefo]
  splitdir=0
@@ -714,9 +715,9 @@ windowlayout=358
  ncx=0
  ncy=0
  x=0
- y=455
+ y=448
  cx=1039
- cy=36
+ cy=43
  [componentstorefo]
  splitdir=0
  useroptions=6195
@@ -810,19 +811,19 @@ windowlayout=358
  [mainfo.panel1]
  splitdir=2
  useroptions=8183
- stackedunder=
+ stackedunder=mainfo
  parent=
  mdistate=0
  nx=0
  ny=0
  ncx=0
  ncy=0
- x=5
- y=201
+ x=72
+ y=155
  cx=1049
  cy=491
  wsize=0
- active=1
+ active=0
  visible=1
 [edit]
 hintwidth=314
@@ -832,8 +833,9 @@ blockindent=1
 rightmarginon=1
 rightmarginchars=80
 tabstops=4
-finddtext=canvas.
+finddtext=writegraphic1
 findhistory=10
+ writegraphic1
  canvas.
  fcanvas
  reporteventty
@@ -843,12 +845,11 @@ findhistory=10
  showhint
  render(
  fareas
- bandarea
 findoptions=1
 editpos=3
  36,15
- 0,96
- 6,127
+ 26,11
+ 47,102
 bookmarks0=0
 bookmarks1=0
 bookmarks2=0
@@ -877,7 +878,7 @@ visiblemodules=4
 [sourcefo.tabwidget]
 tabsize=133
 firsttab=0
-index=1
+index=2
 [components]
 [selecteditpage]
 colwidth=100

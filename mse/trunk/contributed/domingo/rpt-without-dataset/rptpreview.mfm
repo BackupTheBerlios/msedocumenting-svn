@@ -96,7 +96,7 @@ object rptpreviewfo: trptpreviewfo
     val =  1.0000000000000000E+0000
   end
   object fileSaveDialog: tfiledialog
-    controller.filter = '*.jpg'
+    controller.filter = '"*.jpg" "*.png"'
     controller.defaultext = 'jpg'
     controller.options = [fdo_save, fdo_savelastdir]
     controller.captionsave = 'Save Page Image'

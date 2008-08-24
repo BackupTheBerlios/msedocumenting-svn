@@ -41,8 +41,8 @@ var
 implementation
 uses
  rptpreview_mfm, mseformatbmpico, mseformatjpg, mseformatpng, 
- mseformatpnm, mseformattga, mseformatxpm, sysutils, 
- msestream, fpwritejpeg;
+ mseformatpnm, mseformattga, mseformatxpm, sysutils,strutils, 
+ msestream, msegraphicstream, mseformatjpgwrite, mseformatpngwrite;
 {$define compressed} 
 procedure trptpreviewfo.doInit(const sender: TObject);
 begin
@@ -130,9 +130,8 @@ end;
 
 procedure trptpreviewfo.doSavePageImage(const sender: TObject);
 var
-	fn : string;
+	fn, fmt : string;
 	stream: tmsefilestream;
-	jpgwriter : TFPWriterJPEG;
 begin
 	if gridPages.RowCount = 0 then exit;
 	if fileSaveDialog.execute = mr_Ok then
@@ -140,12 +139,12 @@ begin
 		fn := fileSaveDialog.controller.filename;
 		//writeln(fn);
 		stream:= tmsefilestream.create(fn,fm_create);
-		jpgwriter := TFPWriterJPEG.Create;
+        if AnsiEndsStr(pnglabel,fn) then fmt := pnglabel
+        else fmt := jpglabel;
  		try
- 			//jpgwriter.ImageWrite(stream, imagePages[gridPages.row]);
+            writegraphic(stream, imgPreview.bitmap, fmt, []);
  		finally
   			stream.free;
-  			jpgwriter.free;
   		end;
 	end;
 end;
