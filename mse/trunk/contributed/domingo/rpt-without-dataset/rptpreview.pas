@@ -13,21 +13,26 @@ type
    tbutton1: tbutton;
    tbutton2: tbutton;
    fileSaveDialog: tfiledialog;
+   zoonValue: trealspinedit;
    procedure doInit(const sender: TObject);
    procedure pageFinished(const sender: tcustomreportpage;
                    const acanvas: tcanvas);
    procedure rptFinished(const sender: TObject);                   
    procedure doFinish(const sender: TObject);
+   procedure checkPageScroll(const sender: twidget;
+                   var info: mousewheeleventinfoty);
    procedure gridCellEvent(const sender: TObject; var info: celleventinfoty);
    procedure doSavePageImage(const sender: TObject);
 
    procedure showReport(rpt: TReport);
    
+   procedure doZoon(const sender: TObject);
    protected
     bitmapCanvas : tmaskedbitmap;
     imagePages : array of tmaskedbitmap;
     imagePagesCompressed : array of cardinalarty;
-    rptImgSize: sizety
+    rptImgSize: sizety;
+    report : TReport;
  end;
 var
  rptpreviewfo: trptpreviewfo;
@@ -44,6 +49,7 @@ end;
 
 procedure trptpreviewfo.showReport(rpt: TReport);
 begin
+	report := rpt;
 	rpt.onpageafterpaint := @pageFinished;
 	rpt.onreportfinished := @rptFinished;
 	bitmapCanvas.size := rpt.size;
@@ -72,6 +78,7 @@ begin
 		ipagemb.Assign(bitmapCanvas);
 		imagePages[high(imagePages)] := ipagemb;
 {$endif}
+		if sender.pagenum = 0 then gridPages.row := 0;
 	end;
 end;
 
@@ -79,6 +86,7 @@ procedure trptpreviewfo.doFinish(const sender: TObject);
 var
 	i : integer;
 begin
+	if report <> nil then report.destroy;
 	bitmapCanvas.Destroy;
 	for i := 0 to high(imagePages) do
 		imagePages[i].Destroy;
@@ -108,7 +116,7 @@ end;
 
 procedure trptpreviewfo.rptFinished(const sender: TObject);
 begin
-	if gridPages.RowCount > 0 then gridPages.Row := 0;
+	if reo_autorelease in report.options then report := nil;
 end;
 
 procedure trptpreviewfo.doSavePageImage(const sender: TObject);
@@ -131,6 +139,34 @@ begin
   			jpgwriter.free;
   		end;
 	end;
+end;
+
+procedure trptpreviewfo.checkPageScroll(const sender: twidget;
+               var info: mousewheeleventinfoty);
+begin
+	if imgPreview.frame.sbvert.value = 0 then
+	begin //user tryies to go beyound begining of page
+		if gridPages.Row > 0 then 
+		begin		
+			gridPages.Row := gridPages.Row-1;
+			imgPreview.frame.sbvert.value := 0.999999;
+			include(info.eventstate,es_processed);
+		end;
+	end;
+	if imgPreview.frame.sbvert.value = 1 then
+	begin //user tryies to go beyound end of page
+		if gridPages.Row < gridPages.RowCount-1 then 
+		begin
+			gridPages.Row := gridPages.Row+1;
+			imgPreview.frame.sbvert.value := 0.000001;
+			include(info.eventstate,es_processed);
+		end;
+	end;
+end;
+
+procedure trptpreviewfo.doZoon(const sender: TObject);
+begin
+	//imgPreview.scale(zoonValue.value);
 end;
 
 end.

@@ -173,27 +173,33 @@ exceptclassnames=1
  EconvertError
 exceptignore=1
  0
-modulenames=6
+modulenames=8
  DATAGRIDFO
  MAINFO
  NODSRE
  NODSGROUPINGFO
+ PRODUCTPRICESRE
  PRODUCTPRICES2RE
  RPTPREVIEWFO
-moduletypes=6
+ SOURCEPAGE
+moduletypes=8
  TDATAGRIDFO
  TMAINFO
  TNODSRE
  TNODSGROUPINGFO
+ TPRODUCTPRICESRE
  TPRODUCTPRICES2RE
  TRPTPREVIEWFO
-modulefiles=6
+ TSOURCEPAGE
+modulefiles=8
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/datagrid.mfm
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/main.mfm
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/nods.mfm
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/nodsgrouping.mfm
+ /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices.mfm
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices2.mfm
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/rptpreview.mfm
+ /home/mingo/lazarus/msegui-dev/apps/ide/sourcepage.mfm
 mainfile=${PROJECTNAME}.pas
 targetfile=${PROJECTNAME}${EXEEXT}
 messageoutputfile=
@@ -346,26 +352,19 @@ activateonbreak=1
 showconsole=0
 externalconsole=0
 [breakpoints]
-on=2
+on=1
  0
- 0
-path=2
+path=1
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices.pas
- /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/rptpreview.pas
-line=2
- 94
- 85
-address=2
- 136554860
- 135666963
-addbkpt=2
+line=1
+ 101
+address=1
+ 136554674
+addbkpt=1
  0
+ignore=1
  0
-ignore=2
- 0
- 0
-condition=2
- 
+condition=1
  
 panels=1
  panel1
@@ -384,10 +383,13 @@ files=
 storedir=/home/mingo/lazarus/msegui/apps/ide/compstore/
 filename=/home/mingo/lazarus/msegui/apps/ide/compstore/default.stg
 [layout]
-windowlayout=358
+windowlayout=359
  [mainfo.openfile]
- filenames=0
+ filenames=1
+  /home/mingo/lazarus/msegui-dev/apps/ide/sourcepage.pas
  filehistory=10
+  /home/mingo/lazarus/msegui-dev/apps/ide/sourcepage.pas
+  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices.pas
   /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices2.pas
   /home/mingo/lazarus/msegui/lib/common/report/msereport.pas
   /home/mingo/lazarus/msegui/apps/rpt-without-dataset/msereport.pas
@@ -396,8 +398,6 @@ windowlayout=358
   /home/mingo/lazarus/msedocumenting/mse/trunk/contributed/juan/printintf/i386-win32/mseprintintf.pas
   /home/mingo/lazarus/msedocumenting/mse/trunk/contributed/juan/printintf/mseprintintf.inc
   /home/mingo/lazarus/dadbiz-mse5-2/invoicesedit.pas
-  /home/mingo/lazarus/dadbiz-mse5-2/invoiceslist.pas
-  /home/mingo/lazarus/msegui/apps/rpt-without-dataset/productprices.pas
  filefilterindex=0
  filecolwidth=174
  [mainfo.basedock]
@@ -464,7 +464,7 @@ windowlayout=358
  [findinfilefo]
  splitdir=0
  useroptions=4151
- stackedunder=
+ stackedunder=formdesignerfo
  parent=
  mdistate=0
  nx=0
@@ -568,7 +568,7 @@ windowlayout=358
  [objectinspectorfo]
  splitdir=0
  useroptions=4151
- stackedunder=formdesignerfo
+ stackedunder=mainfo.panel1
  parent=
  mdistate=0
  nx=0
@@ -583,10 +583,10 @@ windowlayout=358
  active=0
  visible=1
  [objectinspectorfo.grid]
- propcolwidthref=306
- width0=169
+ propcolwidthref=291
+ width0=161
  sortdescent0=0
- width1=131
+ width1=124
  sortdescent1=0
  [watchfo]
  splitdir=0
@@ -633,13 +633,13 @@ windowlayout=358
  ncx=0
  ncy=0
  x=0
- y=474
+ y=442
  cx=1039
- cy=17
+ cy=49
  [componentstorefo]
  splitdir=0
  useroptions=6195
- stackedunder=findinfilefo
+ stackedunder=
  parent=
  mdistate=0
  nx=0
@@ -729,7 +729,7 @@ windowlayout=358
  [mainfo.panel1]
  splitdir=2
  useroptions=8183
- stackedunder=objectinspectorfo
+ stackedunder=formdesignerfo
  parent=
  mdistate=0
  nx=0
@@ -751,29 +751,31 @@ blockindent=1
 rightmarginon=1
 rightmarginchars=80
 tabstops=4
-finddtext=productprices
+finddtext=showhint
 findhistory=10
- productprices
- bo_dummy
+ showhint
  render(
- canvas
- bandgroup
- bandProducts
- bo_onbeforerenderallways
- bo_
- finished
- rpps_showed
+ fareas
+ bandarea
+ tbasebandarea
+ bandareastatesty
+ areafull
+ bandoptionsty
+ bandoptionty
+ rendernow
 findoptions=1
-editpos=9
- 38,74
- 25,42
+editpos=11
+ 19,38
+ 23,29
  59,24
  0,-1073741823
- 30,48
+ 15,43
  4,57
- 2,81
+ 29,10
+ 43,1412
  0,-1073741823
- 1,31
+ 15,88
+ 26,1023
 bookmarks0=0
 bookmarks1=0
 bookmarks2=0
@@ -783,7 +785,9 @@ bookmarks5=0
 bookmarks6=0
 bookmarks7=0
 bookmarks8=0
-sourcefiles=9
+bookmarks9=0
+bookmarks10=0
+sourcefiles=11
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/rptpreview.pas
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/nods.pas
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/main.pas
@@ -793,7 +797,9 @@ sourcefiles=9
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices2.pas
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/msereport.pas
  /home/mingo/lazarus/msegui/lib/common/kernel/msebitmap.pas
-relpaths=9
+ /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices.pas
+ /home/mingo/lazarus/msegui-dev/apps/ide/sourcepage.pas
+relpaths=11
  rptpreview.pas
  nods.pas
  main.pas
@@ -803,7 +809,9 @@ relpaths=9
  productprices2.pas
  msereport.pas
  ../../../msegui/lib/common/kernel/msebitmap.pas
-ismoduletexts=9
+ productprices.pas
+ ../ide/sourcepage.pas
+ismoduletexts=11
  0
  0
  0
@@ -813,34 +821,42 @@ ismoduletexts=9
  0
  0
  0
-modules=6
+ 0
+ 0
+modules=8
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/rptpreview.mfm
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/main.mfm
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/datagrid.mfm
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/nods.mfm
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/nodsgrouping.mfm
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices2.mfm
-visiblemodules=6
+ /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices.mfm
+ /home/mingo/lazarus/msegui-dev/apps/ide/sourcepage.mfm
+visiblemodules=8
  1
  0
  0
  1
+ 1
+ 0
  1
  1
 [sourcefo.tabwidget]
-order=9
+order=11
  0
  8
+ 6
+ 9
  1
  2
  3
  4
  5
- 6
  7
-tabsize=134
+ 10
+tabsize=133
 firsttab=0
-index=7
+index=10
 [components]
 [selecteditpage]
 colwidth=100
