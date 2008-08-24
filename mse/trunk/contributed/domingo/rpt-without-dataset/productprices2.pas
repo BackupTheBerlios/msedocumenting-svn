@@ -32,6 +32,8 @@ type
    procedure updateCounter(const sender: tcustomrecordband);
    procedure setRecordsPtr(ptr : pointer);
    procedure resetCounter(const sender: tcustomreport);
+   procedure doFinish(const sender: TObject);
+   procedure weveDone(const sender: TObject);
    protected
     recordsPtr : pointer;
     recNo : integer;
@@ -114,6 +116,16 @@ begin
 	recNo := 0;
 	gProductGroup := '';
 	gProduct := '';
+end;
+
+procedure tproductprices2re.doFinish(const sender: TObject);
+begin
+    //writeln('doFinish');
+end;
+
+procedure tproductprices2re.weveDone(const sender: TObject);
+begin
+    //writeln('weveDone');
 end;
  
 end.

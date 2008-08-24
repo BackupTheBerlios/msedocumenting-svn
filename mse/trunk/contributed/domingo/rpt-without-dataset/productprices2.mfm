@@ -7,7 +7,9 @@ object productprices2re: tproductprices2re
   grid_size =  2.0000000000000000E+0000
   options = [reo_autorelease, reo_prepass]
   onreportstart = resetCounter
+  onreportfinished = weveDone
   oncreate = doInit
+  ondestroy = doFinish
   repdesigninfo = (
     237
     193
@@ -141,11 +143,14 @@ object productprices2re: tproductprices2re
       bounds_y = 0
       bounds_cx = 536
       bounds_cy = 92
+      frame.levelo = 0
+      frame.leveli = 0
+      frame.localprops = [frl_levelo, frl_leveli]
       frame.dummy = 0
       taborder = 2
       object treppagenumdisp1: treppagenumdisp
-        bounds_x = 1000
-        bounds_y = 71
+        bounds_x = 1002
+        bounds_y = 69
         bounds_cx = 60
         bounds_cy = 13
         anchors = [an_top, an_right]
@@ -156,8 +161,8 @@ object productprices2re: tproductprices2re
         format = 'P'#225'gina  0 / 1'
       end
       object trepprintdatedisp1: trepprintdatedisp
-        bounds_x = 312
-        bounds_y = 77
+        bounds_x = 310
+        bounds_y = 75
         bounds_cx = 87
         bounds_cy = 13
         taborder = 1
@@ -167,8 +172,8 @@ object productprices2re: tproductprices2re
         font.dummy = 0
       end
       object tlabel1: tlabel
-        bounds_x = 291
-        bounds_y = 6
+        bounds_x = 289
+        bounds_y = 4
         bounds_cx = 241
         bounds_cy = 55
         taborder = 2
@@ -182,8 +187,8 @@ object productprices2re: tproductprices2re
         reffontheight = 11
       end
       object tlabel3: tlabel
-        bounds_x = 6
-        bounds_y = 69
+        bounds_x = 4
+        bounds_y = 67
         bounds_cx = 267
         bounds_cy = 21
         taborder = 3
@@ -197,8 +202,8 @@ object productprices2re: tproductprices2re
         reffontheight = 21
       end
       object timage2: timage
-        bounds_x = 60
-        bounds_y = 6
+        bounds_x = 58
+        bounds_y = 4
         bounds_cx = 176
         bounds_cy = 56
         frame.dummy = 0
@@ -1535,8 +1540,8 @@ object productprices2re: tproductprices2re
         }
       end
       object timage1: timage
-        bounds_x = 6
-        bounds_y = 6
+        bounds_x = 4
+        bounds_y = 4
         bounds_cx = 50
         bounds_cy = 56
         frame.dummy = 0
@@ -2089,8 +2094,8 @@ object productprices2re: tproductprices2re
         }
       end
       object treppagenumdisp2: treppagenumdisp
-        bounds_x = 468
-        bounds_y = 77
+        bounds_x = 466
+        bounds_y = 75
         bounds_cx = 60
         bounds_cy = 13
         anchors = [an_top, an_right]

@@ -37,18 +37,18 @@ findinfiledialog=39
  filefilterindex=-1
  filecolwidth=174
  [findinfileadialogfo.findtext]
- value=textflags
+ value=canvas.
  history=10
+  canvas.
+  tstreamprintercanvas
+  tcustomprintercanvas
+  class(tcanvas)
+  es_processed
   textflags
   writeimage
   compress
   zlib
   smtp
-  writegraphic
-  fpwrite
-  fpwritejpg
-  inherited
-  registergraphicformat
  [findinfileadialogfo]
  stackedunder=
  x=268
@@ -81,48 +81,81 @@ replacedialog=16
  y=302
  cx=520
  cy=163
-options=41
+options=74
+ [projectoptionsfo.twidgetgrid3]
+ propcolwidthref=801
+ width0=13
+ sortdescent0=0
+ width1=13
+ sortdescent1=0
+ width2=13
+ sortdescent2=0
+ width3=140
+ sortdescent3=0
+ width4=291
+ sortdescent4=0
+ width5=320
+ sortdescent5=0
+ [projectoptionsfo.newfile]
+ firsttab=0
+ index=0
+ [projectoptionsfo.fontaliasgrid]
+ propcolwidthref=691
+ values0=0
+ width0=98
+ sortdescent0=0
+ values1=0
+ width1=684
+ sortdescent1=0
+ values2=0
+ width2=30
+ sortdescent2=0
+ [projectoptionsfo.macrosplitter]
+ x=0
+ y=178
+ xprop=0
+ yprop=0.34833659491193
+ [projectoptionsfo.macrogrid]
+ propcolwidthref=595
+ width0=13
+ sortdescent0=0
+ width1=13
+ sortdescent1=0
+ width2=13
+ sortdescent2=0
+ width3=13
+ sortdescent3=0
+ width4=13
+ sortdescent4=0
+ width5=13
+ sortdescent5=0
+ width6=146
+ sortdescent6=0
+ width7=583
+ sortdescent7=0
+ [projectoptionsfo.makegroupbox]
+ firsttab=0
+ index=0
+ [projectoptionsfo.exceptionsgrid]
+ propcolwidthref=772
+ width0=47
+ sortdescent0=0
+ values1=1
+  EconvertError
+ width1=766
+ sortdescent1=0
+ [projectoptionsfo.ttabwidget1]
+ firsttab=0
+ index=0
+ [projectoptionsfo.tabwidget]
+ firsttab=0
+ index=0
  [projectoptionsfo]
  stackedunder=
  x=151
  y=68
  cx=821
  cy=572
- [projectoptionsfo.tabwidget]
- firsttab=0
- index=2
- [projectoptionsfo.macrogrid]
- width0=13
- width1=13
- width2=13
- width3=13
- width4=13
- width5=13
- width6=146
- width7=583
- [projectoptionsfo.macrosplitter]
- x=0
- y=178
- [projectoptionsfo.fontaliasgrid]
- values0=0
- width0=98
- values1=0
- width1=684
- values2=0
- width2=30
- [projectoptionsfo.grid]
- width0=231
- [projectoptionsfo.makesplitter]
- x=0
- y=161
- [projectoptionsfo.ttabwidget1]
- firsttab=0
- index=0
- [projectoptionsfo.exceptionsgrid]
- width0=47
- values1=1
-  EconvertError
- width1=764
 settaborder=5
  [settaborderfo]
  x=471
@@ -173,33 +206,21 @@ exceptclassnames=1
  EconvertError
 exceptignore=1
  0
-modulenames=8
- DATAGRIDFO
+modulenames=4
  MAINFO
  NODSRE
- NODSGROUPINGFO
- PRODUCTPRICESRE
  PRODUCTPRICES2RE
  RPTPREVIEWFO
- SOURCEPAGE
-moduletypes=8
- TDATAGRIDFO
+moduletypes=4
  TMAINFO
  TNODSRE
- TNODSGROUPINGFO
- TPRODUCTPRICESRE
  TPRODUCTPRICES2RE
  TRPTPREVIEWFO
- TSOURCEPAGE
-modulefiles=8
- /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/datagrid.mfm
+modulefiles=4
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/main.mfm
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/nods.mfm
- /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/nodsgrouping.mfm
- /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices.mfm
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices2.mfm
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/rptpreview.mfm
- /home/mingo/lazarus/msegui-dev/apps/ide/sourcepage.mfm
 mainfile=${PROJECTNAME}.pas
 targetfile=${PROJECTNAME}${EXEEXT}
 messageoutputfile=
@@ -290,8 +311,48 @@ toolparams=0
 fontalias=0
 fontnames=0
 fontheights=0
-usercolors=0
-usercolorcomment=0
+usercolors=20
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+usercolorcomment=20
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 showgrid=1
 snaptogrid=1
 moveonfirstclick=1
@@ -301,7 +362,7 @@ rightmarginon=1
 rightmarginchars=80
 scrollheight=0
 tabstops=4
-spacetabs=0
+spacetabs=1
 editfontname=mseide_source
 editfontheight=0
 editfontwidth=0
@@ -352,19 +413,40 @@ activateonbreak=1
 showconsole=0
 externalconsole=0
 [breakpoints]
-on=1
+on=4
  0
-path=1
+ 0
+ 0
+ 0
+path=4
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices.pas
-line=1
+ /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/rptpreview.pas
+ /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices2.pas
+ /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices2.pas
+line=4
  101
-address=1
+ 97
+ 123
+ 128
+address=4
  136554674
-addbkpt=1
+ 135666946
+ 136556959
+ 136557023
+addbkpt=4
  0
-ignore=1
  0
-condition=1
+ 0
+ 0
+ignore=4
+ 0
+ 0
+ 0
+ 0
+condition=4
+ 
+ 
+ 
  
 panels=1
  panel1
@@ -383,34 +465,33 @@ files=
 storedir=/home/mingo/lazarus/msegui/apps/ide/compstore/
 filename=/home/mingo/lazarus/msegui/apps/ide/compstore/default.stg
 [layout]
-windowlayout=359
+windowlayout=358
  [mainfo.openfile]
- filenames=1
-  /home/mingo/lazarus/msegui-dev/apps/ide/sourcepage.pas
+ filenames=0
  filehistory=10
+  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices2.pas
+  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/rptpreview.pas
+  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/main.pas
+  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/savecanvas.pas
+  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/savecanvas0.pas
+  /home/mingo/lazarus/msegui/apps/rpt-without-dataset/productprices2.pas
+  /home/mingo/lazarus/dadbiz-mse5-2/rptpreview.pas
   /home/mingo/lazarus/msegui-dev/apps/ide/sourcepage.pas
   /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices.pas
-  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices2.pas
   /home/mingo/lazarus/msegui/lib/common/report/msereport.pas
-  /home/mingo/lazarus/msegui/apps/rpt-without-dataset/msereport.pas
-  /home/mingo/lazarus/msedocumenting/mse/trunk/help/tutorials/report/groupsum2/testreport.pas
-  /home/mingo/lazarus/msedocumenting/mse/trunk/contributed/juan/printintf/i386-linux/mseprintintf.pas
-  /home/mingo/lazarus/msedocumenting/mse/trunk/contributed/juan/printintf/i386-win32/mseprintintf.pas
-  /home/mingo/lazarus/msedocumenting/mse/trunk/contributed/juan/printintf/mseprintintf.inc
-  /home/mingo/lazarus/dadbiz-mse5-2/invoicesedit.pas
  filefilterindex=0
  filecolwidth=174
  [mainfo.basedock]
  splitdir=2
  useroptions=3904
  [mainfo]
- stackedunder=
+ stackedunder=objectinspectorfo
  x=9
  y=49
  cx=356
  cy=76
  wsize=0
- active=1
+ active=0
  visible=1
  [targetconsolefo]
  splitdir=0
@@ -464,7 +545,7 @@ windowlayout=359
  [findinfilefo]
  splitdir=0
  useroptions=4151
- stackedunder=formdesignerfo
+ stackedunder=reportdesignerfo
  parent=
  mdistate=0
  nx=0
@@ -473,7 +554,7 @@ windowlayout=359
  ncy=0
  x=548
  y=115
- cx=598
+ cx=700
  cy=198
  [projecttreefo]
  splitdir=0
@@ -633,13 +714,13 @@ windowlayout=359
  ncx=0
  ncy=0
  x=0
- y=442
+ y=455
  cx=1039
- cy=49
+ cy=36
  [componentstorefo]
  splitdir=0
  useroptions=6195
- stackedunder=
+ stackedunder=findinfilefo
  parent=
  mdistate=0
  nx=0
@@ -678,7 +759,7 @@ windowlayout=359
  [componentpalettefo]
  splitdir=0
  useroptions=6199
- stackedunder=reportdesignerfo
+ stackedunder=formdesignerfo
  parent=
  mdistate=0
  nx=0
@@ -729,7 +810,7 @@ windowlayout=359
  [mainfo.panel1]
  splitdir=2
  useroptions=8183
- stackedunder=formdesignerfo
+ stackedunder=
  parent=
  mdistate=0
  nx=0
@@ -741,7 +822,7 @@ windowlayout=359
  cx=1049
  cy=491
  wsize=0
- active=0
+ active=1
  visible=1
 [edit]
 hintwidth=314
@@ -751,112 +832,52 @@ blockindent=1
 rightmarginon=1
 rightmarginchars=80
 tabstops=4
-finddtext=showhint
+finddtext=canvas.
 findhistory=10
+ canvas.
+ fcanvas
+ reporteventty
+ es_processed
+ eventstatesty
+ checkPageScroll
  showhint
  render(
  fareas
  bandarea
- tbasebandarea
- bandareastatesty
- areafull
- bandoptionsty
- bandoptionty
- rendernow
 findoptions=1
-editpos=11
- 19,38
- 23,29
- 59,24
- 0,-1073741823
- 15,43
- 4,57
- 29,10
- 43,1412
- 0,-1073741823
- 15,88
- 26,1023
+editpos=3
+ 36,15
+ 0,96
+ 6,127
 bookmarks0=0
 bookmarks1=0
 bookmarks2=0
-bookmarks3=0
-bookmarks4=0
-bookmarks5=0
-bookmarks6=0
-bookmarks7=0
-bookmarks8=0
-bookmarks9=0
-bookmarks10=0
-sourcefiles=11
- /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/rptpreview.pas
- /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/nods.pas
+sourcefiles=3
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/main.pas
- /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/imageviewer.pas
- /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/nodsgrouping.pas
- /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/datagrid.pas
+ /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/rptpreview.pas
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices2.pas
- /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/msereport.pas
- /home/mingo/lazarus/msegui/lib/common/kernel/msebitmap.pas
- /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices.pas
- /home/mingo/lazarus/msegui-dev/apps/ide/sourcepage.pas
-relpaths=11
- rptpreview.pas
- nods.pas
+relpaths=3
  main.pas
- imageviewer.pas
- nodsgrouping.pas
- datagrid.pas
+ rptpreview.pas
  productprices2.pas
- msereport.pas
- ../../../msegui/lib/common/kernel/msebitmap.pas
- productprices.pas
- ../ide/sourcepage.pas
-ismoduletexts=11
+ismoduletexts=3
  0
  0
  0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
-modules=8
- /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/rptpreview.mfm
- /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/main.mfm
- /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/datagrid.mfm
+modules=4
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/nods.mfm
- /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/nodsgrouping.mfm
+ /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/main.mfm
+ /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/rptpreview.mfm
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices2.mfm
- /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices.mfm
- /home/mingo/lazarus/msegui-dev/apps/ide/sourcepage.mfm
-visiblemodules=8
- 1
- 0
+visiblemodules=4
  0
  1
- 1
- 0
  1
  1
 [sourcefo.tabwidget]
-order=11
- 0
- 8
- 6
- 9
- 1
- 2
- 3
- 4
- 5
- 7
- 10
 tabsize=133
 firsttab=0
-index=10
+index=1
 [components]
 [selecteditpage]
 colwidth=100

@@ -33,24 +33,31 @@ type
     imagePagesCompressed : array of cardinalarty;
     rptImgSize: sizety;
     report : TReport;
+    oldonreportfinished : notifyeventty;
+    oldonpageafterpaint : reportpagepainteventty;
  end;
 var
  rptpreviewfo: trptpreviewfo;
 implementation
 uses
  rptpreview_mfm, mseformatbmpico, mseformatjpg, mseformatpng, 
- mseformatpnm, mseformattga, mseformatxpm, nods, sysutils, 
+ mseformatpnm, mseformattga, mseformatxpm, sysutils, 
  msestream, fpwritejpeg;
 {$define compressed} 
 procedure trptpreviewfo.doInit(const sender: TObject);
 begin
 	bitmapCanvas := tmaskedbitmap.Create(false);
+	oldonreportfinished := nil;
+	oldonpageafterpaint := nil;
 end;
 
 procedure trptpreviewfo.showReport(rpt: TReport);
 begin
 	report := rpt;
+	rpt.ppmm := 4;
+	oldonpageafterpaint := rpt.onpageafterpaint;
 	rpt.onpageafterpaint := @pageFinished;
+	oldonreportfinished := rpt.onreportfinished;
 	rpt.onreportfinished := @rptFinished;
 	bitmapCanvas.size := rpt.size;
 	rpt.color := cl_white;
@@ -80,6 +87,7 @@ begin
 {$endif}
 		if sender.pagenum = 0 then gridPages.row := 0;
 	end;
+	if oldonpageafterpaint <> nil then oldonpageafterpaint(sender, acanvas);
 end;
 
 procedure trptpreviewfo.doFinish(const sender: TObject);
@@ -117,6 +125,7 @@ end;
 procedure trptpreviewfo.rptFinished(const sender: TObject);
 begin
 	if reo_autorelease in report.options then report := nil;
+	if oldonreportfinished <> nil then oldonreportfinished(sender);
 end;
 
 procedure trptpreviewfo.doSavePageImage(const sender: TObject);
