@@ -15,6 +15,11 @@
     Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 }
 unit main;
+//
+// treeview with data and state persistence by tstatfile,
+// needs MSEgui SVN trunk rev. 2445+
+// http://sourceforge.net/svn/?group_id=165409
+//
 {$ifdef FPC}{$mode objfpc}{$h+}{$endif}
 interface
 uses
@@ -28,6 +33,7 @@ type
    treeedit: ttreeitemedit;
    stredit: tstringedit;
    intedit: tintegeredit;
+   tstatfile1: tstatfile;
    procedure initdata(const sender: TObject);
    procedure updaterowvalues(const sender: TObject; const aindex: Integer;
                    const aitem: tlistitem);
@@ -35,52 +41,79 @@ type
                    var accept: Boolean);
    procedure intsetvalue(const sender: TObject; var avalue: Integer;
                    var accept: Boolean);
+   procedure initform(const sender: TObject);
  end;
  
  tmynode = class(ttreelistedititem)
   private
    fint: integer;
    fstr: msestring;
+  protected
   public
+   procedure dostatread(const reader: tstatreader); override;
+   procedure dostatwrite(const writer: tstatwriter); override;
    property int: integer read fint write fint;
    property str: msestring read fstr write fstr;
  end;
  
 var
  mainfo: tmainfo;
+ 
 implementation
 uses
  main_mfm;
  
-{tmainfo }
+{ tmynode }
+
+procedure tmynode.dostatread(const reader: tstatreader);
+begin
+ inherited;
+ int:= reader.readinteger('int',int);
+ str:= reader.readstring('str',str);
+end;
+
+procedure tmynode.dostatwrite(const writer: tstatwriter);
+begin
+ inherited;
+ writer.writeinteger('int',int);
+ writer.writestring('str',str);
+end;
+
+{ tmainfo }
+
+procedure tmainfo.initform(const sender: TObject);
+begin
+ treeedit.itemlist.itemclass:= tmynode; 
+end;
 
 procedure tmainfo.initdata(const sender: TObject);
 begin
- treeedit.itemlist.add(tmynode.create); //root nodes
- treeedit.itemlist.add(tmynode.create); 
- with tmynode(treeedit[0]) do begin
-  caption:= 'AAAAA';
-  add(3,tmynode);
-  items[0].caption:= 'A0';
-  items[1].caption:= 'A1';
-  items[2].caption:= 'A2';
- end;
- with tmynode(treeedit[1]) do begin
-  caption:= 'BBBBBBBBBB';
-  add(5,tmynode);
-  items[0].caption:= 'BB0';
-  items[1].caption:= 'B1';
-  with tmynode(items[1]) do begin
-   add(5,tmynode);
-   items[0].caption:= 'B1a';
-   items[1].caption:= 'B1b';
-   items[2].caption:= 'B1c';
-   items[3].caption:= 'B1d';
-   items[4].caption:= 'B1e';
+ if grid.rowcount = 0 then begin //not loaded by statfile
+  grid.rowcount:= 2; //root nodes
+  with tmynode(treeedit[0]) do begin
+   caption:= 'AAAAA';
+   add(3,tmynode);
+   items[0].caption:= 'A0';
+   items[1].caption:= 'A1';
+   items[2].caption:= 'A2';
   end;
-  items[2].caption:= 'BBBBBB2';
-  items[3].caption:= 'B3';
-  items[4].caption:= 'B4';
+  with tmynode(treeedit[1]) do begin
+   caption:= 'BBBBBBBBBB';
+   add(5,tmynode);
+   items[0].caption:= 'BB0';
+   items[1].caption:= 'B1';
+   with tmynode(items[1]) do begin
+    add(5,tmynode);
+    items[0].caption:= 'B1a';
+    items[1].caption:= 'B1b';
+    items[2].caption:= 'B1c';
+    items[3].caption:= 'B1d';
+    items[4].caption:= 'B1e';
+   end;
+   items[2].caption:= 'BBBBBB2';
+   items[3].caption:= 'B3';
+   items[4].caption:= 'B4';
+  end;
  end;
 end;
 

@@ -14,8 +14,8 @@ order11=0
 order12=0
 order13=0
 [projectoptions]
-projectdir=/home/mse/packs/standard/svn/msedocumenting/mse/trunk/help/tutorials/treeview/simple
-projectfilename=/home/mse/packs/standard/svn/msedocumenting/mse/trunk/help/tutorials/treeview/simple/treeview.prj
+projectdir=/home/mse/packs/standard/svn/msedocumenting/mse/trunk/help/tutorials/treeview/statfile
+projectfilename=/home/mse/packs/standard/svn/msedocumenting/mse/trunk/help/tutorials/treeview/statfile/treeview.prj
 options=41
  [projectoptionsfo]
  stackedunder=
@@ -351,7 +351,7 @@ windowlayout=359
  [findinfilefo]
  splitdir=0
  useroptions=4151
- stackedunder=targetconsolefo
+ stackedunder=projecttreefo
  parent=
  mdistate=0
  nx=0
@@ -365,7 +365,7 @@ windowlayout=359
  [projecttreefo]
  splitdir=0
  useroptions=4151
- stackedunder=watchpointsfo
+ stackedunder=breakpointsfo
  parent=
  mdistate=0
  nx=0
@@ -455,7 +455,7 @@ windowlayout=359
  [objectinspectorfo]
  splitdir=0
  useroptions=4151
- stackedunder=componentstorefo
+ stackedunder=watchfo
  parent=
  mdistate=0
  nx=0
@@ -520,8 +520,8 @@ windowlayout=359
  ncx=0
  ncy=0
  x=0
- y=115
- cx=313
+ y=411
+ cx=724
  cy=80
  [componentstorefo]
  splitdir=0
@@ -566,7 +566,7 @@ windowlayout=359
  [componentpalettefo]
  splitdir=0
  useroptions=6199
- stackedunder=mainfo
+ stackedunder=targetconsolefo
  parent=
  mdistate=0
  nx=0
@@ -617,7 +617,7 @@ windowlayout=359
  [mainfo.panel1]
  splitdir=2
  useroptions=8183
- stackedunder=componentpalettefo
+ stackedunder=mainfo
  parent=
  mdistate=0
  nx=0
