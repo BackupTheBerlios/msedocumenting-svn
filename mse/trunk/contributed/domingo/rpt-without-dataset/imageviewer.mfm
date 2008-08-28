@@ -1,29 +1,31 @@
 object imageviewerfo: timageviewerfo
-  bounds_x = 190
-  bounds_y = 263
-  bounds_cx = 444
-  bounds_cy = 363
+  bounds_x = 281
+  bounds_y = 193
+  bounds_cx = 416
+  bounds_cy = 504
   taborder = 1
   container.optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_subfocus, ow_mousetransparent, ow_mousewheel, ow_destroywidgets, ow_autoscale]
   container.bounds_x = 0
   container.bounds_y = 0
-  container.bounds_cx = 444
-  container.bounds_cy = 363
+  container.bounds_cx = 416
+  container.bounds_cy = 504
   container.frame.dummy = 0
+  oncreate = doInit
+  ondestroy = doFinish
   moduleclassname = 'tmseform'
   object imgPreview: timage
     bounds_x = 8
-    bounds_y = 48
-    bounds_cx = 426
-    bounds_cy = 306
+    bounds_y = 96
+    bounds_cx = 400
+    bounds_cy = 400
     frame.dummy = 0
     anchors = [an_left, an_top, an_right, an_bottom]
-    bitmap.alignment = [al_fit]
+    bitmap.alignment = [al_xcentered, al_ycentered, al_intpol]
   end
-  object imagFileName: tfilenameedit
+  object imageFileName: tfilenameedit
     bounds_x = 8
     bounds_y = 8
-    bounds_cx = 364
+    bounds_cx = 336
     bounds_cy = 25
     frame.button.imagenr = 17
     frame.dummy = 0
@@ -32,7 +34,7 @@ object imageviewerfo: timageviewerfo
     reffontheight = 19
   end
   object btnLoadImage: tbutton
-    bounds_x = 384
+    bounds_x = 356
     bounds_y = 8
     bounds_cx = 50
     bounds_cy = 25
@@ -41,5 +43,61 @@ object imageviewerfo: timageviewerfo
     state = [as_localcaption, as_localonexecute]
     caption = 'Load'
     onexecute = doLoadImage
+  end
+  object imgWidth: tintegeredit
+    bounds_x = 13
+    bounds_y = 48
+    bounds_cx = 63
+    bounds_cy = 25
+    frame.caption = 'W'
+    frame.captionpos = cp_left
+    frame.dummy = 0
+    frame.outerframe = (
+      19
+      0
+      0
+      0
+    )
+    taborder = 3
+    ondataentered = doResizeImage
+    svalue = '0'
+    reffontheight = 19
+  end
+  object imgHeight: tintegeredit
+    bounds_x = 97
+    bounds_y = 48
+    bounds_cx = 59
+    bounds_cy = 25
+    frame.caption = 'H'
+    frame.captionpos = cp_left
+    frame.dummy = 0
+    frame.outerframe = (
+      15
+      0
+      0
+      0
+    )
+    taborder = 4
+    ondataentered = doResizeImage
+    svalue = '0'
+    reffontheight = 19
+  end
+  object btnThumbnail: tbutton
+    bounds_x = 212
+    bounds_y = 48
+    bounds_cx = 130
+    bounds_cy = 25
+    anchors = [an_top, an_right]
+    taborder = 5
+    state = [as_localcaption, as_localonexecute]
+    caption = 'Save resized'
+    onexecute = doSaveImage
+  end
+  object resizeProportioal: tbooleanedit
+    bounds_x = 176
+    bounds_y = 56
+    frame.dummy = 0
+    taborder = 6
+    value = True
   end
 end

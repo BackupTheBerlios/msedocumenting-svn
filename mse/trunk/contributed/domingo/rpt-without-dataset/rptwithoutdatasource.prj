@@ -37,8 +37,10 @@ findinfiledialog=39
  filefilterindex=-1
  filecolwidth=174
  [findinfileadialogfo.findtext]
- value=TFPCustomImage
+ value=al_or
  history=10
+  al_or
+  alignmentsty
   TFPCustomImage
   canvas.
   tstreamprintercanvas
@@ -47,8 +49,6 @@ findinfiledialog=39
   es_processed
   textflags
   writeimage
-  compress
-  zlib
  [findinfileadialogfo]
  stackedunder=
  x=268
@@ -206,18 +206,24 @@ exceptclassnames=1
  EconvertError
 exceptignore=1
  0
-modulenames=4
+modulenames=6
+ IMAGEVIEWERFO
+ MAINFO
  MAINFO
  NODSRE
  PRODUCTPRICES2RE
  RPTPREVIEWFO
-moduletypes=4
+moduletypes=6
+ TIMAGEVIEWERFO
+ TMAINFO
  TMAINFO
  TNODSRE
  TPRODUCTPRICES2RE
  TRPTPREVIEWFO
-modulefiles=4
+modulefiles=6
+ /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/imageviewer.mfm
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/main.mfm
+ /home/mingo/lazarus/msegui/apps/runtime_barcode_print/main.mfm
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/nods.mfm
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices2.mfm
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/rptpreview.mfm
@@ -430,9 +436,9 @@ line=4
  128
 address=4
  136554674
- 135669122
- 136559484
- 136559500
+ 135669954
+ 136583244
+ 136583260
 addbkpt=4
  0
  0
@@ -465,11 +471,13 @@ files=
 storedir=/home/mingo/lazarus/msegui/apps/ide/compstore/
 filename=/home/mingo/lazarus/msegui/apps/ide/compstore/default.stg
 [layout]
-windowlayout=359
+windowlayout=358
  [mainfo.openfile]
- filenames=1
-  /home/mingo/lazarus/msegui-dev/lib/common/image/mseformatpngwrite.pas
+ filenames=0
  filehistory=10
+  /home/mingo/lazarus/msegui/apps/runtime_barcode_print/main.pas
+  /home/mingo/lazarus/dadbiz-mse5-2/imagesedit.pas
+  /home/mingo/lazarus/msegui/apps/rpt-without-dataset/imageviewer.pas
   /home/mingo/lazarus/msegui-dev/lib/common/image/mseformatpngwrite.pas
   /home/mingo/lazarus/msegui-dev/lib/common/image/mseformatjpgwrite.pas
   /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices2.pas
@@ -477,22 +485,19 @@ windowlayout=359
   /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/main.pas
   /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/savecanvas.pas
   /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/savecanvas0.pas
-  /home/mingo/lazarus/msegui/apps/rpt-without-dataset/productprices2.pas
-  /home/mingo/lazarus/dadbiz-mse5-2/rptpreview.pas
-  /home/mingo/lazarus/msegui-dev/apps/ide/sourcepage.pas
  filefilterindex=0
  filecolwidth=174
  [mainfo.basedock]
  splitdir=2
  useroptions=3904
  [mainfo]
- stackedunder=
+ stackedunder=mainfo.panel1
  x=9
  y=49
  cx=356
  cy=76
  wsize=0
- active=1
+ active=0
  visible=1
  [targetconsolefo]
  splitdir=0
@@ -507,9 +512,9 @@ windowlayout=359
  y=297
  cx=904
  cy=347
- wsize=0
+ wsize=2
  active=0
- visible=1
+ visible=0
  [threadsfo]
  splitdir=0
  useroptions=4149
@@ -650,25 +655,25 @@ windowlayout=359
  [objectinspectorfo]
  splitdir=0
  useroptions=4151
- stackedunder=mainfo.panel1
+ stackedunder=watchfo
  parent=
  mdistate=0
  nx=0
  ny=0
  ncx=0
  ncy=0
- x=926
- y=77
+ x=909
+ y=143
  cx=316
- cy=577
- wsize=0
+ cy=484
+ wsize=2
  active=0
- visible=1
+ visible=0
  [objectinspectorfo.grid]
- propcolwidthref=291
- width0=161
+ propcolwidthref=306
+ width0=169
  sortdescent0=0
- width1=124
+ width1=131
  sortdescent1=0
  [watchfo]
  splitdir=0
@@ -715,9 +720,9 @@ windowlayout=359
  ncx=0
  ncy=0
  x=0
- y=448
+ y=477
  cx=1039
- cy=43
+ cy=14
  [componentstorefo]
  splitdir=0
  useroptions=6195
@@ -760,7 +765,7 @@ windowlayout=359
  [componentpalettefo]
  splitdir=0
  useroptions=6199
- stackedunder=formdesignerfo
+ stackedunder=objectinspectorfo
  parent=
  mdistate=0
  nx=0
@@ -771,11 +776,11 @@ windowlayout=359
  y=49
  cx=503
  cy=76
- wsize=0
+ wsize=2
  active=0
- visible=1
+ visible=0
  [componentpalettefo.componentpages]
- activetab=8
+ activetab=1
  [debuggerfo]
  splitdir=0
  useroptions=6199
@@ -811,19 +816,19 @@ windowlayout=359
  [mainfo.panel1]
  splitdir=2
  useroptions=8183
- stackedunder=mainfo
+ stackedunder=
  parent=
  mdistate=0
  nx=0
  ny=0
  ncx=0
  ncy=0
- x=72
- y=155
+ x=16
+ y=235
  cx=1049
  cy=491
  wsize=0
- active=0
+ active=1
  visible=1
 [edit]
 hintwidth=314
@@ -833,8 +838,11 @@ blockindent=1
 rightmarginon=1
 rightmarginchars=80
 tabstops=4
-finddtext=writegraphic1
+finddtext=alignmentsty
 findhistory=10
+ alignmentsty
+ al_or
+ al_fit
  writegraphic1
  canvas.
  fcanvas
@@ -842,43 +850,79 @@ findhistory=10
  es_processed
  eventstatesty
  checkPageScroll
- showhint
- render(
- fareas
 findoptions=1
-editpos=3
+editpos=10
  36,15
- 26,11
- 47,102
+ 66,44
+ 36,88
+ 0,-1073741823
+ 0,-1073741823
+ 0,-1073741823
+ 0,-1073741823
+ 0,-1073741823
+ 0,0
+ 55,34
 bookmarks0=0
 bookmarks1=0
 bookmarks2=0
-sourcefiles=3
+bookmarks3=0
+bookmarks4=0
+bookmarks5=0
+bookmarks6=0
+bookmarks7=0
+bookmarks8=0
+bookmarks9=0
+sourcefiles=10
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/main.pas
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/rptpreview.pas
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices2.pas
-relpaths=3
+ /home/mingo/lazarus/msegui/lib/common/widgets/mseimage.pas
+ /home/mingo/lazarus/msegui/lib/common/kernel/msebitmap.pas
+ /home/mingo/lazarus/msegui/lib/common/kernel/msegraphics.pas
+ /home/mingo/lazarus/msegui/lib/common/kernel/i386-win32/mseguiintf.pas
+ /home/mingo/lazarus/dadbiz-mse5-2/imagesedit.pas
+ /home/mingo/lazarus/msegui/apps/runtime_barcode_print/main.pas
+ /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/imageviewer.pas
+relpaths=10
  main.pas
  rptpreview.pas
  productprices2.pas
-ismoduletexts=3
+ ../../../msegui/lib/common/widgets/mseimage.pas
+ ../../../msegui/lib/common/kernel/msebitmap.pas
+ ../../../msegui/lib/common/kernel/msegraphics.pas
+ ../../../msegui/lib/common/kernel/i386-win32/mseguiintf.pas
+ ../../../dadbiz-mse5-2/imagesedit.pas
+ ../../../msegui/apps/runtime_barcode_print/main.pas
+ imageviewer.pas
+ismoduletexts=10
  0
  0
  0
-modules=4
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+modules=6
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/nods.mfm
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/main.mfm
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/rptpreview.mfm
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices2.mfm
-visiblemodules=4
+ /home/mingo/lazarus/msegui/apps/runtime_barcode_print/main.mfm
+ /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/imageviewer.mfm
+visiblemodules=6
  0
- 1
- 1
- 1
+ 0
+ 0
+ 0
+ 0
+ 0
 [sourcefo.tabwidget]
 tabsize=133
 firsttab=0
-index=2
+index=9
 [components]
 [selecteditpage]
 colwidth=100
