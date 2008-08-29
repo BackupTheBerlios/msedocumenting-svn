@@ -27,12 +27,14 @@ type
  tdatagridfo = class(tmseform)
    tbutton1: tbutton;
    grid: tdrawgrid;
+   tbutton2: tbutton;
    procedure doReport(const sender: TObject);
    procedure doInit(const sender: TObject);
    
    procedure doFinish(const sender: TObject);
    procedure grawGridCell(const sender: tcol; const canvas: tcanvas;
                    const cellinfo: cellinfoty);
+   procedure doLabels(const sender: TObject);
    protected
    	records : tpricesrecarty;
  end;
@@ -41,7 +43,7 @@ var
 implementation
 uses
  datagrid_mfm, productprices2, sysutils, mseformatstr, 
- msedrawtext, rptpreview;
+ msedrawtext, rptpreview, productlabels;
  
 procedure tdatagridfo.doReport(const sender: TObject);
 var
@@ -145,6 +147,18 @@ begin
   		locRect.x := locRect.x +4;
   		drawtext(canvas,str,locRect, textflags);
  	end;
+end;
+
+procedure tdatagridfo.doLabels(const sender: TObject);
+var
+	rpt : tproductlabelsre;
+	rptView : trptpreviewfo;
+begin
+ 	application.createform(trptpreviewfo, rptView);
+ 	rptView.Activate;
+	rpt := tproductlabelsre.create(nil);
+	rpt.setRecordsPtr(@records);
+	rptView.showReport(rpt);
 end;
 
 end.

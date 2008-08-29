@@ -17,7 +17,7 @@ object datagridfo: tdatagridfo
   ondestroy = doFinish
   moduleclassname = 'tmseform'
   object tbutton1: tbutton
-    bounds_x = 208
+    bounds_x = 80
     bounds_y = 240
     bounds_cx = 162
     bounds_cy = 25
@@ -150,5 +150,16 @@ object datagridfo: tdatagridfo
     zebra_color = -1610612716
     zebra_height = 1
     reffontheight = 19
+  end
+  object tbutton2: tbutton
+    bounds_x = 336
+    bounds_y = 240
+    bounds_cx = 162
+    bounds_cy = 25
+    anchors = [an_left, an_bottom]
+    taborder = 2
+    state = [as_localcaption, as_localonexecute]
+    caption = 'Print Labels'
+    onexecute = doLabels
   end
 end
