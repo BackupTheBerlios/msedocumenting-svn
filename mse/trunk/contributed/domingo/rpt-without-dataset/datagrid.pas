@@ -27,7 +27,10 @@ type
  tdatagridfo = class(tmseform)
    tbutton1: tbutton;
    grid: tdrawgrid;
-   tbutton2: tbutton;
+   tgroupbox3: tgroupbox;
+   labelPagesToPrint: tintegeredit;
+   tbutton3: tbutton;
+   barcodeType: tenumedit;
    procedure doReport(const sender: TObject);
    procedure doInit(const sender: TObject);
    
@@ -153,12 +156,29 @@ procedure tdatagridfo.doLabels(const sender: TObject);
 var
 	rpt : tproductlabelsre;
 	rptView : trptpreviewfo;
+	lp : integer;
 begin
- 	application.createform(trptpreviewfo, rptView);
- 	rptView.Activate;
+	if grid.row < 0 then
+    begin
+        ShowMessage('Select a product to print labels !');
+        exit;
+    end;
+
 	rpt := tproductlabelsre.create(nil);
-	rpt.setRecordsPtr(@records);
-	rptView.showReport(rpt);
+
+	lp := labelPagesToPrint.value;
+
+    with records[grid.row] do
+	   rpt.setLabelData(lp, id, barcodeType.value,
+		  '<' + IntToStr(id) + '> ' + reference);
+
+	//if btnRptPreview.value then
+	//begin
+	 	application.createform(trptpreviewfo, rptView);
+	 	rptView.Activate;
+		rptView.showReport(rpt);
+	//end
+	//else rpt.reportLoaded(sender);
 end;
 
 end.

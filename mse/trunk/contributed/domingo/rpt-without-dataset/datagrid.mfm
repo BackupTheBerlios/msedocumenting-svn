@@ -3,13 +3,13 @@ object datagridfo: tdatagridfo
   bounds_x = 305
   bounds_y = 108
   bounds_cx = 604
-  bounds_cy = 280
+  bounds_cy = 369
   taborder = 1
   container.optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_subfocus, ow_mousetransparent, ow_destroywidgets, ow_autoscale]
   container.bounds_x = 0
   container.bounds_y = 0
   container.bounds_cx = 604
-  container.bounds_cy = 280
+  container.bounds_cy = 369
   container.frame.dummy = 0
   optionswindow = [wo_groupleader]
   options = [fo_closeonesc, fo_autoreadstat, fo_autowritestat, fo_savepos, fo_savestate]
@@ -17,8 +17,8 @@ object datagridfo: tdatagridfo
   ondestroy = doFinish
   moduleclassname = 'tmseform'
   object tbutton1: tbutton
-    bounds_x = 80
-    bounds_y = 240
+    bounds_x = 8
+    bounds_y = 329
     bounds_cx = 162
     bounds_cy = 25
     anchors = [an_left, an_bottom]
@@ -31,7 +31,7 @@ object datagridfo: tdatagridfo
     bounds_x = 8
     bounds_y = 8
     bounds_cx = 586
-    bounds_cy = 226
+    bounds_cy = 242
     frame.dummy = 0
     taborder = 1
     optionsgrid = [og_colsizing, og_focuscellonenter, og_colchangeontabkey, og_autopopup, og_mousescrollcol]
@@ -151,15 +151,88 @@ object datagridfo: tdatagridfo
     zebra_height = 1
     reffontheight = 19
   end
-  object tbutton2: tbutton
+  object tgroupbox3: tgroupbox
     bounds_x = 336
-    bounds_y = 240
-    bounds_cx = 162
-    bounds_cy = 25
-    anchors = [an_left, an_bottom]
+    bounds_y = 255
+    bounds_cx = 258
+    bounds_cy = 108
+    frame.caption = 'Labels'
+    frame.dummy = 0
+    frame.outerframe = (
+      0
+      10
+      0
+      0
+    )
     taborder = 2
-    state = [as_localcaption, as_localonexecute]
-    caption = 'Print Labels'
-    onexecute = doLabels
+    object labelPagesToPrint: tintegeredit
+      bounds_x = 144
+      bounds_y = 26
+      bounds_cx = 103
+      bounds_cy = 24
+      frame.caption = 'Pages'
+      frame.captionpos = cp_left
+      frame.dummy = 0
+      frame.outerframe = (
+        51
+        0
+        0
+        0
+      )
+      value = 1
+      svalue = '1'
+      reffontheight = 19
+    end
+    object tbutton3: tbutton
+      optionswidget = [ow_tabfocus, ow_arrowfocus, ow_subfocus, ow_destroywidgets, ow_autoscale]
+      bounds_x = 16
+      bounds_y = 26
+      bounds_cx = 90
+      bounds_cy = 25
+      taborder = 1
+      state = [as_localcaption, as_localonexecute]
+      caption = 'Print'
+      onexecute = doLabels
+    end
+    object barcodeType: tenumedit
+      bounds_x = 16
+      bounds_y = 66
+      bounds_cx = 228
+      bounds_cy = 25
+      frame.dummy = 0
+      taborder = 2
+      value = 6
+      dropdown.cols.count = 1
+      dropdown.cols.items = <      
+        item
+          data = (
+            '2 5 interleaved'
+            '2 5 industrial'
+            '2 5 matrix'
+            '39'
+            '39 Extended'
+            '128A'
+            '128B'
+            '128C'
+            '93'
+            '93Extended'
+            'MSI'
+            'PostNet'
+            'CodaBar'
+            'EAN8'
+            'EAN13'
+            'UPC A'
+            'UPC E0'
+            'UPC E1'
+            'UPC Supp2'
+            'UPC Supp5'
+            'EAN128A'
+            'EAN128B'
+            'EAN128C'
+          )
+        end>
+      dropdown.itemindex = 6
+      reffontheight = 19
+    end
   end
 end

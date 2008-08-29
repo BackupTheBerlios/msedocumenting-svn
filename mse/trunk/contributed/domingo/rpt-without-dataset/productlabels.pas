@@ -4,7 +4,8 @@ interface
 uses
  mseglob,mseguiglob,mseapplication,msestat,msemenus,msegui,msegraphics,
  msegraphutils,mseevent,mseclasses,mseforms,msereport,db,mserichstring,
- msesplitter,msestrings,mseimage,msesimplewidgets,msewidgets;
+ msesplitter,msestrings,mseimage,msesimplewidgets,msewidgets,msedataedits,
+ mseedit,msepostscriptprinter,mseprinter,msetypes;
 
 type
  tproductlabelsre = class(treport)
@@ -12,79 +13,51 @@ type
    tileLabels: ttilearea;
    trecordband1: trecordband;
    imageBarCode: timage;
-   labelReference: tlabel;
-   procedure doPaintLabel(const sender: tbasebandarea; const acanvas: tcanvas);
-   procedure doBeforeRender(const sender: tbasebandarea);
-   procedure doFirstArea(const sender: tbasebandarea);
-   procedure doLastArea(const sender: tbasebandarea);
+   labelDescription: tlabel;
+   psprn: tpostscriptprinter;
    procedure feedData(const sender: tcustomrecordband; var empty: Boolean);
-   procedure doRestart(const sender: tcustomreport);
-   procedure setRecordsPtr(ptr : pointer);
-
-   procedure updateCounter(const sender: tcustomrecordband);
+   procedure doInitVars(const sender: tcustomreport);
+   procedure setLabelData(pages, pid, bcType : integer; desc : string);
+   procedure checkPageCounter(const sender: tcustomreportpage;
+                   var empty: Boolean);
+   procedure reportLoaded(const sender: TObject);
    protected
-    recordsPtr : pointer;
-    recNo, lastId : integer;
+    pagesToPrint, productId, barcodeType : integer;
+    description : string;
+    stopPrinting : boolean;
  end;
 var
  productlabelsre: tproductlabelsre;
 implementation
 uses
- productlabels_mfm, sysutils, ubarcode, datagrid;
+ productlabels_mfm, sysutils, ubarcode;
  
-procedure tproductlabelsre.setRecordsPtr(ptr : pointer);
+procedure tproductlabelsre.setLabelData(pages, pid, bcType : integer; desc : string);
 begin
-	recordsPtr := ptr;
-end;
- 
-procedure tproductlabelsre.doPaintLabel(const sender: tbasebandarea;
-               const acanvas: tcanvas);
-begin
-    //writeln('onpaint');
-end;
-
-procedure tproductlabelsre.doBeforeRender(const sender: tbasebandarea);
-begin
-    //writeln('beforerender');
-end;
-
-procedure tproductlabelsre.doFirstArea(const sender: tbasebandarea);
-begin
-    //writeln('firstarea');
-end;
-
-procedure tproductlabelsre.doLastArea(const sender: tbasebandarea);
-begin
-    //writeln('lastarea');
+	pagesToPrint := pages;
+	productId := pid;
+	description := desc;
+	barcodeType := bcType
 end;
 
 procedure tproductlabelsre.feedData(const sender: tcustomrecordband;
                var empty: Boolean);
+begin
+	if stopPrinting then exit;
+    empty := false;
+end;
+
+procedure tproductlabelsre.doInitVars(const sender: tcustomreport);
 var 
     b : TasBarcode;               
-	records : tpricesrecartyPtr; 
-	rec : tpricesrec;
 begin
     //writeln('doRenderRecord');
-	if recordsPtr = nil then exit;
-	records := tpricesrecartyPtr(recordsPtr);
-	if recNo >= length(records^) then exit;
-	rec := records^[recNo];
-
-    while lastId = rec.id do
-    begin
-        inc(recNo);
-        if recNo >= length(records^) then exit;
-        rec := records^[recNo];
-    end; 
-    lastId := rec.id;
-
-    labelReference.caption := '<' +IntToStr(rec.id) + '> ' + rec.reference;
+    labelDescription.caption := description;
 
     b := TasBarcode.Create(Self);
-    b.Text := IntToStr(rec.id);
+    b.Text := IntToStr(productId);
 
-    b.Typ := bcCode128B;
+    b.Typ := TBarcodeType(barcodeType); //bcCode128B;
   
     //bcoNone, bcoCode, bcoTyp, bcoBoth
     b.showtext := bcoBoth;
@@ -101,21 +74,30 @@ begin
     
     b.DrawBarcode(imageBarCode.bitmap.canvas);
   
-    b.free;           
-      
-    empty := false;
+    b.free;    
+    stopPrinting := False;       
 end;
 
-procedure tproductlabelsre.doRestart(const sender: tcustomreport);
+procedure tproductlabelsre.checkPageCounter(const sender: tcustomreportpage;
+               var empty: Boolean);
 begin
-    recNo := 0;
-    lastId := 0;
-    //writeln('doRestart');
+	if pagenum > pagesToPrint-1 then 
+	begin
+		stopPrinting := True;
+		exit;
+	end;
+	empty := false;
 end;
 
-procedure tproductlabelsre.updateCounter(const sender: tcustomrecordband);
+procedure tproductlabelsre.reportLoaded(const sender: TObject);
 begin
-    inc(recNo);
+	render(
+		{$ifdef mswindows}
+		gdiprn
+		{$else}
+		psprn
+		{$endif}
+		{,ttextstream.create('test.ps',fm_create)});
 end;
 
 end.
