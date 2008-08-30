@@ -1,2 +1,0 @@
-rm *.o *.ppu *.bak *.compiled *.bak?
-strip * 
