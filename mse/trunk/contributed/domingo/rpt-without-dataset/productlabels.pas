@@ -92,11 +92,11 @@ end;
 procedure tproductlabelsre.reportLoaded(const sender: TObject);
 begin
 	render(
-		{$ifdef mswindows}
-		gdiprn
-		{$else}
+		//{$ifdef mswindows}
+		//gdiprn
+		//{$else}
 		psprn
-		{$endif}
+		//{$endif}
 		{,ttextstream.create('test.ps',fm_create)});
 end;
 

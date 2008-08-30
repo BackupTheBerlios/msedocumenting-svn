@@ -1,9 +1,11 @@
 #!/bin/sh
 appname=rptwithoutdatasource
 
-mseguilib_home=../msegui/lib/common
+devhome=~/lazarus
 
-fpc=../fpc-2.2.2/bin/ppc386
+mseguilib_home=$devhome/msegui/lib/common
+
+fpc=$devhome/fpc-2.2.2/bin/ppc386
 
 common_options="\
 	-Fu$mseguilib_home/kernel/ \
