@@ -56,7 +56,6 @@ type
    procedure doAddAttachments(const sender: TObject);
    procedure doDelAttachements(const sender: TObject);
    procedure mangeConn(const sender: tthreadcomp);
-   procedure canClose(const sender: TObject);
    procedure checkForClose(const sender: tcustommseform;
                    var amodalresult: modalresultty);
    procedure startTLS(const sender: TObject);
@@ -305,10 +304,6 @@ begin
 	while not FQuit do begin
 		SMTP.CallAction;
 	end;
-end;
-
-procedure tmainfo.canClose(const sender: TObject);
-begin
 end;
 
 procedure tmainfo.checkForClose(const sender: tcustommseform;

@@ -13,135 +13,8 @@ order10=0
 order11=0
 order12=0
 [projectoptions]
-projectdir=/home/mingo/lazarus/msegui-dev/apps/lnet-smtp
+projectdir=/home/mingo/lazarus/msedocumenting/mse/trunk/contributed/domingo/lnet-smtp
 projectfilename=/home/mingo/lazarus/msegui/apps/lnet-smtp/smtptest.prj
-findinfiledialog=36
- [findinfileadialogfo.subdirs]
- value=1
- [findinfileadialogfo.inopenfiles]
- value=0
- [findinfileadialogfo.wholeword]
- value=0
- [findinfileadialogfo.casesensitive]
- value=0
- [findinfileadialogfo.indirectories]
- value=1
- [findinfileadialogfo.mask]
- value="*.pas" "*.pp" "*.inc"
- history=0
- [findinfileadialogfo.dir]
- filenames=1
-  /home/mingo/lazarus/msegui/apps/
- filehistory=4
-  /home/mingo/lazarus/msegui/apps/
-  /home/mingo/lazarus/
-  /home/mingo/lazarus/msegui-dev/lib/
-  /home/mingo/lazarus/msegui-dev/apps/ide/
- filefilterindex=-1
- filecolwidth=174
- [findinfileadialogfo.findtext]
- value=tthreadcomp
- history=4
-  tthreadcomp
-  tlistview
-  tsocket
-  lfi
- [findinfileadialogfo]
- stackedunder=
- x=268
- y=415
- cx=404
- cy=249
-finddialog=8
- [finddialogfo.selectedonly]
- value=0
- [finddialogfo]
- stackedunder=
- x=319
- y=205
- cx=379
- cy=116
-options=74
- [projectoptionsfo.twidgetgrid3]
- propcolwidthref=801
- width0=13
- sortdescent0=0
- width1=13
- sortdescent1=0
- width2=13
- sortdescent2=0
- width3=140
- sortdescent3=0
- width4=291
- sortdescent4=0
- width5=320
- sortdescent5=0
- [projectoptionsfo.newfile]
- firsttab=0
- index=0
- [projectoptionsfo.fontaliasgrid]
- propcolwidthref=691
- values0=0
- width0=98
- sortdescent0=0
- values1=0
- width1=684
- sortdescent1=0
- values2=0
- width2=30
- sortdescent2=0
- [projectoptionsfo.macrosplitter]
- x=0
- y=178
- xprop=0
- yprop=0.34833659491193
- [projectoptionsfo.macrogrid]
- propcolwidthref=595
- width0=13
- sortdescent0=0
- width1=13
- sortdescent1=0
- width2=13
- sortdescent2=0
- width3=13
- sortdescent3=0
- width4=13
- sortdescent4=0
- width5=13
- sortdescent5=0
- width6=146
- sortdescent6=0
- width7=583
- sortdescent7=0
- [projectoptionsfo.makegroupbox]
- firsttab=0
- index=0
- [projectoptionsfo.exceptionsgrid]
- propcolwidthref=772
- width0=47
- sortdescent0=0
- values1=1
-  EconvertError
- width1=766
- sortdescent1=0
- [projectoptionsfo.ttabwidget1]
- firsttab=0
- index=0
- [projectoptionsfo.tabwidget]
- firsttab=0
- index=2
- [projectoptionsfo]
- stackedunder=
- x=151
- y=68
- cx=821
- cy=572
-colordialog=5
- [colordialogfo]
- x=140
- y=234
- cx=342
- cy=303
 sigsettings=27
  1,1,T,F
  3,3,T,F
@@ -176,20 +49,14 @@ exceptclassnames=1
  EconvertError
 exceptignore=1
  0
-modulenames=3
- AUTHENTICATEFO
- LOGFEATURESFO
+modulenames=1
  MAINFO
-moduletypes=3
- TAUTHENTICATEFO
- TLOGFEATURESFO
+moduletypes=1
  TMAINFO
-modulefiles=3
- /home/mingo/lazarus/msegui-dev/apps/lnet-smtp/authenticate.mfm
- /home/mingo/lazarus/msegui-dev/apps/lnet-smtp/logfeatures.mfm
- /home/mingo/lazarus/msegui/apps/lnet-smtp/main.mfm
-mainfile=${PROJECTNAME}.pas
-targetfile=${PROJECTNAME}${EXEEXT}
+modulefiles=1
+ /home/mingo/lazarus/msedocumenting/mse/trunk/contributed/domingo/lnet-smtp/main.mfm
+mainfile=
+targetfile=
 messageoutputfile=
 copymessages=0
 closemessages=1
@@ -214,10 +81,10 @@ afterload=
 beforerun=
 defaultmake=1
 makeoptions=4
- -l -Mobjfpc -Sh -Sc -Fulib
- -gl -O-
+ -l -Mobjfpc -Sh
+ -gl
  -B
- -OG2p3 -XX -Xs
+ -OG2p3 -XX -CX -Xs
 makeoptionson=4
  63
  31
@@ -227,13 +94,7 @@ macroon=0
 macronames=0
 macrovalues=0
 macrogroup=0
-groupcomments=6
- 
- 
- 
- 
- 
- 
+groupcomments=0
 sourcedirs=3
  ${MSELIBDIR}kernel/$TARGET/
  ${MSELIBDIR}*/
@@ -278,48 +139,8 @@ toolparams=0
 fontalias=0
 fontnames=0
 fontheights=0
-usercolors=20
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
-usercolorcomment=20
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+usercolors=0
+usercolorcomment=0
 showgrid=1
 snaptogrid=1
 moveonfirstclick=1
@@ -338,26 +159,10 @@ editfontantialiased=1
 editmarkbrackets=1
 backupfilecount=2
 encoding=0
-newprojectfiles=4
- ${TEMPLATEDIR}default/project.pas
- ${TEMPLATEDIR}default/main.pas
- ${TEMPLATEDIR}default/main.mfm
- ${TEMPLATEDIR}default/main_mfm.pas
-newprojectfilesdest=4
- ${%PROJECTNAME%}.pas
- 
- 
- 
-expandprojectfilemacros=4
- 1
- 1
- 1
- 0
-loadprojectfile=4
- 1
- 1
- 1
- 0
+newprojectfiles=0
+newprojectfilesdest=0
+expandprojectfilemacros=0
+loadprojectfile=0
 newprogramfile=${TEMPLATEDIR}default/program.pas
 newunitfile=${TEMPLATEDIR}default/unit.pas
 newmainfosource=${TEMPLATEDIR}default/mainform.pas
@@ -380,22 +185,14 @@ activateonbreak=1
 showconsole=0
 externalconsole=0
 [breakpoints]
-on=1
- 0
-path=1
- /home/mingo/lazarus/msegui-dev/apps/lnet-smtp/main.pas
-line=1
- 136
-address=1
- 134744133
-addbkpt=1
- 0
-ignore=1
- 0
-condition=1
- 
-panels=1
- panel1
+on=0
+path=0
+line=0
+address=0
+addbkpt=0
+ignore=0
+condition=0
+panels=0
 units=
  (
  modulefilenames=0
@@ -411,31 +208,22 @@ files=
 storedir=/home/mingo/lazarus/msegui/apps/ide/compstore/
 filename=/home/mingo/lazarus/msegui/apps/ide/compstore/default.stg
 [layout]
-windowlayout=358
+windowlayout=333
  [mainfo.openfile]
  filenames=0
- filehistory=10
-  /home/mingo/lazarus/msegui/apps/lnet-smtp/main.pas
-  /home/mingo/lazarus/lazarus-svn/components/lnet/examples/console/lsmtp/lsmtpclient.pp
-  /home/mingo/lazarus/msegui-dev/apps/lnet-smtp/lib/lsmtp.pp
-  /home/mingo/lazarus/msegui-dev/apps/lnet-smtp/lib/lnetssl.pp
-  /home/mingo/lazarus/msegui-dev/apps/lnet-smtp/lib/openssl.pas
-  /home/mingo/lazarus/msegui-dev/apps/lnet-smtp/logfeatures.pas
-  /home/mingo/lazarus/msegui-dev/apps/lnet-smtp/authenticate.pas
-  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/datagrid.pas
-  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/rptpreview.pas
-  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/imageviewer.pas
+ filehistory=1
+  /home/mingo/lazarus/msedocumenting/mse/trunk/contributed/domingo/lnet-smtp/main.pas
  filefilterindex=0
  filecolwidth=174
  [mainfo.basedock]
  splitdir=2
- useroptions=3904
+ useroptions=44864
  [mainfo]
  stackedunder=
  x=9
- y=49
- cx=370
- cy=73
+ y=50
+ cx=429
+ cy=85
  wsize=0
  active=1
  visible=1
@@ -448,10 +236,10 @@ windowlayout=358
  ny=0
  ncx=0
  ncy=0
- x=116
- y=297
- cx=904
- cy=347
+ x=205
+ y=367
+ cx=368
+ cy=137
  wsize=0
  active=0
  visible=0
@@ -491,7 +279,7 @@ windowlayout=358
  [findinfilefo]
  splitdir=0
  useroptions=4151
- stackedunder=formdesignerfo
+ stackedunder=componentpalettefo
  parent=
  mdistate=0
  nx=0
@@ -500,7 +288,7 @@ windowlayout=358
  ncy=0
  x=548
  y=115
- cx=541
+ cx=369
  cy=198
  [projecttreefo]
  splitdir=0
@@ -512,10 +300,10 @@ windowlayout=358
  ny=0
  ncx=0
  ncy=0
- x=321
- y=101
- cx=698
- cy=413
+ x=263
+ y=431
+ cx=286
+ cy=201
  wsize=0
  active=0
  visible=0
@@ -530,7 +318,7 @@ windowlayout=358
  ncy=0
  x=407
  y=349
- cx=620
+ cx=254
  cy=180
  wsize=0
  active=0
@@ -544,34 +332,30 @@ windowlayout=358
  ny=0
  ncx=0
  ncy=0
- x=542
- y=50
- cx=473
- cy=181
+ x=120
+ y=368
+ cx=483
+ cy=210
  wsize=0
  active=0
  visible=0
  [watchpointsfo.grid]
- propcolwidthref=342
+ propcolwidthref=352
  width0=16
  sortdescent0=0
- values1=1
-  0
+ values1=0
  width1=33
  sortdescent1=0
- values2=1
-  pinteger(0x126c6b4)^
- width2=239
+ values2=0
+ width2=158
  sortdescent2=0
  width4=34
  sortdescent4=0
- values5=1
-  0
+ values5=0
  width5=38
  sortdescent5=0
- values6=1
-  
- width6=93
+ values6=0
+ width6=184
  sortdescent6=0
  [breakpointsfo]
  splitdir=0
@@ -585,7 +369,7 @@ windowlayout=358
  ncy=0
  x=107
  y=404
- cx=477
+ cx=636
  cy=128
  wsize=0
  active=0
@@ -595,25 +379,25 @@ windowlayout=358
  [objectinspectorfo]
  splitdir=0
  useroptions=4151
- stackedunder=mainfo.panel1
+ stackedunder=componentstorefo
  parent=
  mdistate=0
  nx=0
  ny=0
  ncx=0
  ncy=0
- x=958
- y=53
- cx=316
- cy=484
+ x=354
+ y=403
+ cx=254
+ cy=248
  wsize=0
  active=0
- visible=1
+ visible=0
  [objectinspectorfo.grid]
- propcolwidthref=306
- width0=193
+ propcolwidthref=244
+ width0=90
  sortdescent0=0
- width1=107
+ width1=148
  sortdescent1=0
  [watchfo]
  splitdir=0
@@ -624,8 +408,8 @@ windowlayout=358
  ny=0
  ncx=0
  ncy=0
- x=510
- y=325
+ x=291
+ y=247
  cx=310
  cy=245
  wsize=0
@@ -651,18 +435,21 @@ windowlayout=358
  value=1
  [messagefo]
  splitdir=0
- useroptions=12343
- parent=mainfo.panel1.container
- visible=0
+ useroptions=4151
+ stackedunder=watchfo
+ parent=
  mdistate=0
  nx=0
  ny=0
  ncx=0
  ncy=0
- x=0
- y=411
- cx=933
- cy=80
+ x=100
+ y=100
+ cx=491
+ cy=317
+ wsize=0
+ active=0
+ visible=0
  [componentstorefo]
  splitdir=0
  useroptions=6195
@@ -674,7 +461,7 @@ windowlayout=358
  ncx=0
  ncy=0
  x=100
- y=92
+ y=100
  cx=445
  cy=354
  wsize=0
@@ -684,9 +471,9 @@ windowlayout=358
  propcolwidthref=435
  width0=111
  sortdescent0=0
- width1=160
+ width1=157
  sortdescent1=0
- width2=157
+ width2=160
  sortdescent2=0
  [componentstorefo.storefiledialog]
  filenames=1
@@ -705,22 +492,22 @@ windowlayout=358
  [componentpalettefo]
  splitdir=0
  useroptions=6199
- stackedunder=formdesignerfo
+ stackedunder=sourcefo
  parent=
  mdistate=0
  nx=0
  ny=0
  ncx=0
  ncy=0
- x=389
+ x=448
  y=49
- cx=511
- cy=100
+ cx=542
+ cy=98
  wsize=0
  active=0
  visible=1
  [componentpalettefo.componentpages]
- activetab=1
+ activetab=0
  [debuggerfo]
  splitdir=0
  useroptions=6199
@@ -733,43 +520,28 @@ windowlayout=358
  ncy=0
  x=0
  y=0
- cx=370
- cy=27
+ cx=429
+ cy=39
  [sourcefo]
  splitdir=0
  useroptions=4149
- parent=mainfo.panel1.container
- visible=1
- mdistate=0
- nx=0
- ny=0
- ncx=0
- ncy=0
- x=0
- y=0
- cx=933
- cy=491
- [actionsmo.watchesonact]
- checked=1
- [actionsmo.bluedotsonact]
- checked=1
- [mainfo.panel1]
- splitdir=2
- useroptions=8183
- stackedunder=mainfo
  parent=
  mdistate=0
  nx=0
  ny=0
  ncx=0
  ncy=0
- x=5
- y=201
- cx=943
- cy=491
+ x=8
+ y=241
+ cx=834
+ cy=485
  wsize=0
  active=0
  visible=1
+ [actionsmo.watchesonact]
+ checked=1
+ [actionsmo.bluedotsonact]
+ checked=1
 [edit]
 hintwidth=0
 hintheight=0
@@ -778,112 +550,26 @@ blockindent=1
 rightmarginon=1
 rightmarginchars=80
 tabstops=4
-finddtext=active
-findhistory=8
- active
- ek_terminate
- fonclose
- tstringcol
- FQuit
- FPipeLine
- RefreshFeatureList
- tlistitem
+finddtext=
+findhistory=0
 findoptions=1
-editpos=13
- 0,-1073741823
- 23,316
- 32,15
- 23,11
- 0,-1073741823
- 0,-1073741823
- 18,691
- 0,-1073741823
- 0,-1073741823
- 0,-1073741823
- 23,154
- 18,34
- 37,313
+editpos=1
+ 0,0
 bookmarks0=0
-bookmarks1=0
-bookmarks2=0
-bookmarks3=0
-bookmarks4=0
-bookmarks5=0
-bookmarks6=0
-bookmarks7=0
-bookmarks8=0
-bookmarks9=0
-bookmarks10=0
-bookmarks11=0
-bookmarks12=0
-sourcefiles=13
- /home/mingo/lazarus/msegui-dev/apps/lnet-smtp/smtptest.pas
- /home/mingo/lazarus/msegui/apps/lnet-smtp/main.pas
- /home/mingo/lazarus/msegui-dev/apps/lnet-smtp/authenticate.pas
- /home/mingo/lazarus/msegui-dev/apps/lnet-smtp/logfeatures.pas
- /home/mingo/lazarus/msegui/lib/common/kernel/msedatalist.pas
- /home/mingo/lazarus/msegui/lib/common/editwidgets/mseedit.pas
- /home/mingo/lazarus/msegui/lib/common/widgets/mseforms.pas
- /home/mingo/lazarus/msegui/lib/common/widgets/msegrids.pas
- /home/mingo/lazarus/msegui-dev/apps/lnet-smtp/lib/lnetssl.pp
- /home/mingo/lazarus/msegui-dev/apps/lnet-smtp/lib/lsmtp.pp
- /home/mingo/lazarus/lazarus-svn/components/lnet/examples/console/lsmtp/lsmtpclient.pp
- /home/mingo/lazarus/msegui/lib/common/kernel/msethreadcomp.pas
- /home/mingo/lazarus/msegui/lib/common/kernel/msethread.pas
-relpaths=13
- smtptest.pas
- ../../../msegui/apps/lnet-smtp/main.pas
- authenticate.pas
- logfeatures.pas
- ../../../msegui/lib/common/kernel/msedatalist.pas
- ../../../msegui/lib/common/editwidgets/mseedit.pas
- ../../../msegui/lib/common/widgets/mseforms.pas
- ../../../msegui/lib/common/widgets/msegrids.pas
- lib/lnetssl.pp
- lib/lsmtp.pp
- ../../../lazarus-svn/components/lnet/examples/console/lsmtp/lsmtpclient.pp
- ../../../msegui/lib/common/kernel/msethreadcomp.pas
- ../../../msegui/lib/common/kernel/msethread.pas
-ismoduletexts=13
+sourcefiles=1
+ /home/mingo/lazarus/msedocumenting/mse/trunk/contributed/domingo/lnet-smtp/main.pas
+relpaths=1
+ main.pas
+ismoduletexts=1
  0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
- 0
-modules=3
- /home/mingo/lazarus/msegui-dev/apps/lnet-smtp/authenticate.mfm
- /home/mingo/lazarus/msegui-dev/apps/lnet-smtp/logfeatures.mfm
- /home/mingo/lazarus/msegui/apps/lnet-smtp/main.mfm
-visiblemodules=3
- 1
- 1
+modules=1
+ /home/mingo/lazarus/msedocumenting/mse/trunk/contributed/domingo/lnet-smtp/main.mfm
+visiblemodules=1
  1
 [sourcefo.tabwidget]
-order=13
- 0
- 1
- 11
- 12
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
- 10
-tabsize=134
+tabsize=104
 firsttab=0
-index=1
+index=0
 [components]
 [selecteditpage]
 colwidth=100
