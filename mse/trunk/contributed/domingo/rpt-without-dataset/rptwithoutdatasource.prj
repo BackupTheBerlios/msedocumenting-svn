@@ -14,7 +14,7 @@ order11=0
 order12=0
 [projectoptions]
 projectdir=/home/mingo/lazarus/msedocumenting/mse/trunk/contributed/domingo/rpt-without-dataset
-projectfilename=/home/mingo/lazarus/msedocumenting/mse/trunk/contributed/domingo/rpt-without-dataset/rptwithoutdatasource.prj
+projectfilename=/home/mingo/lazarus/msegui/apps/rpt-without-dataset/rptwithoutdatasource.prj
 findinfiledialog=39
  [findinfileadialogfo.subdirs]
  value=1
@@ -431,48 +431,13 @@ activateonbreak=1
 showconsole=0
 externalconsole=0
 [breakpoints]
-on=5
- 0
- 0
- 0
- 0
- 0
-path=5
- /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices.pas
- /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/rptpreview.pas
- /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices2.pas
- /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices2.pas
- /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productlabels.pas
-line=5
- 101
- 97
- 123
- 128
- 102
-address=5
- 136554674
- 135552674
- 136407084
- 136407100
- 136407915
-addbkpt=5
- 0
- 0
- 0
- 0
- 0
-ignore=5
- 0
- 0
- 0
- 0
- 0
-condition=5
- 
- 
- 
- 
- 
+on=0
+path=0
+line=0
+address=0
+addbkpt=0
+ignore=0
+condition=0
 panels=1
  panel1
 units=
@@ -490,11 +455,11 @@ files=
 storedir=/home/mingo/lazarus/msegui/apps/ide/compstore/
 filename=/home/mingo/lazarus/msegui/apps/ide/compstore/default.stg
 [layout]
-windowlayout=359
+windowlayout=358
  [mainfo.openfile]
- filenames=1
-  /home/mingo/lazarus/dadbiz-mse5-2/productsedit.pas
+ filenames=0
  filehistory=10
+  /home/mingo/lazarus/dadbiz-mse5-2/invoicesedit.pas
   /home/mingo/lazarus/dadbiz-mse5-2/productsedit.pas
   /home/mingo/lazarus/dadbiz-mse5-2/productlabels.pas
   /home/mingo/lazarus/msedocumenting/mse/trunk/contributed/attid/runtime_barcode_print/main.pas
@@ -504,20 +469,19 @@ windowlayout=359
   /home/mingo/lazarus/dadbiz-mse5-2/imagesedit.pas
   /home/mingo/lazarus/msegui/apps/rpt-without-dataset/imageviewer.pas
   /home/mingo/lazarus/msegui-dev/lib/common/image/mseformatpngwrite.pas
-  /home/mingo/lazarus/msegui-dev/lib/common/image/mseformatjpgwrite.pas
  filefilterindex=0
  filecolwidth=243
  [mainfo.basedock]
  splitdir=2
  useroptions=3904
  [mainfo]
- stackedunder=objectinspectorfo
+ stackedunder=
  x=9
  y=49
  cx=356
  cy=76
  wsize=0
- active=0
+ active=1
  visible=1
  [targetconsolefo]
  splitdir=0
@@ -690,10 +654,10 @@ windowlayout=359
  active=0
  visible=1
  [objectinspectorfo.grid]
- propcolwidthref=291
- width0=161
+ propcolwidthref=306
+ width0=169
  sortdescent0=0
- width1=124
+ width1=131
  sortdescent1=0
  [watchfo]
  splitdir=0
@@ -740,9 +704,9 @@ windowlayout=359
  ncx=0
  ncy=0
  x=0
- y=457
+ y=476
  cx=1039
- cy=34
+ cy=15
  [componentstorefo]
  splitdir=0
  useroptions=6195
@@ -785,7 +749,7 @@ windowlayout=359
  [componentpalettefo]
  splitdir=0
  useroptions=6199
- stackedunder=formdesignerfo
+ stackedunder=mainfo
  parent=
  mdistate=0
  nx=0
@@ -836,7 +800,7 @@ windowlayout=359
  [mainfo.panel1]
  splitdir=2
  useroptions=8183
- stackedunder=
+ stackedunder=componentpalettefo
  parent=
  mdistate=0
  nx=0
@@ -848,7 +812,7 @@ windowlayout=359
  cx=1049
  cy=491
  wsize=0
- active=1
+ active=0
  visible=1
 [edit]
 hintwidth=314
@@ -872,12 +836,12 @@ findhistory=10
  eventstatesty
 findoptions=1
 editpos=6
- 47,24
- 0,-1073741823
- 0,-1073741823
+ 0,6
+ 3,22
+ 0,0
  0,-1073741823
  3,180
- 19,15
+ 4,73
 bookmarks0=0
 bookmarks1=0
 bookmarks2=0
@@ -886,8 +850,8 @@ bookmarks4=0
 bookmarks5=0
 sourcefiles=6
  /home/mingo/lazarus/msedocumenting/mse/trunk/contributed/domingo/rpt-without-dataset/main.pas
- /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/rptpreview.pas
- /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/productprices2.pas
+ /home/mingo/lazarus/msedocumenting/mse/trunk/contributed/domingo/rpt-without-dataset/rptpreview.pas
+ /home/mingo/lazarus/msedocumenting/mse/trunk/contributed/domingo/rpt-without-dataset/productprices2.pas
  /home/mingo/lazarus/msegui-dev/apps/rpt-without-dataset/imageviewer.pas
  /home/mingo/lazarus/msedocumenting/mse/trunk/contributed/domingo/rpt-without-dataset/datagrid.pas
  /home/mingo/lazarus/msedocumenting/mse/trunk/contributed/domingo/rpt-without-dataset/productlabels.pas
@@ -917,7 +881,7 @@ modules=8
 visiblemodules=8
  0
  1
- 0
+ 1
  1
  0
  1
@@ -926,7 +890,7 @@ visiblemodules=8
 [sourcefo.tabwidget]
 tabsize=133
 firsttab=0
-index=0
+index=2
 [components]
 [selecteditpage]
 colwidth=100
