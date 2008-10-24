@@ -1,0 +1,133 @@
+object repazdialogfo: trepazdialogfo
+  bounds_x = 250
+  bounds_y = 255
+  bounds_cx = 326
+  bounds_cy = 180
+  bounds_cxmin = 326
+  bounds_cymin = 180
+  bounds_cxmax = 326
+  bounds_cymax = 180
+  taborder = 1
+  container.optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_subfocus, ow_mousetransparent, ow_mousewheel, ow_destroywidgets, ow_autoscale]
+  container.bounds_x = 0
+  container.bounds_y = 0
+  container.bounds_cx = 326
+  container.bounds_cy = 180
+  container.frame.dummy = 0
+  optionswindow = [wo_message]
+  options = [fo_screencentered, fo_autoreadstat, fo_autowritestat, fo_savepos, fo_savezorder, fo_savestate]
+  caption = 'Repaz Dialog'
+  moduleclassname = 'tmseform'
+  object cactions: tdropdownlistedit
+    bounds_x = 8
+    bounds_y = 11
+    bounds_cx = 243
+    bounds_cy = 19
+    frame.caption = 'Report Action'
+    frame.captionpos = cp_left
+    frame.dummy = 0
+    frame.outerframe = (
+      69
+      0
+      0
+      0
+    )
+    ondataentered = cactions_ondataentered
+    dropdown.options = [deo_selectonly, deo_autodropdown, deo_keydropdown, deo_autosavehistory]
+    dropdown.cols.count = 2
+    dropdown.cols.items = <    
+      item
+        data = (
+          'Preview (Screen)'
+          'Printer'
+          'Save to PostScript File'
+          'Save to PDF File'
+        )
+      end    
+      item
+        options = [co_readonly, co_invisible, co_mousemovefocus, co_focusselect, co_rowselect, co_fill]
+        data = (
+          'Show report on screen than can be print on printer, save to Postscript, PDF, etc.'
+          'Print report on general printer like LaserJet, InkJet, Dot Matrix, etc.'
+          'Save to PostScript file and than can print that is support PostScript or convert to another file format.'
+          'Save to PDF (Portable Document Format) file and than can be viewed with PDF Reader Application like Adobe Acrobat Reader, etc.'
+        )
+      end>
+    reffontheight = 13
+  end
+  object tgroupbox1: tgroupbox
+    bounds_x = 6
+    bounds_y = 40
+    bounds_cx = 246
+    bounds_cy = 102
+    frame.caption = 'Description'
+    frame.dummy = 0
+    frame.outerframe = (
+      0
+      7
+      0
+      0
+    )
+    taborder = 2
+    object cdescription: tlabel
+      optionswidget = [ow_destroywidgets, ow_fontglyphheight, ow_autoscale]
+      bounds_x = 6
+      bounds_y = 20
+      bounds_cx = 234
+      bounds_cy = 71
+      textflags = [tf_wordbreak]
+      reffontheight = 13
+    end
+  end
+  object showagain: tbooleanedit
+    bounds_x = 6
+    bounds_y = 152
+    bounds_cx = 260
+    bounds_cy = 15
+    frame.caption = 'S&how this dialog again every execute report action'
+    frame.dummy = 0
+    frame.outerframe = (
+      0
+      1
+      247
+      1
+    )
+    taborder = 1
+    value = True
+  end
+  object btnsetting: tbutton
+    bounds_x = 258
+    bounds_y = 11
+    bounds_cx = 60
+    bounds_cy = 19
+    taborder = 3
+    state = [as_localcaption]
+    caption = 'Se&tting'
+  end
+  object btnok: tbutton
+    optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_destroywidgets, ow_fontglyphheight, ow_autoscale]
+    bounds_x = 258
+    bounds_y = 48
+    bounds_cx = 60
+    bounds_cy = 19
+    anchors = [an_top, an_right]
+    taborder = 4
+    state = [as_default, as_localdefault, as_localcaption]
+    caption = '&OK'
+    modalresult = mr_ok
+    reffontheight = 13
+  end
+  object btncancel: tbutton
+    optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_destroywidgets, ow_fontglyphheight, ow_autoscale]
+    bounds_x = 258
+    bounds_y = 73
+    bounds_cx = 60
+    bounds_cy = 19
+    anchors = [an_top, an_right]
+    taborder = 5
+    state = [as_localcaption]
+    caption = '&Cancel'
+    modalresult = mr_cancel
+    reffontheight = 13
+  end
+end
