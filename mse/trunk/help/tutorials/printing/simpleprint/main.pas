@@ -22,8 +22,10 @@ procedure tmainfo.printex(const sender: TObject);
 var
  rect1: rectty;
 begin
-// printer.beginprint(ttextstream.create('test.ps',fm_create)); //printing into file
- printer.beginprint;           //printing direct to default printer
+// printer.beginprint(ttextstream.create(
+//         'test.ps',fm_create));//printing into file
+ printer.beginprint;             //printing direct to default printer
+                                 //needs installed ghostscript on win32
  rect1:= makerect(50,100,500,100);
  with printer.canvas do begin
   writeln('AAAAAAAAA');
