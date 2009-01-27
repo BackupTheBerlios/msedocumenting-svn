@@ -23,6 +23,8 @@ object datagridfo: tdatagridfo
     bounds_cy = 25
     anchors = [an_left, an_bottom]
     state = [as_localcaption, as_localonexecute]
+    autosize_cx = 0
+    autosize_cy = 0
     caption = 'Print Report'
     onexecute = doReport
   end
@@ -113,7 +115,7 @@ object datagridfo: tdatagridfo
     fixrows.count = 1
     fixrows.items = <    
       item
-        height = 21
+        height = 23
         captions.count = 10
         captions.items = <        
           item
@@ -149,56 +151,58 @@ object datagridfo: tdatagridfo
       end>
     zebra_color = -1610612716
     zebra_height = 1
-    reffontheight = 19
+    reffontheight = 21
   end
   object tgroupbox3: tgroupbox
     bounds_x = 336
-    bounds_y = 255
+    bounds_y = 254
     bounds_cx = 258
-    bounds_cy = 108
+    bounds_cy = 109
     frame.caption = 'Labels'
     frame.dummy = 0
     frame.outerframe = (
       0
-      10
+      11
       0
       0
     )
     taborder = 2
     object labelPagesToPrint: tintegeredit
-      bounds_x = 144
-      bounds_y = 26
-      bounds_cx = 103
-      bounds_cy = 24
+      bounds_x = 150
+      bounds_y = 27
+      bounds_cx = 97
+      bounds_cy = 26
       frame.caption = 'Pages'
       frame.captionpos = cp_left
       frame.dummy = 0
       frame.outerframe = (
-        51
+        45
         0
         0
         0
       )
       value = 1
-      svalue = '1'
-      reffontheight = 19
+      reffontheight = 21
     end
     object tbutton3: tbutton
       optionswidget = [ow_tabfocus, ow_arrowfocus, ow_subfocus, ow_destroywidgets, ow_autoscale]
       bounds_x = 16
-      bounds_y = 26
+      bounds_y = 27
       bounds_cx = 90
       bounds_cy = 25
       taborder = 1
       state = [as_localcaption, as_localonexecute]
+      autosize_cx = 0
+      autosize_cy = 0
       caption = 'Print'
       onexecute = doLabels
     end
     object barcodeType: tenumedit
       bounds_x = 16
-      bounds_y = 66
+      bounds_y = 67
       bounds_cx = 228
-      bounds_cy = 25
+      bounds_cy = 27
+      frame.button.color = -2147483646
       frame.dummy = 0
       taborder = 2
       value = 6
@@ -232,7 +236,7 @@ object datagridfo: tdatagridfo
           )
         end>
       dropdown.itemindex = 6
-      reffontheight = 19
+      reffontheight = 21
     end
   end
 end
