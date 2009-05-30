@@ -15,7 +15,6 @@ object barfo: tbarfo
   container.frame.dummy = 0
   optionswindow = [wo_popup]
   options = [fo_screencentered, fo_autoreadstat, fo_autowritestat, fo_savepos, fo_savestate]
-  icon.transparency = -2147483648
   oncreate = barformcreate
   ondestroy = barfodestroy
   moduleclassname = 'tmseform'
@@ -39,25 +38,23 @@ object barfo: tbarfo
       0
       0
     )
-    face.image.transparency = -2147483648
     face.fade_pos.count = 2
     face.fade_pos.items = (
-      0
-      1
+       0.0000000000000000E+0000
+       1.0000000000000000E+0000
     )
     face.fade_color.count = 2
     face.fade_color.items = (
       -1610612712
       -1610612729
     )
-    face.fade_transparency = -2147483648
+    face.localprops = [fal_fatransparency]
     face.dummy = 0
-    bar_face.image.transparency = -2147483648
     bar_face.fade_pos.count = 3
     bar_face.fade_pos.items = (
-      0
-      0.4
-      1
+       0.0000000000000000E+0000
+       4.0000000000000002E-0001
+       1.0000000000000000E+0000
     )
     bar_face.fade_color.count = 3
     bar_face.fade_color.items = (
@@ -66,15 +63,17 @@ object barfo: tbarfo
       -1610612727
     )
     bar_face.fade_direction = gd_up
-    bar_face.fade_transparency = -2147483648
+    bar_face.localprops = [fal_fadirection, fal_fatransparency]
     bar_face.dummy = 0
     bar_frame.dummy = 0
-    scale = 0.01
-    format = ' 0%'
+    valuescale =  1.0000000000000000E-0002
     textflags = [tf_ycentered]
     font.color = -1610612730
     font.style = [fs_bold]
     font.name = 'stf_default'
+    font.xscale =  1.0000000000000000E+0000
     font.dummy = 0
+    value =  0.0000000000000000E+0000
+    format = ' 0%'
   end
 end
