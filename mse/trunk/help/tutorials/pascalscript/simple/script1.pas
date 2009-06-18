@@ -4,14 +4,14 @@ interface
 uses
  mseglob,mseguiglob,mseapplication,msestat,msemenus,msegui,msegraphics,
  msegraphutils,mseevent,mseclasses,mseforms,msepascalscript,msesimplewidgets,
- msewidgets,psimportmsegui,uPSComponent_Default;
+ msewidgets,msepascimportmsegui,msepascimport;
 
 type
- tscript1sc = class(tscriptform)
+ tscript1sc = class(tpascform)
    tbutton1: tbutton;
    tbutton2: tbutton;
-   tpsimportmsegui1: tpsimportmsegui;
-   TPSImport_Classes1: TPSImport_Classes;
+   tpsimportmsegui1: tpascimportmsegui;
+   TPSImport_Classes1: tpascImport_Classes;
    procedure beepex(const sender: TObject);
  end;
 

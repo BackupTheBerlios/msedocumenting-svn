@@ -4,7 +4,7 @@ interface
 uses
  classes,mseglob,mseguiglob,mseapplication,msestat,msemenus,msegui,msegraphics,
  msegraphutils,mseevent,mseclasses,mseforms,msesimplewidgets,msewidgets,
- uPSComponent_Default,psimportmsegui,msepascalscript,uPSCompiler,uPSComponent,
+ uPSComponent_Default,msepascimportmsegui,msepascalscript,uPSCompiler,uPSComponent,
  uPSPreProcessor,uPSRuntime;
 
 type
@@ -18,7 +18,7 @@ var
  mainfo: tmainfo;
 implementation
 uses
- main_mfm,script1;
+ main_mfm,script1,msepascimport;
  
 procedure tmainfo.comprun(const sender: TObject);
 begin
@@ -27,9 +27,9 @@ end;
 
 procedure tmainfo.scriptrun(const sender: TObject);
 begin
- registerclasses([TPSImport_Classes,tpsimportmsegui,tbutton]); 
+ registerclasses([tpascimport_classes,tpascimportmsegui,tbutton]); 
                        //register allowed components
- loadscriptform('script1.mfm');
+ loadpascform('script1.mfm');
 end;
 
 end.

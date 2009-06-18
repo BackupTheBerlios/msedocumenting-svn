@@ -12,7 +12,7 @@ object script1sc: tscript1sc
   container.frame.dummy = 0
   options = [fo_freeonclose, fo_autoreadstat, fo_autowritestat, fo_savepos, fo_savezorder, fo_savestate]
   caption = 'Scripted Form'
-  ps_script.Strings = (
+  pasc_script.Strings = (
     ' '
     'procedure            beepex(const sender: TObject);'
     'begin'
@@ -20,7 +20,7 @@ object script1sc: tscript1sc
     'end;'
     ''
   )
-  ps_plugins = <  
+  pasc_plugins = <  
     item
       Plugin = TPSImport_Classes1
     end  
@@ -55,7 +55,7 @@ object script1sc: tscript1sc
     left = 8
     top = 88
   end
-  object TPSImport_Classes1: TpascImport_Classes
+  object TPSImport_Classes1: tpascimport_classes
     EnableStreams = True
     EnableClasses = True
     left = 8
