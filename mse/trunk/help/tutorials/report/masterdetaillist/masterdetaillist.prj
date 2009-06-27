@@ -399,13 +399,13 @@ windowlayout=392
  splitdir=2
  useroptions=15488
  [mainfo]
- stackedunder=componentpalettefo
+ stackedunder=
  x=4
  y=24
  cx=286
  cy=74
  wsize=0
- active=0
+ active=1
  visible=1
  [targetconsolefo]
  splitdir=0
@@ -467,7 +467,7 @@ windowlayout=392
  [disassfo]
  splitdir=0
  useroptions=16491
- stackedunder=stackfo
+ stackedunder=projecttreefo
  parent=
  mdistate=0
  nx=0
@@ -484,7 +484,7 @@ windowlayout=392
  [findinfilefo]
  splitdir=0
  useroptions=16491
- stackedunder=disassfo
+ stackedunder=targetconsolefo
  parent=
  mdistate=0
  nx=0
@@ -498,7 +498,7 @@ windowlayout=392
  [projecttreefo]
  splitdir=0
  useroptions=16491
- stackedunder=watchpointsfo
+ stackedunder=stackfo
  parent=
  mdistate=0
  nx=0
@@ -588,7 +588,7 @@ windowlayout=392
  [objectinspectorfo]
  splitdir=0
  useroptions=16491
- stackedunder=watchfo
+ stackedunder=componentstorefo
  parent=
  mdistate=0
  nx=0
@@ -698,7 +698,7 @@ windowlayout=392
  [componentpalettefo]
  splitdir=0
  useroptions=24683
- stackedunder=mainfo.panel1
+ stackedunder=mainfo
  parent=
  mdistate=0
  nx=0
@@ -792,7 +792,7 @@ finddtext=
 findhistory=0
 findoptions=1
 editpos=2
- 0,0
+ 0,-1073741823
  0,0
 bookmarks0=0
 bookmarks1=0

@@ -169,9 +169,9 @@ object mainfo: tmainfo
     end
   end
   object button1: tbutton
-    bounds_x = 16
+    bounds_x = 8
     bounds_y = 224
-    bounds_cx = 98
+    bounds_cx = 122
     bounds_cy = 20
     anchors = [an_left, an_bottom]
     taborder = 2
@@ -182,9 +182,9 @@ object mainfo: tmainfo
     onexecute = runlistrep
   end
   object button2: tbutton
-    bounds_x = 120
+    bounds_x = 136
     bounds_y = 224
-    bounds_cx = 98
+    bounds_cx = 122
     bounds_cy = 20
     anchors = [an_left, an_bottom]
     taborder = 3
@@ -199,6 +199,7 @@ object mainfo: tmainfo
     bounds_y = 228
     bounds_cx = 171
     bounds_cy = 16
+    anchors = [an_left, an_bottom]
     taborder = 4
     visible = False
     caption = 'PostScript written to test.ps'
