@@ -330,6 +330,7 @@ object mainfo: tmainfo
   object custlink: tfieldfieldlink
     destdataset = qlist
     destdatafield = 'CUST'
+    options = [flo_notifunmodifiedinsert]
     datafield = 'ID'
     datasource = dcustomer
     left = 272
