@@ -45,6 +45,7 @@ object mainfo: tmainfo
         options = [co_fill, co_savevalue, co_savestate, co_rowfont, co_rowcolor, co_zebracolor, co_mousescrollrow]
         datafield = 'NAME'
       end>
+    datalink.options = [gdo_propscrollbar, gdo_thumbtrack]
     datalink.datasource = dcustomer
     fixcols.count = 1
     fixcols.items = <    
@@ -121,6 +122,7 @@ object mainfo: tmainfo
         width = 65
         widgetname = 'tdbrealedit1'
       end>
+    datalink.options = [gdo_propscrollbar, gdo_thumbtrack]
     datalink.datasource = dlist
     datarowheight = 16
     reffontheight = 14
