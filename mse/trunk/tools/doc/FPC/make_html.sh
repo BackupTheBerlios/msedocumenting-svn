@@ -37,12 +37,12 @@ function do_it () {
   local unit_file; local pas_file; local pp_file; local cur_dir_inc;
 
   src_dir="$fpc_src_dir/$1"
-  xml_dir=${fpc_doc_root}/xml/$1
+  xml_dir=${fpc_doc_root}/xml/$2
   [ -d $xml_dir ] || {
     echo -e "Directory $xml_dir does not exist. So, skipping..."
     return
   }
-  html_dir=${fpc_doc_root}/html/$1
+  html_dir=${fpc_doc_root}/html/$2
   
 # recreating the HTML dir to empty its contents
   rm -rf -- $html_dir
@@ -91,8 +91,18 @@ function do_it () {
       cur_dir_inc="-Fi"`dirname $pas_file`
       echo $pas_file $cur_dir_inc "$inc_dirs" >> $CurInputFileList  
     fi
-  
+    pas_file="${unit_file}.PAS"
+    if [ -f $pas_file ]; then
+      cur_dir_inc="-Fi"`dirname $pas_file`
+      echo $pas_file $cur_dir_inc "$inc_dirs" >> $CurInputFileList  
+    fi
+
     pp_file="${unit_file}.pp"
+    if [ -f $pp_file ]; then
+      cur_dir_inc="-Fi"`dirname $pp_file`
+      echo $pp_file $cur_dir_inc "$inc_dirs" >> $CurInputFileList  
+    fi
+    pp_file="${unit_file}.PP"
     if [ -f $pp_file ]; then
       cur_dir_inc="-Fi"`dirname $pp_file`
       echo $pp_file $cur_dir_inc "$inc_dirs" >> $CurInputFileList  
@@ -100,21 +110,19 @@ function do_it () {
 
   done
 
-  FPDocParams="--content=${fpc_doc_root}/html/$1/$2.xct --package=$2 --descr=$xml_dir/$2.xml --format=html $imports"
+  FPDocParams="--content=${fpc_doc_root}/html/$2/$2.xct --package=$2 --descr=$xml_dir/$2.xml --format=html $imports"
 
   cd $html_dir
-  fpdoc --descr=@$DescrFileList --input=@$InputFileList $FPDocParams
+
+  fpdoc-2.3.1 --descr=@$DescrFileList --input=@$InputFileList $FPDocParams
+#  echo "fpdoc --descr=@$DescrFileList --input=@$InputFileList $FPDocParams"
   rm -f -- $CurInputFileList $CurDescrFileList $html_dir/$2.xml
 }
 
 # ========== RTL ==============
 do_it "rtl" "rtl" "$rtl_inc_dirs" "$rtl_defines"
-do_it "fcl" "fcl" "$fcl_inc_dirs" "$fcl_defines" "$fcl_imports"
+do_it "packages" "packages" "$pkg_inc_dirs" "$pkg_defines"
 
-# Uncomment the below lines to make HTML docs for the FPC packages as well - It may take a long !
-#
-#do_it "packages/base" "packages_base" "$base_pkg_inc_dirs" "$base_pkg_defines"
-#do_it "packages/extra" "packages_extra" "$extra_pkg_inc_dirs" "$extra_pkg_defines"
 
 cd $this_dir
 #===============================

@@ -57,10 +57,14 @@ function do_it () {
     inc_dirs="${inc_dirs} -Fi${fpc_src_dir}/$1/${id}"
   done
   
+#echo "5= $5"  
+#return 1
   imports=
   for imp in $5; do
     imports="${imports} --import=${imp}"
   done
+#echo  "imp= $imports"
+#return 1 
 
 # [re]create input file list
   CurInputFileList=$html_dir/$InputFileList
@@ -93,7 +97,9 @@ function do_it () {
   FPDocParams="--content=${msegui_doc_root}/html/$1/$2.xct --package=$2 --descr=$xml_dir/$2.xml --format=html $imports"
 
   cd $html_dir
+echo "fpdoc --descr=@$DescrFileList --input=@$InputFileList $FPDocParams"  
   fpdoc --descr=@$DescrFileList --input=@$InputFileList $FPDocParams
+  
   rm -f -- $CurInputFileList $CurDescrFileList $html_dir/$2.xml
 }
 
