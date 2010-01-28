@@ -28,12 +28,14 @@ begin
    writeln('Terminating.');
    application.terminated:= true;
   end;
+  flush(output);
  end;
 end;
 
 procedure tmainmo.timerevent1(const sender: TObject);
 begin
  writeln('Timerevent.');
+ flush(output);
  asyncevent(123); //posts a message into the queue
 end;
 
