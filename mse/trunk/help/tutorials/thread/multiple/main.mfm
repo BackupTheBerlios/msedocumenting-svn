@@ -89,6 +89,16 @@ object mainfo: tmainfo
     caption = 'Post Event'
     onexecute = posteventexe
   end
+  object tbutton4: tbutton
+    taborder = 6
+    bounds_x = 288
+    bounds_y = 32
+    bounds_cx = 106
+    bounds_cy = 20
+    state = [as_localcaption, as_localonexecute]
+    caption = 'Terminate'
+    onexecute = terminateexe
+  end
   object tstatfile1: tstatfile
     filename = 'status.sta'
     left = 88

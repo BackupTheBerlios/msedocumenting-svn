@@ -18,21 +18,24 @@ type
    list: tstringgrid;
    tbutton3: tbutton;
    tstatfile1: tstatfile;
+   tbutton4: tbutton;
    procedure doexecute(const sender: tthreadcomp);
    procedure dostart(const sender: tthreadcomp);
    procedure doterminate(const sender: tthreadcomp);
    procedure createexe(const sender: TObject);
    procedure destroyexe(const sender: TObject);
    procedure posteventexe(const sender: TObject);
+   procedure terminateexe(const sender: TObject);
   private
    fthreads: threadcomparty;
    procedure listmessage(const sender: tthreadcomp; const amessage: msestring);
+   function checkthreadnum: boolean;
  end;
 var
  mainfo: tmainfo;
 implementation
 uses
- main_mfm,sysutils;
+ main_mfm,sysutils,msesysintf;
  
 procedure tmainfo.listmessage(const sender: tthreadcomp; const amessage: msestring);
 begin
@@ -102,15 +105,30 @@ begin
  fthreads:= nil;
 end;
 
+function tmainfo.checkthreadnum: boolean;
+begin
+ result:= (threadnum.value >= 0) and (threadnum.value <= high(fthreads)) and
+     (fthreads[threadnum.value] <> nil);
+ if not result then begin
+  showerror('Invalid thread number.');
+ end;
+end;
+
 procedure tmainfo.posteventexe(const sender: TObject);
 begin
- if (threadnum.value < 0) or (threadnum.value >= high(fthreads)) or
-     (fthreads[threadnum.value] = nil) then begin
-  showerror('Invalid thread number.');
- end
- else begin
+ if checkthreadnum then begin
   fthreads[threadnum.value].postevent(tevent.create(ek_none));
  end;
+end;
+
+procedure tmainfo.terminateexe(const sender: TObject);
+begin
+ if checkthreadnum then begin
+  fthreads[threadnum.value].terminate;
+ end;
+// application.unlock;
+// sys_waitforthread;
+// application.lock;
 end;
 
 end.
