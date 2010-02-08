@@ -12,9 +12,12 @@ order9=0
 order10=0
 order11=0
 order12=0
+order13=0
+order14=0
+order15=0
 [projectoptions]
-projectdir=/F:/proj/msedocumenting/mse/trunk/help/tutorials/mseifi/ifipipedemo/client
-projectfilename=/F:/proj/msedocumenting/mse/trunk/help/tutorials/mseifi/ifipipedemo/client/ifipipedemoclient.prj
+projectdir=/home/mse/packs/standard/svn/msedocumenting/mse/trunk/help/tutorials/mseifi/ifipipedemo/client
+projectfilename=/home/mse/packs/standard/svn/msedocumenting/mse/trunk/help/tutorials/mseifi/ifipipedemo/client/ifipipedemoclient.prj
 findinfiledialog=30
  [findinfileadialogfo]
  stackedunder=
@@ -82,7 +85,7 @@ options=93
  sortcol=-1
  col=-1073741823
  row=-1073741823
- rowheight=15
+ rowheight=16
  [projectoptionsfo.newfile]
  firsttab=0
  index=2
@@ -111,7 +114,7 @@ options=93
  sortdescent6=0
  [projectoptionsfo.macrosplitter]
  x=0
- y=178
+ y=177
  xprop=0
  yprop=0.34034416826003
  [projectoptionsfo.macrogrid]
@@ -139,10 +142,10 @@ options=93
  sortdescent1=0
  [projectoptionsfo.ttabwidget1]
  firsttab=0
- index=0
+ index=2
  [projectoptionsfo.tabwidget]
  firsttab=0
- index=2
+ index=1
  [projectoptionsfo]
  stackedunder=
  x=151
@@ -184,7 +187,7 @@ sigsettings=27
  26,26,T,F
  27,27,T,F
  28,28,T,F
- 29,29,T,F
+ 29,29,F,F
  30,30,T,F
 gridsizex=8
 gridsizey=8
@@ -197,7 +200,7 @@ modulenames=1
 moduletypes=1
  TMAINFO
 modulefiles=1
- /F:/proj/msedocumenting/mse/trunk/help/tutorials/mseifi/ifipipedemo/client/main.mfm
+ /home/mse/packs/standard/svn/msedocumenting/mse/trunk/help/tutorials/mseifi/ifipipedemo/client/main.mfm
 mainfile=${projectname}.pas
 targetfile=${projectname}${exeext}
 messageoutputfile=
@@ -485,7 +488,7 @@ files=
  a=0,4132,0,Text Files
  )
 [componentstore]
-storedir=/F:/proj/mseide-msegui/trunk/apps/ide/compstore/
+storedir=/home/mse/packs/standard/svn/mse/trunk/apps/ide/compstore/
 filename=
 [layout]
 windowlayout=413
@@ -508,13 +511,13 @@ windowlayout=413
  splitdir=2
  useroptions=15488
  [mainfo]
- stackedunder=
+ stackedunder=targetconsolefo
  x=10
  y=26
  cx=286
  cy=74
  wsize=0
- active=1
+ active=0
  visible=1
  [targetconsolefo]
  splitdir=0
@@ -576,7 +579,7 @@ windowlayout=413
  [disassfo]
  splitdir=0
  useroptions=16491
- stackedunder=componentstorefo
+ stackedunder=projecttreefo
  parent=
  mdistate=0
  nx=0
@@ -593,7 +596,7 @@ windowlayout=413
  [findinfilefo]
  splitdir=0
  useroptions=16491
- stackedunder=breakpointsfo
+ stackedunder=threadsfo
  parent=
  mdistate=0
  nx=0
@@ -607,7 +610,7 @@ windowlayout=413
  [projecttreefo]
  splitdir=0
  useroptions=16491
- stackedunder=findinfilefo
+ stackedunder=componentstorefo
  parent=
  mdistate=0
  nx=0
@@ -678,7 +681,7 @@ windowlayout=413
  [breakpointsfo]
  splitdir=0
  useroptions=16491
- stackedunder=watchpointsfo
+ stackedunder=memoryfo
  parent=
  mdistate=0
  nx=0
@@ -697,7 +700,7 @@ windowlayout=413
  [objectinspectorfo]
  splitdir=0
  useroptions=16491
- stackedunder=mainfo
+ stackedunder=componentpalettefo
  parent=
  mdistate=0
  nx=0
@@ -774,13 +777,13 @@ windowlayout=413
  ncx=0
  ncy=0
  x=0
- y=467
+ y=438
  cx=828
- cy=68
+ cy=97
  [componentstorefo]
  splitdir=0
  useroptions=24675
- stackedunder=projecttreefo
+ stackedunder=findinfilefo
  parent=
  mdistate=0
  nx=0
@@ -819,7 +822,7 @@ windowlayout=413
  [componentpalettefo]
  splitdir=0
  useroptions=24683
- stackedunder=threadsfo
+ stackedunder=mainfo
  parent=
  mdistate=0
  nx=0
@@ -834,7 +837,7 @@ windowlayout=413
  active=0
  visible=1
  [componentpalettefo.componentpages]
- activetab=3
+ activetab=9
  [debuggerfo]
  splitdir=0
  useroptions=24683
@@ -848,7 +851,7 @@ windowlayout=413
  x=0
  y=0
  cx=286
- cy=40
+ cy=38
  [sourcefo]
  splitdir=0
  useroptions=16489
@@ -888,19 +891,19 @@ windowlayout=413
  [mainfo.panel1]
  splitdir=2
  useroptions=32235
- stackedunder=formdesignerfo
+ stackedunder=
  parent=
  mdistate=0
  nx=0
  ny=0
  ncx=0
  ncy=0
- x=16
- y=184
+ x=24
+ y=101
  cx=838
  cy=535
  wsize=0
- active=0
+ active=1
  visible=1
 [edit]
 hintwidth=314
@@ -924,16 +927,16 @@ findhistory=10
  ifi
 findoptions=1
 editpos=1
- 0,0
+ 49,6
 bookmarks0=0
 sourcefiles=1
- /F:/proj/msedocumenting/mse/trunk/help/tutorials/mseifi/ifipipedemo/client/main.pas
+ /home/mse/packs/standard/svn/msedocumenting/mse/trunk/help/tutorials/mseifi/ifipipedemo/client/main.pas
 relpaths=1
  main.pas
 ismoduletexts=1
  0
 modules=1
- /F:/proj/msedocumenting/mse/trunk/help/tutorials/mseifi/ifipipedemo/client/main.mfm
+ /home/mse/packs/standard/svn/msedocumenting/mse/trunk/help/tutorials/mseifi/ifipipedemo/client/main.mfm
 visiblemodules=1
  -1
 [sourcefo.tabwidget]
