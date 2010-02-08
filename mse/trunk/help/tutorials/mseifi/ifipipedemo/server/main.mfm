@@ -1,16 +1,10 @@
 object mainfo: tmainfo
   optionswidget = [ow_arrowfocus, ow_subfocus, ow_destroywidgets, ow_hinton, ow_autoscale]
-  bounds_x = 422
+  bounds_x = 408
   bounds_y = 378
-  bounds_cx = 345
+  bounds_cx = 359
   bounds_cy = 242
-  taborder = 1
   container.optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_subfocus, ow_mousetransparent, ow_destroywidgets, ow_autoscale]
-  container.bounds_x = 0
-  container.bounds_y = 0
-  container.bounds_cx = 345
-  container.bounds_cy = 242
-  container.frame.dummy = 0
   optionswindow = [wo_groupleader]
   options = [fo_main, fo_terminateonclose, fo_autoreadstat, fo_autowritestat, fo_savepos, fo_savestate]
   statfile = tstatfile1
@@ -19,40 +13,38 @@ object mainfo: tmainfo
   onasyncevent = asyncev
   moduleclassname = 'tmseform'
   object tdbstringgrid1: tdbstringgrid
-    optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_focusbackonesc, ow_mousewheel, ow_destroywidgets, ow_fontglyphheight, ow_autoscale]
-    bounds_x = 8
-    bounds_y = 46
-    bounds_cx = 304
-    bounds_cy = 190
     frame.caption = 'Dataset'
-    frame.dummy = 0
     frame.outerframe = (
       0
-      18
+      17
       0
       0
     )
-    anchors = [an_left, an_top, an_right, an_bottom]
     taborder = 4
-    datasource = datasource
+    bounds_x = 8
+    bounds_y = 47
+    bounds_cx = 318
+    bounds_cy = 189
+    anchors = [an_left, an_top, an_right, an_bottom]
     options = [dsgo_autofields]
     optionsgrid = [og_rowinserting, og_rowdeleting, og_focuscellonenter, og_autofirstrow, og_autoappend, og_colchangeontabkey, og_autopopup, og_mousescrollcol]
     datacols.count = 3
     datacols.items = <    
       item
-        width = 160
+        width = 140
         datafield = 'queryField1'
       end    
       item
-        width = 80
+        width = 70
         datafield = 'string2'
       end    
       item
-        width = 80
+        width = 70
         datafield = 'integer1'
         textflags = [tf_right, tf_ycentered, tf_noselect]
       end>
     datalink.options = [gdo_propscrollbar, gdo_thumbtrack, gdo_checkbrowsemodeonexit]
+    datalink.datasource = datasource
     fixcols.count = 1
     fixcols.items = <    
       item
@@ -61,7 +53,7 @@ object mainfo: tmainfo
     fixrows.count = 1
     fixrows.items = <    
       item
-        height = 17
+        height = 16
         captions.count = 3
         captions.items = <        
           item
@@ -74,77 +66,77 @@ object mainfo: tmainfo
             caption = 'integer1'
           end>
       end>
-    datarowheight = 17
+    datarowheight = 16
     statfile = tstatfile1
-    reffontheight = 15
+    reffontheight = 14
   end
   object prociddisp: tintegerdisp
-    bounds_x = 294
-    bounds_y = 7
-    bounds_cx = 44
-    bounds_cy = 37
     frame.caption = 'ProcID'
     frame.dummy = 0
     frame.outerframe = (
       0
-      18
+      17
       0
       0
     )
+    bounds_x = 294
+    bounds_y = 8
+    bounds_cx = 44
+    bounds_cy = 35
     textflags = [tf_xcentered, tf_right, tf_ycentered]
-    reffontheight = 15
+    reffontheight = 14
   end
   object tstringedit1: tstringedit
-    optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_destroywidgets, ow_fontglyphheight, ow_autoscale]
-    bounds_x = 8
-    bounds_y = 6
-    bounds_cx = 100
-    bounds_cy = 39
     frame.caption = 'Editwidget'
     frame.dummy = 0
     frame.outerframe = (
       0
-      18
+      17
       0
       0
     )
     taborder = 1
-    reffontheight = 15
+    bounds_x = 8
+    bounds_y = 7
+    bounds_cx = 100
+    bounds_cy = 37
+    reffontheight = 14
   end
   object buttondisp: tstringdisp
+    frame.dummy = 0
+    taborder = 2
     bounds_x = 178
     bounds_y = 25
     bounds_cx = 108
-    bounds_cy = 19
-    frame.dummy = 0
-    taborder = 2
+    bounds_cy = 18
     font.color = -1610612730
     font.name = 'stf_default'
-    font.xscale = 1.00000000000000000
+    font.xscale =  1.0000000000000000E+0000
     font.dummy = 0
     textflags = [tf_xcentered, tf_ycentered]
-    reffontheight = 15
+    reffontheight = 14
   end
   object tbutton1: tbutton
+    taborder = 3
     bounds_x = 120
     bounds_y = 25
     bounds_cx = 50
     bounds_cy = 19
-    taborder = 3
     state = [as_localcaption, as_localonexecute]
     caption = 'Button'
     onexecute = buttonex
   end
   object slider: tslider
     optionswidget = [ow_destroywidgets, ow_autoscale]
-    bounds_x = 318
+    frame.localprops = [frl_fileft, frl_fitop, frl_firight, frl_fibottom]
+    frame.dummy = 0
+    taborder = 5
+    bounds_x = 332
     bounds_y = 64
     bounds_cx = 19
     bounds_cy = 172
-    frame.localprops = [frl_fileft, frl_fitop, frl_firight, frl_fibottom]
-    frame.dummy = 0
     anchors = [an_top, an_right, an_bottom]
-    taborder = 5
+    value =  0.0000000000000000E+0000
     scrollbar.face.dummy = 0
     direction = gd_up
   end
@@ -161,6 +153,7 @@ object mainfo: tmainfo
       item
         name = 'edit1'
         widget = tstringedit1
+        options = [iwlo_sendvalue]
       end    
       item
         name = 'buttondisp'
@@ -168,6 +161,7 @@ object mainfo: tmainfo
       item
         name = 'progressbar'
         widget = slider
+        options = [iwlo_sendvalue]
       end>
     actionsrx.count = 6
     actionsrx.items = <    
@@ -228,23 +222,28 @@ object mainfo: tmainfo
   end
   object query: ttxsqlquery
     logfilename = 'data.log'
+    Active = True
+    AutoCalcFields = True
     params = <>
     IndexDefs = <>
-    Active = True
     FieldDefs = <    
       item
         Name = 'queryField1'
         DataType = ftString
+        Precision = 0
         Size = 60
       end    
       item
         Name = 'string2'
         DataType = ftString
+        Precision = 0
         Size = 10
       end    
       item
         Name = 'integer1'
         DataType = ftInteger
+        Precision = 0
+        Size = 0
       end>
     controller.fields.count = 3
     controller.fields.fields = (
@@ -257,6 +256,7 @@ object mainfo: tmainfo
         item
           DisplayWidth = 60
           FieldName = 'queryField1'
+          Index = 0
           Size = 60
         end      
         item
@@ -266,8 +266,6 @@ object mainfo: tmainfo
           Size = 10
         end      
         item
-          AlignMent = taRightJustify
-          DisplayWidth = 10
           FieldName = 'integer1'
           Index = 2
         end>
@@ -275,6 +273,7 @@ object mainfo: tmainfo
     controller.options = [dso_utf8, dso_autoapply, dso_local]
     ifi.channel = channel
     ifi.linkname = 'dataset'
+    ifi.optionsdb = []
     left = 176
     top = 144
   end
