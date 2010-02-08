@@ -29,13 +29,13 @@ var
 implementation
 uses
  main_mfm,msesimplewidgets,mseactions,msedbedit,db,mseifids,
- msedb,mseskin;
+ msedb,mseskin,msefileutils;
  
 procedure tmainfo.setconnected(const sender: TObject; var avalue: Boolean;
                var accept: Boolean);
 begin
  if avalue then begin
-  channel.serverapp:= serverapp.value;
+  channel.serverapp:= tosysfilepath(serverapp.value);
   channel.active:= true;
  end
  else begin

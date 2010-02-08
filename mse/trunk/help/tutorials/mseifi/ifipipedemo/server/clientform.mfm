@@ -13,15 +13,15 @@ object clientfo: tclientfo
     frame.dummy = 0
     frame.outerframe = (
       0
-      17
+      16
       0
       0
     )
     bounds_x = 8
-    bounds_y = 1
+    bounds_y = 2
     bounds_cx = 100
-    bounds_cy = 37
-    reffontheight = 14
+    bounds_cy = 35
+    reffontheight = 13
   end
   object tbutton1: tbutton
     taborder = 1
@@ -39,27 +39,27 @@ object clientfo: tclientfo
     bounds_x = 176
     bounds_y = 19
     bounds_cx = 92
-    bounds_cy = 18
+    bounds_cy = 17
     font.color = -1610612730
     font.name = 'stf_default'
     font.xscale =  1.0000000000000000E+0000
     font.dummy = 0
     textflags = [tf_xcentered, tf_ycentered]
-    reffontheight = 14
+    reffontheight = 13
   end
   object tdbstringgrid1: tdbstringgrid
     frame.caption = 'Dataset'
     frame.outerframe = (
       0
-      17
+      16
       0
       0
     )
     taborder = 3
     bounds_x = 8
-    bounds_y = 39
+    bounds_y = 40
     bounds_cx = 337
-    bounds_cy = 148
+    bounds_cy = 147
     anchors = [an_left, an_top, an_right, an_bottom]
     options = [dsgo_autofields]
     optionsgrid = [og_rowinserting, og_rowdeleting, og_focuscellonenter, og_autofirstrow, og_autoappend, og_colchangeontabkey, og_autopopup, og_mousescrollcol]
@@ -73,10 +73,10 @@ object clientfo: tclientfo
     fixrows.count = 1
     fixrows.items = <    
       item
-        height = 16
+        height = 15
       end>
-    datarowheight = 16
-    reffontheight = 14
+    datarowheight = 15
+    reffontheight = 13
   end
   object progressbar: tprogressbar
     frame.framei_left = 2
@@ -113,7 +113,6 @@ object clientfo: tclientfo
     format = ''
   end
   object tdbnavigator1: tdbnavigator
-    optionswidget = [ow_destroywidgets, ow_autoscale]
     optionswidget1 = [ow1_autowidth, ow1_autoheight]
     frame.levelo = -1
     frame.leveli = 1
@@ -188,7 +187,7 @@ object clientfo: tclientfo
     ifi.optionsdb = []
     AutoCalcFields = True
     fielddefs = <>
-    left = 176
+    left = 160
     top = 88
   end
   object datasource: tmsedatasource
