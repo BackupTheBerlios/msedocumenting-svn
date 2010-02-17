@@ -4,26 +4,26 @@ object mainfo: tmainfo
   bounds_y = 224
   bounds_cx = 403
   bounds_cy = 280
-  taborder = 1
   container.optionswidget = [ow_mousefocus, ow_tabfocus, ow_arrowfocus, ow_subfocus, ow_mousetransparent, ow_destroywidgets, ow_autoscale]
-  container.bounds_x = 0
-  container.bounds_y = 0
-  container.bounds_cx = 403
-  container.bounds_cy = 280
-  container.frame.dummy = 0
+  container.bounds = (
+    0
+    0
+    403
+    280
+  )
   optionswindow = [wo_groupleader]
   options = [fo_main, fo_terminateonclose, fo_autoreadstat, fo_autowritestat, fo_savepos, fo_savestate]
+  caption = 'MSEide+MSEgui Chartrecorder'
   moduleclassname = 'tmseform'
   object chartrec: tchartrecorder
-    bounds_x = 0
-    bounds_y = 0
-    bounds_cx = 403
-    bounds_cy = 280
     frame.framei_left = 30
     frame.framei_top = 10
     frame.framei_bottom = 10
     frame.localprops = [frl_fileft, frl_fitop, frl_firight, frl_fibottom]
-    frame.dummy = 0
+    bounds_x = 0
+    bounds_y = 0
+    bounds_cx = 403
+    bounds_cy = 280
     anchors = []
     samplecount = 300
     traces.count = 1
@@ -32,23 +32,52 @@ object mainfo: tmainfo
         offset = -1.0000000000000000E+0000
         range =  2.0000000000000000E+0000
       end>
-    dialhorz.widthmm =  2.9999999999999999E-0001
-    dialhorz.range =  1.0000000000000000E+0000
-    dialhorz.ticks.count = 1
-    dialhorz.ticks.items = <    
+    xstart =  0.0000000000000000E+0000
+    ystart =  0.0000000000000000E+0000
+    xrange =  1.0000000000000000E+0000
+    yrange =  1.0000000000000000E+0000
+    xdials.count = 1
+    xdials.start =  0.0000000000000000E+0000
+    xdials.range =  1.0000000000000000E+0001
+    xdials.items = <    
       item
-        color = -1610612733
-        intervalcount =  1.0000000000000000E+0001
+        widthmm =  2.9999999999999999E-0001
+        start =  0.0000000000000000E+0000
+        range =  1.0000000000000000E+0000
+        ticks.count = 1
+        ticks.items = <        
+          item
+            color = -1610612733
+            widthmm =  0.0000000000000000E+0000
+            escapement =  0.0000000000000000E+0000
+            intervalcount =  1.0000000000000000E+0001
+          end>
       end>
-    dialvert.widthmm =  2.9999999999999999E-0001
-    dialvert.offset = -1.0000000000000000E+0000
-    dialvert.range =  2.0000000000000000E+0000
-    dialvert.ticks.count = 1
-    dialvert.ticks.items = <    
+    ydials.count = 1
+    ydials.start =  0.0000000000000000E+0000
+    ydials.range =  1.0000000000000000E+0001
+    ydials.items = <    
       item
-        color = -1610612733
-        caption = '0.0'
-        intervalcount =  1.0000000000000000E+0001
+        widthmm =  2.9999999999999999E-0001
+        start = -1.0000000000000000E+0000
+        range =  2.0000000000000000E+0000
+        markers.count = 1
+        markers.items = <        
+          item
+            color = -1610612729
+            widthmm =  2.9999999999999999E-0001
+            escapement =  0.0000000000000000E+0000
+          end>
+        ticks.count = 1
+        ticks.items = <        
+          item
+            color = -1610612733
+            widthmm =  0.0000000000000000E+0000
+            caption = '0.0'
+            escapement =  0.0000000000000000E+0000
+            intervalcount =  1.0000000000000000E+0001
+            options = [dto_opposite]
+          end>
       end>
   end
   object ttimer1: ttimer
