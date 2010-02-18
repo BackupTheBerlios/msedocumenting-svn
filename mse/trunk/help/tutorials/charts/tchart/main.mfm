@@ -122,7 +122,7 @@ object mainfo: tmainfo
             widthmm =  0.0000000000000000E+0000
             dashes = #1#1
             caption = '0.00'
-            captiondist = -40
+            captiondist = -35
             captionoffset = -6
             escapement =  0.0000000000000000E+0000
             val = -2.2000000000000000E-0001
@@ -174,22 +174,22 @@ object mainfo: tmainfo
     frame.caption = 'X/Y Scatter'
     frame.outerframe = (
       0
-      17
+      16
       0
       0
     )
     taborder = 1
     bounds_x = 394
-    bounds_y = 46
+    bounds_y = 47
     bounds_cx = 162
-    bounds_cy = 295
+    bounds_cy = 294
     anchors = [an_top, an_right, an_bottom]
     optionsgrid = [og_rowinserting, og_rowdeleting, og_focuscellonenter, og_autofirstrow, og_autoappend, og_colchangeontabkey, og_wrapcol, og_autopopup, og_mousescrollcol]
     rowstatelist.data = (    )
     fixrows.count = 1
     fixrows.items = <    
       item
-        height = 16
+        height = 15
         captions.count = 2
         captions.items = <        
           item
@@ -220,7 +220,7 @@ object mainfo: tmainfo
              7.1999999999999997E-0001
              7.8000000000000003E-0001
              9.0000000000000002E-0001
-             1.0000000000000000E+0000
+             9.7999999999999998E-0001
           )
         )
       end    
@@ -246,9 +246,9 @@ object mainfo: tmainfo
           )
         )
       end>
-    datarowheight = 16
+    datarowheight = 15
     statfile = tstatfile1
-    reffontheight = 14
+    reffontheight = 13
     object xval: trealedit
       optionsskin = [osk_framebuttononly]
       taborder = 1
@@ -256,9 +256,9 @@ object mainfo: tmainfo
       bounds_x = 0
       bounds_y = 0
       bounds_cx = 78
-      bounds_cy = 16
+      bounds_cy = 15
       valuerange =  1.0000000000000000E+0000
-      reffontheight = 14
+      reffontheight = 13
       mi = -2.0000000000000000E+0000
       ma =  2.0000000000000000E+0000
       def =  0.0000000000000000E+0000
@@ -271,9 +271,9 @@ object mainfo: tmainfo
       bounds_x = 79
       bounds_y = 0
       bounds_cx = 78
-      bounds_cy = 16
+      bounds_cy = 15
       valuerange =  1.0000000000000000E+0000
-      reffontheight = 14
+      reffontheight = 13
       mi = -2.0000000000000000E+0000
       ma =  2.0000000000000000E+0000
       def =  0.0000000000000000E+0000
@@ -284,21 +284,21 @@ object mainfo: tmainfo
     frame.dummy = 0
     frame.outerframe = (
       0
-      17
+      16
       0
       0
     )
     taborder = 2
     bounds_x = 394
-    bounds_y = 2
+    bounds_y = 3
     bounds_cx = 77
-    bounds_cy = 37
+    bounds_cy = 35
     anchors = [an_top, an_right]
     statfile = tstatfile1
     optionsedit = [oe_undoonesc, oe_closequery, oe_checkmrcancel, oe_exitoncursor, oe_shiftreturn, oe_eatreturn, oe_resetselectonexit, oe_endonenter, oe_autoselect, oe_autoselectonfirstclick, oe_autopopupmenu, oe_keyexecute, oe_checkvaluepaststatread, oe_savevalue, oe_savestate]
     ondataentered = sigdataentered
     valuerange =  1.0000000000000000E+0000
-    reffontheight = 14
+    reffontheight = 13
     val =  1.0000000000000000E+0000
     mi =  1.0000000000000000E-0002
     ma =  1.0000000000000000E+0002
@@ -309,20 +309,20 @@ object mainfo: tmainfo
     frame.dummy = 0
     frame.outerframe = (
       0
-      17
+      16
       0
       0
     )
     taborder = 3
     bounds_x = 478
-    bounds_y = 2
+    bounds_y = 3
     bounds_cx = 77
-    bounds_cy = 37
+    bounds_cy = 35
     anchors = [an_top, an_right]
     statfile = tstatfile1
     ondataentered = sigdataentered
     valuerange =  1.0000000000000000E+0000
-    reffontheight = 14
+    reffontheight = 13
     val =  9.0000000000000002E-0001
     mi =  1.0000000000000001E-0001
     ma =  1.0000000000000000E+0001
@@ -334,20 +334,20 @@ object mainfo: tmainfo
     frame.outerframe = (
       0
       0
-      40
+      36
       0
     )
     taborder = 4
     bounds_x = 394
-    bounds_y = 347
-    bounds_cx = 108
-    bounds_cy = 20
+    bounds_y = 348
+    bounds_cx = 104
+    bounds_cy = 19
     anchors = [an_right, an_bottom]
     statfile = tstatfile1
     optionsedit = [oe_undoonesc, oe_closequery, oe_checkmrcancel, oe_exitoncursor, oe_shiftreturn, oe_eatreturn, oe_resetselectonexit, oe_endonenter, oe_autoselect, oe_autoselectonfirstclick, oe_autopopupmenu, oe_keyexecute, oe_checkvaluepaststatread, oe_savevalue, oe_savestate]
     onsetvalue = xymarkersetval
     valuerange =  1.0000000000000000E+0000
-    reffontheight = 14
+    reffontheight = 13
     val = -2.2000000000000000E-0001
     mi = -1.0000000000000000E+0000
     ma =  1.0000000000000000E+0000
@@ -366,24 +366,24 @@ object mainfo: tmainfo
     top = 104
     image = {
       0000000003000000210000002100000008010000000000000000000000000000
-      00000000000000000000000000000000000000000000000028E6980A00000000
-      1600090000C0070024F3230000F83F000000000000FEFF0010DBFD0980FFFF03
-      00000000C0FFFF0700000000E0FFFF0F00000000E0FFFF0FFEFF0000F03FF81F
-      00000000F00FE01F00000000F807C03FFEFF0000F803803F00000000F803803F
-      00000000FC01007FFEFF0000FC01007FA61400EBFC01007FD83A0000FC01007F
-      FEFF0000FC01007FFEB40000F803803FFED80000F803803FFEFF0000F807C03F
-      FEFC0000F00FE01FFEFE0000F03FF81FFEFF00FCE0FFFF0F00000000E0FFFF0F
-      FEFF0000C0FFFF07FEFF000080FFFF037EDC000000FEFF00FEFF000000F83F00
-      FEFF00C600C00700CE6E00EB00000000EAFFEB0000000000FEFFEB2B00000000
-      70A48F0A000000001600090000C0070028F3230000F83F000000000000FEFF00
-      60E6980A80FFFF0300000000C0FFFF07F4FDF1B9E0FFFF0F00000000E0FFFF0F
-      00000000F03FF81F42010000F00FE01F00000000F807C03F00000000F803803F
-      00000000F803803F00000000FC01007F00000000FC01007FFEFFEB00FC01007F
-      EA870500FC01007F50F99600FC01007F00000000F803803F66FF8700F803803F
-      F45AC800F807C03F00000000F00FE01F10FFE900F03FF81F50000000E0FFFF0F
-      00000000E0FFFF0F0CFFF000C0FFFF070000000080FFFF030000000000FEFF00
-      66FF950000F83F00000000C600C00700FEFFEB0000000000EC92090000000000
-      FEFFEB2B
+      000000000000000000000000000000000000000000000000FEFFFFFF00000000
+      FEFFFFFF00C00700FEFFFFFF00F83F00FEFFFFFF00FEFF00FEFFFFFF80FFFF03
+      FEFFFFFFC0FFFF07FEFFFFFFE0FFFF0FFEFFFFFFE0FFFF0FFEFFFFFFF03FF81F
+      FEFFFFFFF00FE01FFEFFFFFFF807C03FFEFFFFFFF803803FFEFFFFFFF803803F
+      FEFFFFFFFC01007FFEFFFFFFFC01007FFEFFFFFFFC01007FFEFFFFFFFC01007F
+      FEFFFFFFFC01007FFEFFFFFFF803803FFEFFFFFFF803803FFEFFFFFFF807C03F
+      FEFFFFFFF00FE01FFEFFFFFFF03FF81FFEFFFFFFE0FFFF0FFEFFFFFFE0FFFF0F
+      FEFFFFFFC0FFFF07FEFFFFFF80FFFF03FEFFFFFF00FEFF00FEFFFFFF00F83F00
+      FEFFFFFF00C00700FEFFFFFF00000000FEFFFFFF00000000FEFFFFFF00000000
+      FEFFFFFF00000000FEFFFFFF00C00700FEFFFFFF00F83F00FEFFFFFF00FEFF00
+      FEFFFFFF80FFFF03FEFFFFFFC0FFFF07FEFFFFFFE0FFFF0FFEFFFFFFE0FFFF0F
+      FEFFFFFFF03FF81FFEFFFFFFF00FE01FFEFFFFFFF807C03FFEFFFFFFF803803F
+      FEFFFFFFF803803FFEFFFFFFFC01007FFEFFFFFFFC01007FFEFFFFFFFC01007F
+      FEFFFFFFFC01007FFEFFFFFFFC01007FFEFFFFFFF803803FFEFFFFFFF803803F
+      FEFFFFFFF807C03FFEFFFFFFF00FE01FFEFFFFFFF03FF81FFEFFFFFFE0FFFF0F
+      FEFFFFFFE0FFFF0FFEFFFFFFC0FFFF07FEFFFFFF80FFFF03FEFFFFFF00FEFF00
+      FEFFFFFF00F83F00FEFFFFFF00C00700FEFFFFFF00000000FEFFFFFF00000000
+      FEFFFFFF
     }
   end
 end

@@ -53,7 +53,7 @@ begin
  chart.traces.itembyname('xysinus').xydata:= ar1;
  setlength(ar2,length(ar1));
  for int1:= 0 to high(ar2) do begin
-  ar2[int1]:= frac(step*int1*frequ.value) * (amp.value) + 0.5 - amp.value/2;
+  ar2[int1]:= frac(step*int1*frequ.value+0.5) * (amp.value) + 0.5 - amp.value/2;
  end;
  chart.traces.itembyname('xseries').ydata:= ar2;
 end;

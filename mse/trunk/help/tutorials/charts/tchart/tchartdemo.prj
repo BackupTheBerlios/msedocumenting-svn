@@ -12,12 +12,9 @@ order9=0
 order10=0
 order11=0
 order12=0
-order13=0
-order14=0
-order15=0
 [projectoptions]
-projectdir=/home/mse/packs/standard/svn/msedocumenting/mse/trunk/help/tutorials/charts/tchart
-projectfilename=/home/mse/packs/standard/svn/msedocumenting/mse/trunk/help/tutorials/charts/tchart/tchartdemo.prj
+projectdir=/F:/proj/msedocumenting/mse/trunk/help/tutorials/charts/tchart
+projectfilename=/F:/proj/msedocumenting/mse/trunk/help/tutorials/charts/tchart/tchartdemo.prj
 options=83
  [projectoptionsfo.twidgetgrid3]
  propcolwidthref=801
@@ -136,9 +133,12 @@ exceptclassnames=1
  EconvertError
 exceptignore=1
  0
-modulenames=0
-moduletypes=0
-modulefiles=0
+modulenames=1
+ MAINFO
+moduletypes=1
+ TMAINFO
+modulefiles=1
+ /F:/proj/msedocumenting/mse/trunk/help/tutorials/charts/tchart/main.mfm
 mainfile=${PROJECTNAME}.pas
 targetfile=${PROJECTNAME}${EXEEXT}
 messageoutputfile=
@@ -429,13 +429,15 @@ files=
  a=0,4132,0,Text Files
  )
 [componentstore]
-storedir=/home/mse/proj/mseguidist/test/msegui/apps/ide/compstore/
+storedir=/E:/test/msegui/apps/ide/compstore/
 filename=
 [layout]
-windowlayout=393
+windowlayout=395
  [mainfo.openfile]
- filenames=0
- filehistory=2
+ filenames=1
+  /F:/proj/msedocumenting/mse/trunk/help/tutorials/charts/tchart/main.pas
+ filehistory=3
+  /F:/proj/msedocumenting/mse/trunk/help/tutorials/charts/tchart/main.pas
   /home/mse/proj/msegui/testcase/jean-pierre/Demo/main.pas
   /D:/MSE/Livre/DemoMSE/Demo.pas
  filefilterindex=0
@@ -444,7 +446,7 @@ windowlayout=393
  splitdir=2
  useroptions=15488
  [mainfo]
- stackedunder=mainfo.panel1
+ stackedunder=
  x=4
  y=24
  cx=286
@@ -582,15 +584,15 @@ windowlayout=393
  ny=0
  ncx=0
  ncy=0
- x=537
- y=26
- cx=483
- cy=210
+ x=656
+ y=143
+ cx=313
+ cy=199
  wsize=0
  active=0
  visible=0
  [watchpointsfo.grid]
- propcolwidthref=352
+ propcolwidthref=182
  width0=16
  sortdescent0=0
  values1=1
@@ -599,7 +601,7 @@ windowlayout=393
  sortdescent1=0
  values2=1
   pinteger(0x126c6b4)^
- width2=239
+ width2=124
  sortdescent2=0
  width4=34
  sortdescent4=0
@@ -609,7 +611,7 @@ windowlayout=393
  sortdescent5=0
  values6=1
   
- width6=103
+ width6=48
  sortdescent6=0
  [breakpointsfo]
  splitdir=0
@@ -621,10 +623,10 @@ windowlayout=393
  ny=0
  ncx=0
  ncy=0
- x=107
- y=404
- cx=477
- cy=128
+ x=656
+ y=345
+ cx=313
+ cy=221
  wsize=0
  active=0
  visible=0
@@ -633,7 +635,7 @@ windowlayout=393
  [objectinspectorfo]
  splitdir=0
  useroptions=16491
- stackedunder=targetconsolefo
+ stackedunder=watchpointsfo
  parent=
  mdistate=0
  nx=0
@@ -648,10 +650,10 @@ windowlayout=393
  active=0
  visible=0
  [objectinspectorfo.grid]
- propcolwidthref=347
- width0=113
+ propcolwidthref=306
+ width0=100
  sortdescent0=0
- width1=187
+ width1=200
  sortdescent1=0
  [watchfo]
  splitdir=0
@@ -662,15 +664,15 @@ windowlayout=393
  ny=0
  ncx=0
  ncy=0
- x=510
- y=325
- cx=310
- cy=245
+ x=304
+ y=544
+ cx=703
+ cy=127
  wsize=0
  active=0
  visible=0
  [watchfo.grid]
- propcolwidthref=105
+ propcolwidthref=498
  values0=0
  width0=13
  sortdescent0=0
@@ -743,7 +745,7 @@ windowlayout=393
  [componentpalettefo]
  splitdir=0
  useroptions=24683
- stackedunder=
+ stackedunder=mainfo.panel1
  parent=
  mdistate=0
  nx=0
@@ -755,7 +757,7 @@ windowlayout=393
  cx=440
  cy=129
  wsize=0
- active=1
+ active=0
  visible=1
  [componentpalettefo.componentpages]
  activetab=0
@@ -772,7 +774,7 @@ windowlayout=393
  x=0
  y=0
  cx=286
- cy=38
+ cy=40
  [sourcefo]
  splitdir=0
  useroptions=16489
@@ -812,7 +814,7 @@ windowlayout=393
  [mainfo.panel1]
  splitdir=2
  useroptions=32235
- stackedunder=componentpalettefo
+ stackedunder=mainfo
  parent=
  mdistate=0
  nx=0
@@ -837,16 +839,23 @@ tabstops=4
 finddtext=
 findhistory=0
 findoptions=1
-editpos=0
-sourcefiles=0
-relpaths=0
-ismoduletexts=0
-modules=0
-visiblemodules=0
+editpos=1
+ 0,0
+bookmarks0=0
+sourcefiles=1
+ /F:/proj/msedocumenting/mse/trunk/help/tutorials/charts/tchart/main.pas
+relpaths=1
+ main.pas
+ismoduletexts=1
+ 0
+modules=1
+ /F:/proj/msedocumenting/mse/trunk/help/tutorials/charts/tchart/main.mfm
+visiblemodules=1
+ -1
 [sourcefo.tabwidget]
 tabsize=134
 firsttab=0
-index=-1
+index=0
 [components]
 [selecteditpage]
 colwidth=100
