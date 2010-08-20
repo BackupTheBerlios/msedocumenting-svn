@@ -18,7 +18,7 @@ type
    ); override;
   end;
 
- tsubform1fo = class(tdockform)
+ tsubform1fo = class(tdockform,icaptionframe)
    tstringedit1: tstringedit;
    procedure subformactivated(const sender: TObject);
    procedure subformdestroyed(const sender: TObject);
@@ -83,7 +83,7 @@ begin
     linewidth:= 3;    
     
     if grip_size >= 8 then begin
-     draw3dframe(acanvas, arect,1,defaultframecolors);
+     draw3dframe(acanvas, arect,1,defaultframecolors,[]);
      drawcross(inflaterect(scalerect(arect,0.8,true),-2),cl_yellow);
     end else begin
      drawcross(scalerect(arect,0.8,true),cl_yellow);
@@ -101,7 +101,7 @@ end;
 
 procedure tsubform1fo.internalcreateframe;
 begin
- mygripframety.create(iframe(self),dragdock);
+ mygripframety.create(icaptionframe(self),dragdock);
 end;
 
 
