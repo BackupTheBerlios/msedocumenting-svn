@@ -1,6 +1,6 @@
 object mainfo: tmainfo
-  bounds_x = 42
-  bounds_y = 166
+  bounds_x = 80
+  bounds_y = 219
   bounds_cx = 503
   bounds_cy = 308
   container.bounds = (

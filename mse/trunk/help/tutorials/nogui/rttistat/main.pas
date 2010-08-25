@@ -10,6 +10,7 @@ uses
  msewidgetgrid,msedatalist,classes,msegraphedits,mserttistat,msecolordialog;
 
 type
+{$M+} //ttestrttistat needs RTTI
  ttestrttistat = class(tobject)
   private
    fint1: integer;
