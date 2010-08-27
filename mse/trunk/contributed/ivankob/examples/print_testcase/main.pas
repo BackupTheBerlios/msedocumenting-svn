@@ -59,9 +59,9 @@ uses
  sysutils,  // gettemp*
  dmprint,
  msewidgets,
- mseformatpng,
- mseformatjpg,
- mseformatbmpico
+ mseformatpngread,
+ mseformatjpgread,
+ mseformatbmpicoread
 ;
 
 var

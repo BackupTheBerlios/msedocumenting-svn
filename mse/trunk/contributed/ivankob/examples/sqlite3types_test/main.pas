@@ -4,7 +4,8 @@ interface
 
 uses
  mseglob,msegui,mseclasses,mseforms,msesimplewidgets,msesqlite3conn,msesqldb,msedb,
- msedbedit,msedbgraphics, mseformatjpg,msemenus,msefiledialog,mseevent,mseguiglob;
+ msedbedit,msedbgraphics, mseformatjpgread,
+ msemenus,msefiledialog,mseevent,mseguiglob;
  
 type
  tmainfo = class(tmseform)

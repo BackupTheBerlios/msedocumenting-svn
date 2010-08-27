@@ -30,8 +30,8 @@ var
  imageviewerfo: timageviewerfo;
 implementation
 uses
- imageviewer_mfm, mseformatbmpico, mseformatjpg, mseformatpng, 
- mseformatpnm, mseformattga, mseformatxpm, msestream, strutils,
+ imageviewer_mfm, mseformatbmpicoread, mseformatjpgread, mseformatpngread, 
+ mseformatpnmread, mseformattgaread, mseformatxpmread, msestream, strutils,
  msegraphicstream, mseformatjpgwrite, mseformatpngwrite;
 
 procedure timageviewerfo.checkAlignment(img : timage);

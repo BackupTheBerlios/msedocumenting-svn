@@ -34,7 +34,7 @@ var
  mainfo: tmainfo;
 implementation
 uses
- main_mfm,mseformatbmpico;
+ main_mfm,mseformatbmpicoread;
 procedure tmainfo.btnconvert_onexecute(const sender: TObject);
 var
  ar1,ar2: msestringarty;

@@ -40,8 +40,8 @@ var
  rptpreviewfo: trptpreviewfo;
 implementation
 uses
- rptpreview_mfm, mseformatbmpico, mseformatjpg, mseformatpng, 
- mseformatpnm, mseformattga, mseformatxpm, sysutils,strutils, 
+ rptpreview_mfm, mseformatbmpicoread, mseformatjpgread, mseformatpngread, 
+ mseformatpnmread, mseformattgaread, mseformatxpmread, sysutils,strutils, 
  msestream, msegraphicstream, mseformatjpgwrite, mseformatpngwrite;
 {$define compressed} 
 procedure trptpreviewfo.doInit(const sender: TObject);
