@@ -17,6 +17,7 @@ type
    adisp: tintegerdisp;
    bdisp: tintegerdisp;
    tbutton1: tbutton;
+   tstringedit1: tstringedit;
    procedure exe(const sender: TObject);
    procedure aset(const sender: TObject; var avalue: Integer;
                    var accept: Boolean);

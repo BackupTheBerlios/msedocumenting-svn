@@ -3,6 +3,7 @@ object mainfo: tmainfo
   bounds_y = 255
   bounds_cx = 360
   bounds_cy = 251
+  container.face.image.transparentcolor = -2147483642
   container.face.image.options = [bmo_masked]
   container.face.image.alignment = [al_tiled]
   container.face.image.transparency = 10526880
@@ -314,13 +315,60 @@ object mainfo: tmainfo
     caption = 'Exit'
     modalresult = mr_windowclosed
   end
+  object tstringedit1: tstringedit
+    color = -2147483645
+    frame.levelo = -1
+    frame.leveli = 1
+    frame.framei_left = 3
+    frame.framei_right = 3
+    frame.colorclient = -2147483645
+    frame.caption = 'Semi-transparent Edit Widget'
+    frame.localprops = [frl_levelo, frl_leveli, frl_fileft, frl_firight, frl_colorclient]
+    frame.dummy = 0
+    frame.outerframe = (
+      0
+      17
+      3
+      0
+    )
+    face.fade_pos.count = 2
+    face.fade_pos.items = (
+       0.0000000000000000E+0000
+       1.0000000000000000E+0000
+    )
+    face.fade_color.count = 2
+    face.fade_color.items = (
+      8553090
+      -1610612730
+    )
+    face.fade_direction = gd_down
+    face.fade_transparency = 11579568
+    face.localprops = [fal_fadirection, fal_fatransparency]
+    face.dummy = 0
+    taborder = 7
+    bounds_x = 184
+    bounds_y = 121
+    bounds_cx = 163
+    bounds_cy = 47
+    optionsedit = [oe_undoonesc, oe_closequery, oe_checkmrcancel, oe_shiftreturn, oe_eatreturn, oe_resetselectonexit, oe_exitoncursor, oe_nofirstarrownavig, oe_autopopupmenu, oe_keyexecute, oe_checkvaluepaststatread, oe_savevalue, oe_savestate]
+    font.color = 14052096
+    font.shadow_color = -1610612733
+    font.gloss_color = -1610612730
+    font.height = 20
+    font.name = 'stf_default'
+    font.xscale =  1.0000000000000000E+0000
+    font.dummy = 0
+    textflagsactive = [tf_ycentered, tf_noselect]
+    value = 'Edit Text'
+    reffontheight = 24
+  end
   object timagelist1: timagelist
     width = 50
     height = 50
     colormask = True
     count = 6
     left = 168
-    top = 136
+    top = 8
     image = {
       000000000600000096000000960000009CB40000000000000000000000000000
       0000000000000000000000000000000000000000FFFFFF145555FF015454FF02
