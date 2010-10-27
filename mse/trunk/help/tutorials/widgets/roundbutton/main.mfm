@@ -350,7 +350,6 @@ object mainfo: tmainfo
     bounds_y = 121
     bounds_cx = 163
     bounds_cy = 47
-    optionsedit = [oe_undoonesc, oe_closequery, oe_checkmrcancel, oe_shiftreturn, oe_eatreturn, oe_resetselectonexit, oe_exitoncursor, oe_nofirstarrownavig, oe_autopopupmenu, oe_keyexecute, oe_checkvaluepaststatread, oe_savevalue, oe_savestate]
     font.color = 14052096
     font.shadow_color = -1610612733
     font.gloss_color = -1610612730
@@ -358,7 +357,7 @@ object mainfo: tmainfo
     font.name = 'stf_default'
     font.xscale =  1.0000000000000000E+0000
     font.dummy = 0
-    textflagsactive = [tf_ycentered, tf_noselect]
+    textflagsactive = [tf_ycentered, tf_underlineselect]
     value = 'Edit Text'
     reffontheight = 24
   end
