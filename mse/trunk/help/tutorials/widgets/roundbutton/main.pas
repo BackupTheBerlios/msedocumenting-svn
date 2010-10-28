@@ -10,7 +10,7 @@ uses
 type
  tmainfo = class(tmainform)
    trichbutton1: trichbutton;
-   timagelist1: timagelist;
+   backgroundimagelist: timagelist;
    tdatabutton1: tdatabutton;
    tdatabutton2: tdatabutton;
    trichbutton2: trichbutton;
@@ -18,6 +18,9 @@ type
    bdisp: tintegerdisp;
    tbutton1: tbutton;
    tstringedit1: tstringedit;
+   tfacelist1: tfacelist;
+   tbutton2: tbutton;
+   foregroundimagelist: timagelist;
    procedure exe(const sender: TObject);
    procedure aset(const sender: TObject; var avalue: Integer;
                    var accept: Boolean);
